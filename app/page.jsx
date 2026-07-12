@@ -21,10 +21,10 @@ export default function Home() {
         style={{
           width: "100%",
           maxWidth: "460px",
-          background: "#000000", // Pure black container for deep contrast
+          background: "#A6CCC4", // Pure black container for deep contrast
           borderRadius: "28px",
           overflow: "hidden",
-          border: "1px solid #1e1e1e", // Subtle edge definition
+          border: "1px solid #A6CCC4", // Subtle edge definition
           boxShadow: "0 25px 50px -12px rgba(0,0,0,0.5)",
         }}
       >
