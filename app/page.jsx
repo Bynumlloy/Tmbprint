@@ -85,7 +85,7 @@ export default function Home() {
                 lineHeight: 1.1,
               }}
             >
-              The Retired Wealthy Guides
+              The Retire Wealthy Guides
             </h1>
           </div>
         </div>
