@@ -191,13 +191,13 @@ export default function Home() {
               target="_blank"
               style={{
                 background: "#21BEDE",
-                color: "#0d9488",
+                color: "#fff",
                 padding: "15px",
                 borderRadius: 16,
                 textDecoration: "none",
                 fontWeight: 700,
                 fontSize: 16,
-                border: "2px solid #0d9488",
+                border: "2px solid #21BEDE",
               }}
             >
               Chat on Telegram
