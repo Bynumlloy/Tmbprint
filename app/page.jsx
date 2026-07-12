@@ -97,7 +97,7 @@ export default function Home() {
         <div
           style={{
             display: "flex",
-            justifyContent: "left",
+            justifyContent: "right",
             marginTop: "-60px",
             position: "relative",
             zIndex: 10,
