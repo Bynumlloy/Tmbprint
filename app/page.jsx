@@ -9,7 +9,7 @@ export default function Home() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#0a0a0a", // Deep, anti-glare backdrop
+        background: "#A6CCC4", // Deep, anti-glare backdrop
         display: "flex",
         justifyContent: "center",
         padding: "30px 15px",
