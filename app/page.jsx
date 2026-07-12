@@ -14,12 +14,13 @@ export default function Home() {
 
         {/* Masthead */}
         <div className="px-8 pt-10 pb-6 text-center border-b border-[#1C2B28]/12">
-          <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-5 ring-1 ring-[#1C2B28]/15 relative bg-[#E9E4D8]">
+          <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-5 ring-1 ring-[#1C2B28]/15 bg-[#E9E4D8]">
             <Image
               src="/profile.jpg"
               alt="The Retired Wealthy Guides"
-              fill
-              className="object-cover grayscale-[15%]"
+              width={80}
+              height={80}
+              className="w-full h-full object-cover grayscale-[15%]"
             />
           </div>
 
