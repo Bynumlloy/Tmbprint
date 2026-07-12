@@ -9,7 +9,7 @@ export default function Home() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#f5f2eb", // Warm cream backdrop synced with layout
+        background: "#fff", // Warm cream backdrop synced with layout
         display: "flex",
         justifyContent: "center",
         padding: "30px 15px",
@@ -219,8 +219,8 @@ export default function Home() {
               Official Communication Channels
             </strong>
             <p style={{ margin: "6px 0 12px 0" }}>
-              We are committed to providing quality educational  and
-              supporting investors on the journey toward financial growth.
+              We are committed to providing guide to 
+             investors on the journey toward financial growth.
             </p>
             <p
               style={{
