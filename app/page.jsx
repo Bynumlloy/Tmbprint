@@ -9,7 +9,7 @@ export default function Home() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#f5f2eb", // Soft, warm light cream backdrop
+        background: "#f5f2eb", // Warm cream backdrop synced with layout
         display: "flex",
         justifyContent: "center",
         padding: "30px 15px",
@@ -21,10 +21,10 @@ export default function Home() {
         style={{
           width: "100%",
           maxWidth: "460px",
-          background: "#ffffff", // Crisp white card container for clean separation
+          background: "#ffffff",
           borderRadius: "28px",
           overflow: "hidden",
-          border: "1px solid #e5dfd3", // Subtle warm border definition
+          border: "1px solid #e5dfd3",
           boxShadow: "0 20px 40px rgba(45, 42, 38, 0.06)",
         }}
       >
@@ -43,7 +43,7 @@ export default function Home() {
             style={{ objectFit: "cover" }}
           />
 
-          {/* Dark Overlay to protect white text legibility over the sunny beach image */}
+          {/* Dark Overlay for typography protection */}
           <div
             style={{
               position: "absolute",
@@ -67,7 +67,7 @@ export default function Home() {
               style={{
                 display: "inline-block",
                 padding: "6px 14px",
-                background: "#D4AF37", // Elegant gold tag
+                background: "#D4AF37",
                 color: "#111827",
                 borderRadius: 999,
                 fontWeight: 700,
@@ -109,7 +109,7 @@ export default function Home() {
               height: 120,
               borderRadius: "50%",
               overflow: "hidden",
-              border: "5px solid #ffffff", // Pops beautifully against the body
+              border: "5px solid #ffffff",
               background: "#ffffff",
               boxShadow: "0 10px 25px rgba(0, 0, 0, 0.08)",
               position: "relative",
@@ -133,7 +133,7 @@ export default function Home() {
         >
           <p
             style={{
-              color: "#0f766e", // Premium Deep Teal for subheadings
+              color: "#0f766e",
               fontWeight: 700,
               textTransform: "uppercase",
               letterSpacing: ".1em",
@@ -146,7 +146,7 @@ export default function Home() {
 
           <p
             style={{
-              color: "#475569", // Highly legible slate gray for regular prose
+              color: "#475569",
               lineHeight: 1.7,
               fontSize: 15,
               marginBottom: 28,
@@ -164,7 +164,7 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               gap: 14,
-              marginBottom: 30,
+              marginBottom: 10,
             }}
           >
             {/* Primary Action Button */}
@@ -172,7 +172,7 @@ export default function Home() {
               href={WHATSAPP_URL}
               target="_blank"
               style={{
-                background: "#16a34a", // Retaining WhatsApp's recognizable identity color
+                background: "#16a34a",
                 color: "#ffffff",
                 padding: "16px",
                 borderRadius: 16,
@@ -185,125 +185,26 @@ export default function Home() {
               💬 Chat on WhatsApp →
             </Link>
 
-            {/* Secondary Light Teal Ghost Button to prevent choice-friction */}
+            {/* Secondary Light Teal Ghost Button */}
             <Link
               href={TELEGRAM_URL}
               target="_blank"
               style={{
                 background: "transparent",
-                color: "#0d9488", // Clean Light Teal action text
+                color: "#0d9488",
                 padding: "15px",
                 borderRadius: 16,
                 textDecoration: "none",
                 fontWeight: 700,
                 fontSize: 16,
-                border: "2px solid #0d9488", // Light Teal outline
+                border: "2px solid #0d9488",
               }}
             >
               ✈️ Join our Telegram Channel →
             </Link>
           </div>
 
-          {/* Social Proof / Trust Card */}
-          <div
-            style={{
-              background: "#faf8f5", // Cream accent panel tint
-              border: "1px solid #eaddca",
-              borderRadius: 18,
-              padding: 20,
-              marginBottom: 26,
-            }}
-          >
-            <div
-              style={{
-                fontSize: 20,
-                color: "#d97706", // Soft warm amber stars
-                letterSpacing: "2px",
-              }}
-            >
-              ★★★★★
-            </div>
-
-            <p
-              style={{
-                marginTop: 10,
-                marginBottom: 0,
-                color: "#334155",
-                lineHeight: 1.6,
-                fontSize: 14,
-              }}
-            >
-              Join a growing community dedicated to financial education,
-              disciplined investing, and long-term wealth creation.
-            </p>
-          </div>
-
-          {/* Value Props / Features Grid */}
-          <div
-            style={{
-              display: "grid",
-              gap: 14,
-            }}
-          >
-            {[
-              {
-                icon: "📈",
-                title: "Daily Market Insights",
-                text: "Receive timely educational market updates and trading ideas.",
-              },
-              {
-                icon: "💎",
-                title: "Exclusive VIP Community",
-                text: "Network with serious investors and gain access to premium content.",
-              },
-              {
-                icon: "🎯",
-                title: "Wealth Building Strategies",
-                text: "Learn practical methods designed to help you grow your financial knowledge.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                style={{
-                  display: "flex",
-                  gap: 15,
-                  alignItems: "flex-start",
-                  padding: 18,
-                  borderRadius: 18,
-                  background: "#faf8f5", // Matching light cream accent panel
-                  border: "1px solid #ebe5d8",
-                  textAlign: "left",
-                }}
-              >
-                <div style={{ fontSize: 26, lineHeight: 1 }}>{item.icon}</div>
-
-                <div>
-                  <div
-                    style={{
-                      fontWeight: 700,
-                      color: "#0f172a",
-                      fontSize: 15,
-                      marginBottom: 4,
-                    }}
-                  >
-                    {item.title}
-                  </div>
-
-                  <div
-                    style={{
-                      color: "#475569",
-                      fontSize: 13,
-                      lineHeight: 1.6,
-                    }}
-                  >
-                    {item.text}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Minimalist Footer */}
+          {/* Minimal Clean Footer */}
           <div
             style={{
               marginTop: 35,
@@ -317,21 +218,19 @@ export default function Home() {
             <strong style={{ color: "#0f172a", fontSize: 14 }}>
               Official Communication Channels
             </strong>
-
-            <p style={{ margin: "8px 0 16px 0" }}>
+            <p style={{ margin: "6px 0 12px 0" }}>
               We are committed to providing quality educational content and
               supporting our community on the journey toward financial growth.
             </p>
-
             <p
               style={{
                 color: "#94a3b8",
                 fontSize: 11,
                 letterSpacing: "0.02em",
+                margin: 0,
               }}
             >
-              🔒 Secure Communication • 🌍 Global Community • 📚 Educational
-              Resources
+              🔒 Secure Communication • 🌍 Global Community • 📚 Educational Resources
             </p>
           </div>
         </div>
