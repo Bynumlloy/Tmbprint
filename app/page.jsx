@@ -9,7 +9,7 @@ export default function Home() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#f4f7fb",
+        background: "#0a0a0a", // Deep, anti-glare backdrop
         display: "flex",
         justifyContent: "center",
         padding: "30px 15px",
@@ -21,10 +21,11 @@ export default function Home() {
         style={{
           width: "100%",
           maxWidth: "460px",
-          background: "#fff",
+          background: "#000000", // Pure black container for deep contrast
           borderRadius: "28px",
           overflow: "hidden",
-          boxShadow: "0 20px 60px rgba(0,0,0,.08)",
+          border: "1px solid #1e1e1e", // Subtle edge definition
+          boxShadow: "0 25px 50px -12px rgba(0,0,0,0.5)",
         }}
       >
         {/* Banner */}
@@ -42,13 +43,13 @@ export default function Home() {
             style={{ objectFit: "cover" }}
           />
 
-          {/* Dark Overlay */}
+          {/* Enhanced High-Contrast Dark Overlay */}
           <div
             style={{
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(to top, rgba(15,23,42,.85), rgba(15,23,42,.15))",
+                "linear-gradient(to top, rgba(0,0,0,0.95) 15%, rgba(0,0,0,0.2) 100%)",
             }}
           />
 
@@ -67,10 +68,11 @@ export default function Home() {
                 display: "inline-block",
                 padding: "6px 14px",
                 background: "#D4AF37",
-                color: "#111827",
+                color: "#000000",
                 borderRadius: 999,
                 fontWeight: 700,
-                fontSize: 12,
+                fontSize: 11,
+                letterSpacing: ".05em",
                 marginBottom: 12,
               }}
             >
@@ -80,9 +82,10 @@ export default function Home() {
             <h1
               style={{
                 margin: 0,
-                fontSize: 34,
+                fontSize: 32,
                 fontWeight: 800,
-                lineHeight: 1.1,
+                lineHeight: 1.15,
+                letterSpacing: "-0.02em",
               }}
             >
               The Retire Wealthy Guides
@@ -90,7 +93,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Profile Image */}
+        {/* Profile Image Wrapper */}
         <div
           style={{
             display: "flex",
@@ -106,9 +109,9 @@ export default function Home() {
               height: 120,
               borderRadius: "50%",
               overflow: "hidden",
-              border: "5px solid white",
-              background: "#fff",
-              boxShadow: "0 15px 35px rgba(0,0,0,.18)",
+              border: "5px solid #000000", // Merges seamlessly with the pure black body
+              background: "#000000",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
               position: "relative",
             }}
           >
@@ -121,7 +124,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Body */}
+        {/* Body Content */}
         <div
           style={{
             padding: "24px",
@@ -130,12 +133,12 @@ export default function Home() {
         >
           <p
             style={{
-              color: "#059669",
+              color: "#34d399", // High-visibility mint green for dark UI
               fontWeight: 700,
               textTransform: "uppercase",
-              letterSpacing: ".08em",
-              fontSize: 13,
-              marginBottom: 10,
+              letterSpacing: ".1em",
+              fontSize: 12,
+              marginBottom: 12,
             }}
           >
             Plan Today for a Comfortable Tomorrow
@@ -143,7 +146,7 @@ export default function Home() {
 
           <p
             style={{
-              color: "#475569",
+              color: "#a1a1aa", // Soft zinc gray to prevent optical fatigue
               lineHeight: 1.7,
               fontSize: 15,
               marginBottom: 28,
@@ -155,7 +158,7 @@ export default function Home() {
             resources.
           </p>
 
-          {/* Contact Buttons FIRST */}
+          {/* Streamlined Action Funnel */}
           <div
             style={{
               display: "flex",
@@ -164,46 +167,50 @@ export default function Home() {
               marginBottom: 30,
             }}
           >
+            {/* Primary Action Button */}
             <Link
               href={WHATSAPP_URL}
               target="_blank"
               style={{
                 background: "#16a34a",
-                color: "#fff",
-                padding: "18px",
-                borderRadius: 18,
+                color: "#ffffff",
+                padding: "16px",
+                borderRadius: 16,
                 textDecoration: "none",
                 fontWeight: 700,
-                fontSize: 17,
-                boxShadow: "0 10px 20px rgba(22,163,74,.2)",
+                fontSize: 16,
+                boxShadow: "0 8px 20px rgba(22,163,74,.15)",
+                transition: "background 0.2s",
               }}
             >
               💬 Chat on WhatsApp →
             </Link>
 
+            {/* Secondary Ghost Button to reduce choice-friction */}
             <Link
               href={TELEGRAM_URL}
               target="_blank"
               style={{
-                background: "#0284c7",
-                color: "#fff",
-                padding: "18px",
-                borderRadius: 18,
+                background: "transparent",
+                color: "#38bdf8",
+                padding: "15px",
+                borderRadius: 16,
                 textDecoration: "none",
                 fontWeight: 700,
-                fontSize: 17,
-                boxShadow: "0 10px 20px rgba(2,132,199,.2)",
+                fontSize: 16,
+                border: "2px solid #0284c7",
+                transition: "all 0.2s",
               }}
             >
               ✈️ Join our Telegram Channel →
             </Link>
           </div>
 
-          {/* Trust Card */}
+          {/* Social Proof/Trust Card */}
           <div
             style={{
-              background: "#f8fafc",
-              border: "1px solid #e2e8f0",
+              background: "#09090b",
+              border: "1px solid #1e1e1e",
               borderRadius: 18,
               padding: 20,
               marginBottom: 26,
@@ -211,8 +218,9 @@ export default function Home() {
           >
             <div
               style={{
-                fontSize: 22,
-                color: "#f59e0b",
+                fontSize: 20,
+                color: "#fbbf24",
+                letterSpacing: "2px",
               }}
             >
               ★★★★★
@@ -221,8 +229,10 @@ export default function Home() {
             <p
               style={{
                 marginTop: 10,
-                color: "#475569",
+                marginHeight: 0,
+                color: "#e4e4e7",
                 lineHeight: 1.6,
+                fontSize: 14,
               }}
             >
               Join a growing community dedicated to financial education,
@@ -230,7 +240,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Features */}
+          {/* Value Props / Features Grid */}
           <div
             style={{
               display: "grid",
@@ -262,18 +272,20 @@ export default function Home() {
                   alignItems: "flex-start",
                   padding: 18,
                   borderRadius: 18,
-                  border: "1px solid #e5e7eb",
+                  background: "#09090b",
+                  border: "1px solid #161617",
                   textAlign: "left",
                 }}
               >
-                <div style={{ fontSize: 28 }}>{item.icon}</div>
+                <div style={{ fontSize: 26, lineHeight: 1 }}>{item.icon}</div>
 
                 <div>
                   <div
                     style={{
                       fontWeight: 700,
-                      color: "#0f172a",
-                      marginBottom: 6,
+                      color: "#ffffff",
+                      fontSize: 15,
+                      marginBottom: 4,
                     }}
                   >
                     {item.title}
@@ -281,8 +293,8 @@ export default function Home() {
 
                   <div
                     style={{
-                      color: "#64748b",
-                      fontSize: 14,
+                      color: "#a1a1aa",
+                      fontSize: 13,
                       lineHeight: 1.6,
                     }}
                   >
@@ -293,30 +305,31 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Footer */}
+          {/* Minimalist Footer */}
           <div
             style={{
               marginTop: 35,
-              borderTop: "1px solid #e5e7eb",
-              paddingTop: 20,
-              color: "#64748b",
+              borderTop: "1px solid #161617",
+              paddingTop: 24,
+              color: "#71717a",
               fontSize: 13,
               lineHeight: 1.8,
             }}
           >
-            <strong style={{ color: "#0f172a" }}>
+            <strong style={{ color: "#ffffff", fontSize: 14 }}>
               Official Communication Channels
             </strong>
 
-            <p>
+            <p style={{ margin: "8px 0 16px 0" }}>
               We are committed to providing quality educational content and
               supporting our community on the journey toward financial growth.
             </p>
 
             <p
               style={{
-                color: "#94a3b8",
-                fontSize: 12,
+                color: "#52525b",
+                fontSize: 11,
+                letterSpacing: "0.02em",
               }}
             >
               🔒 Secure Communication • 🌍 Global Community • 📚 Educational
