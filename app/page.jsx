@@ -12,7 +12,7 @@ export default function Home() {
         background: "#f5f2eb",
         display: "flex",
         justifyContent: "center",
-        padding: "15px 12px", // Tightened outer page padding
+        padding: "15px 12px",
         fontFamily:
           '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif',
       }}
@@ -20,19 +20,19 @@ export default function Home() {
       <div
         style={{
           width: "100%",
-          maxWidth: "440px", // Marginally narrowed for a tighter profile
+          maxWidth: "440px",
           background: "#ffffff",
-          borderRadius: "24px", // Snugger corners
+          borderRadius: "24px",
           overflow: "hidden",
           border: "1px solid #e5dfd3",
           boxShadow: "0 15px 35px rgba(45, 42, 38, 0.05)",
         }}
       >
-        {/* Banner */}
+        {/* Banner - Cleaned up completely to eliminate text collisions */}
         <div
           style={{
             position: "relative",
-            height: "210px", // Reduced height from 250px to reclaim vertical space
+            height: "150px", // Reduced height since text moved below
           }}
         >
           <Image
@@ -42,53 +42,13 @@ export default function Home() {
             priority
             style={{ objectFit: "cover" }}
           />
-
           <div
             style={{
               position: "absolute",
               inset: 0,
-              background:
-                "linear-gradient(to top, rgba(15, 28, 36, 0.85) 15%, rgba(15, 28, 36, 0.2) 100%)",
+              background: "linear-gradient(to top, rgba(0,0,0,0.2), transparent)",
             }}
           />
-
-          {/* Banner Text */}
-          <div
-            style={{
-              position: "absolute",
-              left: 20,
-              right: 20,
-              bottom: 18, // Brought text closer to the bottom edge
-            }}
-          >
-            <div
-              style={{
-                display: "inline-block",
-                padding: "4px 10px", // Slimmer tag padding
-                background: "#D4AF37",
-                color: "#111827",
-                borderRadius: 999,
-                fontWeight: 700,
-                fontSize: 10,
-                letterSpacing: ".05em",
-                marginBottom: 8, // Reduced margin
-              }}
-            >
-              OFFICIAL COMMUNITY
-            </div>
-
-            <h1
-              style={{
-                margin: 0,
-                fontSize: 28, // Sized down slightly to match tighter layout
-                fontWeight: 800,
-                lineHeight: 1.15,
-                letterSpacing: "-0.02em",
-              }}
-            >
-              The Retire Wealthy Guides
-            </h1>
-          </div>
         </div>
 
         {/* Profile Image Wrapper */}
@@ -96,14 +56,14 @@ export default function Home() {
           style={{
             display: "flex",
             justifyContent: "center",
-            marginTop: "-50px", // Adjusted relative offset to match smaller size
+            marginTop: "-50px", // Nicely sits halfway up the banner image
             position: "relative",
             zIndex: 10,
           }}
         >
           <div
             style={{
-              width: 100, // Scaled down from 120px to reduce blank crowding
+              width: 100,
               height: 100,
               borderRadius: "50%",
               overflow: "hidden",
@@ -125,10 +85,41 @@ export default function Home() {
         {/* Body Content */}
         <div
           style={{
-            padding: "16px 20px 20px 20px", // Dropped top padding from 24px
+            padding: "12px 20px 20px 20px", // Optimized snug padding
             textAlign: "center",
           }}
         >
+          {/* Official Community Badge - Safely placed below avatar */}
+          <div
+            style={{
+              display: "inline-block",
+              padding: "4px 10px",
+              background: "#D4AF37",
+              color: "#111827",
+              borderRadius: 999,
+              fontWeight: 700,
+              fontSize: 10,
+              letterSpacing: ".05em",
+              marginBottom: 10,
+            }}
+          >
+            OFFICIAL COMMUNITY
+          </div>
+
+          {/* Title - Moved here for flawless legibility & crisp layout hierarchy */}
+          <h1
+            style={{
+              margin: "0 0 6px 0",
+              fontSize: 26,
+              fontWeight: 800,
+              color: "#0f172a", // Deep slate for premium readability
+              lineHeight: 1.2,
+              letterSpacing: "-0.02em",
+            }}
+          >
+            The Retire Wealthy Guides
+          </h1>
+
           <p
             style={{
               color: "#0f766e",
@@ -136,7 +127,7 @@ export default function Home() {
               textTransform: "uppercase",
               letterSpacing: ".1em",
               fontSize: 11,
-              marginBottom: 8, // Reduced margin
+              marginBottom: 12,
             }}
           >
             Plan Today for a Comfortable Tomorrow
@@ -147,7 +138,7 @@ export default function Home() {
               color: "#475569",
               lineHeight: 1.6,
               fontSize: 14.5,
-              margin: "0 0 20px 0", // Lowered bottom margin from 28px
+              margin: "0 0 22px 0",
             }}
           >
             Helping investors build lasting wealth through education,
@@ -161,7 +152,7 @@ export default function Home() {
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: 10, // Compressed spacing between buttons
+              gap: 10,
               marginBottom: 10,
             }}
           >
@@ -172,7 +163,7 @@ export default function Home() {
               style={{
                 background: "#16a34a",
                 color: "#ffffff",
-                padding: "14px", // Balanced interior button padding
+                padding: "14px",
                 borderRadius: 14,
                 textDecoration: "none",
                 fontWeight: 700,
@@ -203,7 +194,7 @@ export default function Home() {
               style={{
                 background: "transparent",
                 color: "#0d9488",
-                padding: "13px", // Balanced structural thickness
+                padding: "13px",
                 borderRadius: 14,
                 textDecoration: "none",
                 fontWeight: 700,
@@ -231,9 +222,9 @@ export default function Home() {
           {/* Minimal Clean Footer */}
           <div
             style={{
-              marginTop: 24, // Cut down top margin from 35px
+              marginTop: 24,
               borderTop: "1px solid #ebe5d8",
-              paddingTop: 16, // Trimmed interior padding from 24px
+              paddingTop: 16,
               color: "#64748b",
               fontSize: 12.5,
               lineHeight: 1.7,
