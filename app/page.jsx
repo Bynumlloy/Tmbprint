@@ -9,7 +9,7 @@ export default function Home() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#A6CCC4", // Deep, anti-glare backdrop
+        background: "#f5f2eb", // Soft, warm light cream backdrop
         display: "flex",
         justifyContent: "center",
         padding: "30px 15px",
@@ -21,11 +21,11 @@ export default function Home() {
         style={{
           width: "100%",
           maxWidth: "460px",
-          background: "#A6CCC4", // Pure black container for deep contrast
+          background: "#ffffff", // Crisp white card container for clean separation
           borderRadius: "28px",
           overflow: "hidden",
-          border: "1px solid #A6CCC4", // Subtle edge definition
-          boxShadow: "0 25px 50px -12px rgba(0,0,0,0.5)",
+          border: "1px solid #e5dfd3", // Subtle warm border definition
+          boxShadow: "0 20px 40px rgba(45, 42, 38, 0.06)",
         }}
       >
         {/* Banner */}
@@ -43,13 +43,13 @@ export default function Home() {
             style={{ objectFit: "cover" }}
           />
 
-          {/* Enhanced High-Contrast Dark Overlay */}
+          {/* Dark Overlay to protect white text legibility over the sunny beach image */}
           <div
             style={{
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(to top, rgba(0,0,0,0.95) 15%, rgba(0,0,0,0.2) 100%)",
+                "linear-gradient(to top, rgba(15, 28, 36, 0.85) 15%, rgba(15, 28, 36, 0.2) 100%)",
             }}
           />
 
@@ -67,8 +67,8 @@ export default function Home() {
               style={{
                 display: "inline-block",
                 padding: "6px 14px",
-                background: "#D4AF37",
-                color: "#000000",
+                background: "#D4AF37", // Elegant gold tag
+                color: "#111827",
                 borderRadius: 999,
                 fontWeight: 700,
                 fontSize: 11,
@@ -109,9 +109,9 @@ export default function Home() {
               height: 120,
               borderRadius: "50%",
               overflow: "hidden",
-              border: "5px solid #000000", // Merges seamlessly with the pure black body
-              background: "#000000",
-              boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
+              border: "5px solid #ffffff", // Pops beautifully against the body
+              background: "#ffffff",
+              boxShadow: "0 10px 25px rgba(0, 0, 0, 0.08)",
               position: "relative",
             }}
           >
@@ -133,7 +133,7 @@ export default function Home() {
         >
           <p
             style={{
-              color: "#34d399", // High-visibility mint green for dark UI
+              color: "#0f766e", // Premium Deep Teal for subheadings
               fontWeight: 700,
               textTransform: "uppercase",
               letterSpacing: ".1em",
@@ -146,7 +146,7 @@ export default function Home() {
 
           <p
             style={{
-              color: "#a1a1aa", // Soft zinc gray to prevent optical fatigue
+              color: "#475569", // Highly legible slate gray for regular prose
               lineHeight: 1.7,
               fontSize: 15,
               marginBottom: 28,
@@ -158,7 +158,7 @@ export default function Home() {
             resources.
           </p>
 
-          {/* Streamlined Action Funnel */}
+          {/* Action Buttons Funnel */}
           <div
             style={{
               display: "flex",
@@ -172,45 +172,43 @@ export default function Home() {
               href={WHATSAPP_URL}
               target="_blank"
               style={{
-                background: "#16a34a",
+                background: "#16a34a", // Retaining WhatsApp's recognizable identity color
                 color: "#ffffff",
                 padding: "16px",
                 borderRadius: 16,
                 textDecoration: "none",
                 fontWeight: 700,
                 fontSize: 16,
-                boxShadow: "0 8px 20px rgba(22,163,74,.15)",
-                transition: "background 0.2s",
+                boxShadow: "0 8px 20px rgba(22, 163, 74, 0.15)",
               }}
             >
               💬 Chat on WhatsApp →
             </Link>
 
-            {/* Secondary Ghost Button to reduce choice-friction */}
+            {/* Secondary Light Teal Ghost Button to prevent choice-friction */}
             <Link
               href={TELEGRAM_URL}
               target="_blank"
               style={{
                 background: "transparent",
-                color: "#38bdf8",
+                color: "#0d9488", // Clean Light Teal action text
                 padding: "15px",
                 borderRadius: 16,
                 textDecoration: "none",
                 fontWeight: 700,
                 fontSize: 16,
-                border: "2px solid #0284c7",
-                transition: "all 0.2s",
+                border: "2px solid #0d9488", // Light Teal outline
               }}
             >
               ✈️ Join our Telegram Channel →
             </Link>
           </div>
 
-          {/* Social Proof/Trust Card */}
+          {/* Social Proof / Trust Card */}
           <div
             style={{
-              background: "#09090b",
-              border: "1px solid #1e1e1e",
+              background: "#faf8f5", // Cream accent panel tint
+              border: "1px solid #eaddca",
               borderRadius: 18,
               padding: 20,
               marginBottom: 26,
@@ -219,7 +217,7 @@ export default function Home() {
             <div
               style={{
                 fontSize: 20,
-                color: "#fbbf24",
+                color: "#d97706", // Soft warm amber stars
                 letterSpacing: "2px",
               }}
             >
@@ -229,8 +227,8 @@ export default function Home() {
             <p
               style={{
                 marginTop: 10,
-                marginHeight: 0,
-                color: "#e4e4e7",
+                marginBottom: 0,
+                color: "#334155",
                 lineHeight: 1.6,
                 fontSize: 14,
               }}
@@ -272,8 +270,8 @@ export default function Home() {
                   alignItems: "flex-start",
                   padding: 18,
                   borderRadius: 18,
-                  background: "#09090b",
-                  border: "1px solid #161617",
+                  background: "#faf8f5", // Matching light cream accent panel
+                  border: "1px solid #ebe5d8",
                   textAlign: "left",
                 }}
               >
@@ -283,7 +281,7 @@ export default function Home() {
                   <div
                     style={{
                       fontWeight: 700,
-                      color: "#ffffff",
+                      color: "#0f172a",
                       fontSize: 15,
                       marginBottom: 4,
                     }}
@@ -293,7 +291,7 @@ export default function Home() {
 
                   <div
                     style={{
-                      color: "#a1a1aa",
+                      color: "#475569",
                       fontSize: 13,
                       lineHeight: 1.6,
                     }}
@@ -309,14 +307,14 @@ export default function Home() {
           <div
             style={{
               marginTop: 35,
-              borderTop: "1px solid #161617",
+              borderTop: "1px solid #ebe5d8",
               paddingTop: 24,
-              color: "#71717a",
+              color: "#64748b",
               fontSize: 13,
               lineHeight: 1.8,
             }}
           >
-            <strong style={{ color: "#ffffff", fontSize: 14 }}>
+            <strong style={{ color: "#0f172a", fontSize: 14 }}>
               Official Communication Channels
             </strong>
 
@@ -327,7 +325,7 @@ export default function Home() {
 
             <p
               style={{
-                color: "#52525b",
+                color: "#94a3b8",
                 fontSize: 11,
                 letterSpacing: "0.02em",
               }}
