@@ -22,7 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${inter.variable} font-sans antialiased bg-gray-50 text-gray-900 min-h-full`}>
+      {/* Changed 'bg-gray-50' to 'bg-[#f5f2eb]' so the base body layer matches your cream theme perfectly */}
+      <body className={`${inter.variable} font-sans antialiased bg-[#f5f2eb] text-gray-900 min-h-full m-0 p-0`}>
         {children}
       </body>
     </html>
