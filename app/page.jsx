@@ -82,7 +82,7 @@ export default function Home() {
             <h1
               style={{
                 margin: 0,
-                fontSize: 25,
+                fontSize: 32,
                 fontWeight: 800,
                 lineHeight: 1.15,
                 letterSpacing: "-0.02em",
