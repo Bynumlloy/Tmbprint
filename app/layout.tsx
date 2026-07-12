@@ -10,9 +10,9 @@ const inter = Inter({
 
 // SEO and Page Metadata
 export const metadata: Metadata = {
-  title: "Frugal Living and Budget Mastery",
-  description: "Join our trading channel and membership to master your budget and discover frugal living strategies.",
-  keywords: ["Frugal Living", "Budget Mastery", "Trading Channel", "Finance"],
+  title: "The Retire Wealthy Guides",
+  description: "Join our trading channel wealthy retirement guides.",
+  keywords: ["The Retire", "Wealthy Guides", "Trading Channel", "Finance"],
 };
 
 export default function RootLayout({
