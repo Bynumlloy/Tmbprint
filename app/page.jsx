@@ -190,7 +190,7 @@ export default function Home() {
               href={TELEGRAM_URL}
               target="_blank"
               style={{
-                background: "transparent",
+                background: "#21BEDE",
                 color: "#0d9488",
                 padding: "15px",
                 borderRadius: 16,
@@ -200,7 +200,7 @@ export default function Home() {
                 border: "2px solid #0d9488",
               }}
             >
-              Chat Telegram
+              Chat on Telegram
             </Link>
           </div>
 
