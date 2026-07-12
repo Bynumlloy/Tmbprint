@@ -141,7 +141,7 @@ export default function Home() {
               marginBottom: 12,
             }}
           >
-            Plan Today for a Comfortable Tomorrow
+            Plan Today for a Wealthy Tomorrow
           </p>
 
           <p
@@ -152,8 +152,8 @@ export default function Home() {
               marginBottom: 28,
             }}
           >
-            Helping investors build lasting wealth through education,
-            discipline, and smart opportunities. Connect with us directly to
+            Helping you build lasting wealth through education,
+            discipline and smart opportunities. Connect with us directly to
             access our exclusive community, market insights, and wealth-building
             resources.
           </p>
@@ -182,7 +182,7 @@ export default function Home() {
                 boxShadow: "0 8px 20px rgba(22, 163, 74, 0.15)",
               }}
             >
-              💬 Chat on WhatsApp →
+              💬 Chat on WhatsApp
             </Link>
 
             {/* Secondary Light Teal Ghost Button */}
@@ -200,7 +200,7 @@ export default function Home() {
                 border: "2px solid #0d9488",
               }}
             >
-              ✈️ Join our Telegram Channel →
+              Chat Telegram
             </Link>
           </div>
 
