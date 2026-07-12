@@ -24,7 +24,7 @@ export default function Home() {
           background: "#ffffff",
           borderRadius: "28px",
           overflow: "hidden",
-          border: "1px solid #e5dfd3",
+          border: "1px solid #EFF6F1",
           boxShadow: "0 20px 40px rgba(45, 42, 38, 0.06)",
         }}
       >
