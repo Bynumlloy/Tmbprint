@@ -56,7 +56,7 @@ export default function Home() {
     >
       OFFICIAL CHANNELS
     </div>
-    <
+    
   </div>
 </div>
 
