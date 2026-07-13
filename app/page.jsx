@@ -55,26 +55,7 @@ export default function Home() {
               backdropFilter: "blur(8px)",
             }}
           >
-            <div style={{ fontSize: 16, fontWeight: 700, color: "#ffffff", letterSpacing: "-0.01em" }}>
-              RWG <span style={{ color: "#cfa043", fontWeight: 400, fontFamily: "Georgia, serif", fontStyle: "italic" }}>Advisory</span>
-            </div>
-            <Link
-              href={WHATSAPP_URL}
-              target="_blank"
-              style={{
-                background: "#cfa043",
-                color: "#111827",
-                padding: "8px 16px",
-                borderRadius: "8px",
-                fontSize: 13,
-                fontWeight: 700,
-                textDecoration: "none",
-                letterSpacing: "-0.01em",
-              }}
-            >
-              Join Free →
-            </Link>
-          </div>
+         
 
           {/* Hero Banner Area */}
           <div style={{ position: "relative", height: "200px", width: "100%" }}>
