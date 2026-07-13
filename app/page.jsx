@@ -97,14 +97,14 @@ export default function Home() {
                 >
                   The
                 </span>
-                <span style={{ fontWeight: 900 }}>Retire{" "}</span>
+                <span style={{ fontWeight: 900 }}>{" "}</span>
                 <span
                   style={{
                     color: "#cfa043",
                     fontWeight: 900,
                   }}
                 >
-                  Wealthy Guides
+                 Retire Wealthy Guides
                 </span>
               </div>
             </h1>
