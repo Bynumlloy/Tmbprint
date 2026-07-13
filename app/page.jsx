@@ -75,7 +75,7 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-   <h1
+<h1
   style={{
     color: "#fff",
     fontSize: 34,
@@ -86,16 +86,19 @@ export default function Home() {
     fontFamily: "var(--font-inter), sans-serif",
   }}
 >
-  <span style={{ fontWeight: 400 }}>
-    <br>The </br>{" "}
-
+  <span style={{ fontSize: 18, fontWeight: 400, display: "block" }}>
+    The
+  </span>
+  <span style={{ fontWeight: 900 }}>
+    Retire{" "}
+  </span>
   <span
     style={{
       color: "#cfa043",
-      fontWeight: 900,
+      fontWeight: 700,
     }}
   >
-   Retire Wealthy  Guides
+    Wealthy <br /> Guides
   </span>
 </h1>
 
