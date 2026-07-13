@@ -100,7 +100,7 @@ export default function Home() {
         fontWeight: 900,
       }}
     >
-     Retire Wealthy <br /> Guides
+     Retire Wealthy Guides
     </span>
   </div>
 </h1>
