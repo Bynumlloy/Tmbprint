@@ -28,62 +28,7 @@ export default function Home() {
           boxShadow: "0 20px 40px rgba(45, 42, 38, 0.06)",
         }}
       >
-        {/* Banner */}
-        <div style={{ position: "relative", height: "230px" }}>
-          <Image
-            src="/banner.jpg"
-            alt="Banner"
-            fill
-            priority
-            style={{ objectFit: "cover" }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background:
-                "linear-gradient(to top, rgba(15, 28, 36, 0.9) 20%, rgba(15, 28, 36, 0.25) 100%)",
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              left: 24,
-              right: 24,
-              bottom: 20,
-              color: "#fff",
-            }}
-          >
-            <div
-              style={{
-                display: "inline-block",
-                padding: "6px 14px",
-                background: "#D4AF37",
-                color: "#111827",
-                borderRadius: 999,
-                fontWeight: 700,
-                fontSize: 11,
-                letterSpacing: ".05em",
-                marginBottom: 10,
-              }}
-            >
-              OFFICIAL CHANNELS
-            </div>
-
-            <h1
-              style={{
-                margin: 0,
-                fontSize: "clamp(22px, 6vw, 30px)",
-                fontWeight: 800,
-                lineHeight: 1.15,
-                letterSpacing: "-0.02em",
-                whiteSpace: "nowrap",
-              }}
-            >
-              The Retire Wealthy Guides
-            </h1>
-          </div>
-        </div>
+        
 
         {/* Banner */}
 <div style={{ position: "relative", height: "260px" }}>
