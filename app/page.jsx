@@ -75,28 +75,26 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-            <h1
+         <h1
               style={{
                 color: "#fff",
-                fontSize: 30,
+                fontSize: 34,
                 fontWeight: 700,
                 lineHeight: 1.2,
                 marginBottom: 16,
               }}
             >
-            
-              
+              The Retire 
+              <br />
               <span
                 style={{
                   color: "#cfa043",
                   fontFamily: "Georgia, serif",
                   fontStyle: "bold",
                   fontWeight: 400,
-                  gap: 3,
-                  
                 }}
               >
-                The Retire Wealthy Guides 
+                Wealthy Guides 
               </span>
             </h1>
 
