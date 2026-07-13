@@ -116,6 +116,11 @@ export default function Home() {
                 textDecoration: "none",
                 fontWeight: 700,
                 fontSize: 16,
+                border: "2px solid #21BEDE",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 8,
                 boxShadow: "0 8px 20px rgba(22, 163, 74, 0.15)",
               }}
             >
