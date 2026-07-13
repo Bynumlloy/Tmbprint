@@ -76,27 +76,26 @@ export default function Home() {
             }}
           >
          <h1
-              style={{
-                color: "#fff",
-                fontSize: 34,
-                fontWeight: 700,
-                lineHeight: 1.2,
-                marginBottom: 16,
-              }}
-            >
-              The Retire  
-              
-              <span
-                style={{
-                  color: "#cfa043",
-                  fontFamily: "Georgia, serif",
-                  fontStyle: "bold",
-                  fontWeight: 500,
-                }}
-              >
-                 Wealthy Guides 
-              </span>
-            </h1>
+  style={{
+    color: "#fff",
+    fontSize: 34,
+    fontWeight: 700, // This makes "The Retire" bold
+    lineHeight: 1.2,
+    marginBottom: 16,
+  }}
+>
+  The Retire{" "}
+  <span
+    style={{
+      color: "#cfa043",
+      fontFamily: "Georgia, serif",
+      fontWeight: 500, // Keeps the gold text slightly cleaner/thinner for contrast, or change to 700 to match
+    }}
+  >
+    Wealthy Guides
+  </span>
+</h1>
+
 
             <p
               style={{
