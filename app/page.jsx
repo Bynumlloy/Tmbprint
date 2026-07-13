@@ -78,23 +78,7 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-            <div
-              style={{
-                marginTop: -55,
-                marginBottom: 24,
-              }}
-            >
-              <Image
-                src="/profile.jpg"
-                alt="Richard Wealth"
-                width={110}
-                height={110}
-                style={{
-                  borderRadius: "50%",
-                  border: "4px solid #16252f",
-                  objectFit: "cover",
-                }}
-              />
+          
             </div>
 
             <h1
@@ -182,146 +166,71 @@ export default function Home() {
                 }}
               >
                 About RWG
-              </h2>
+             <h2
+  style={{
+    color: "#fff",
+    fontSize: 24,
+    marginTop: 40,
+    marginBottom: 24,
+  }}
+>
+  About Retire Wealthy Guides
+</h2>
 
-              <p
-                style={{
-                  color: "#9fb0bc",
-                  lineHeight: 1.8,
-                  fontSize: 15,
-                }}
-              >
-                Retire Wealthy Guides is a global community where
-                people share retirement ideas, learn practical financial
-                strategies, and inspire one another to build a secure
-                financial future.
-              </p>
-            </section>
+<div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: 24,
+    textAlign: "left",
+  }}
+>
+  <p
+    style={{
+      color: "#9fb0bc",
+      lineHeight: 1.8,
+      fontSize: 15,
+      margin: 0,
+    }}
+  >
+    The Retire Wealthy Guides (RWG) is a global community where people
+    share retirement ideas, learn from one another, and find inspiration
+    for the next chapter of life.
+  </p>
 
-            <section style={{ marginBottom: 42 }}>
-              <h2
-                style={{
-                  color: "#fff",
-                  fontSize: 22,
-                  marginBottom: 18,
-                }}
-              >
-                Our Global Community
-              </h2>
+  <p
+    style={{
+      color: "#9fb0bc",
+      lineHeight: 1.8,
+      fontSize: 15,
+      margin: 0,
+    }}
+  >
+    Our worldwide community is supported from the <strong>United States</strong>,
+    <strong> Australia</strong>, and the <strong>United Kingdom</strong>,
+    bringing together members from across the globe in a diverse environment
+    where people from different cultures and backgrounds can connect, learn,
+    and inspire one another.
+  </p>
 
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-evenly",
-                  marginBottom: 18,
-                  fontWeight: 700,
-                  color: "#cfa043",
-                }}
-              >
-                <span>🇺🇸 USA</span>
-                <span>🇦🇺 Australia</span>
-                <span>🇬🇧 UK</span>
-              </div>
-
-              <p
-                style={{
-                  color: "#9fb0bc",
-                  lineHeight: 1.8,
-                  fontSize: 15,
-                }}
-              >
-                Our members come from different cultures and backgrounds,
-                creating an encouraging environment where everyone can
-                learn, grow and succeed together.
-              </p>
-            </section>
-
-            <section>
-              <h2
-                style={{
-                  color: "#fff",
-                  fontSize: 22,
-                  marginBottom: 20,
-                }}
-              >
-                What You'll Gain
-              </h2>
-
-              <div
-                style={{
-                  display: "grid",
-                  gap: 14,
-                }}
-              >
-                                {[
-                  {
-                    title: "📈 Smarter Investing",
-                    text: "Learn practical investment strategies designed to help you grow wealth with confidence.",
-                  },
-                  {
-                    title: "📊 Confident Trading",
-                    text: "Gain market insights and step-by-step guidance to make informed trading decisions.",
-                  },
-                  {
-                    title: "💰 Debt Elimination",
-                    text: "Discover proven approaches to reduce debt and strengthen your financial foundation.",
-                  },
-                  {
-                    title: "🏖️ Retirement Planning",
-                    text: "Build sustainable income streams and prepare for long-term financial independence.",
-                  },
-                  {
-                    title: "🤝 Expert Guidance",
-                    text: "Benefit from shared knowledge, educational resources, and support from our global community.",
-                  },
-                ].map((item) => (
-                  <div
-                    key={item.title}
-                    style={{
-                      background: "#1b2d38",
-                      border: "1px solid rgba(255,255,255,.05)",
-                      borderRadius: 14,
-                      padding: 18,
-                      textAlign: "left",
-                    }}
-                  >
-                    <h3
-                      style={{
-                        color: "#fff",
-                        fontSize: 17,
-                        margin: "0 0 10px",
-                      }}
-                    >
-                      {item.title}
-                    </h3>
-
-                    <p
-                      style={{
-                        color: "#8ea3b1",
-                        fontSize: 14,
-                        lineHeight: 1.7,
-                        margin: 0,
-                      }}
-                    >
-                      {item.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <p
-              style={{
-                color: "#748a99",
-                fontSize: 14,
-                marginTop: 36,
-                marginBottom: 0,
-              }}
-            >
-              We typically respond within a few hours.
-            </p>
-          </div>
-        </div>
+  <p
+    style={{
+      color: "#9fb0bc",
+      lineHeight: 1.8,
+      fontSize: 15,
+      margin: 0,
+    }}
+  >
+    The Retire Wealthy Guides also unites top financial experts to help you
+    <strong> invest smarter</strong>,
+    <strong> trade confidently</strong>,
+    <strong> eliminate debt</strong>,
+    <strong> build wealth</strong>, and strengthen your retirement finances.
+    With shared tools, free education, support, insights, and step-by-step
+    guidance, we're here to help you grow residual income and achieve your
+    long-term financial freedom and retirement goals.
+  </p>
+</div>
 
         <footer
           style={{
