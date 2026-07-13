@@ -85,31 +85,64 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Profile Image */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "-50px",
-            position: "relative",
-            zIndex: 10,
-          }}
-        >
-          <div
-            style={{
-              width: 100,
-              height: 100,
-              borderRadius: "50%",
-              overflow: "hidden",
-              border: "5px solid #ffffff",
-              background: "#ffffff",
-              boxShadow: "0 10px 25px rgba(0, 0, 0, 0.08)",
-              position: "relative",
-            }}
-          >
-            <Image src="/profile.jpg" alt="Profile" fill style={{ objectFit: "cover" }} />
-          </div>
-        </div>
+        {/* Banner */}
+<div style={{ position: "relative", height: "260px" }}>
+  <Image src="/banner.jpg" alt="Banner" fill priority style={{ objectFit: "cover" }} />
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      background: "linear-gradient(to top, rgba(15, 28, 36, 0.9) 25%, rgba(15, 28, 36, 0.25) 100%)",
+    }}
+  />
+  <div style={{ position: "absolute", left: 24, right: 24, top: 24 }}>
+    <div
+      style={{
+        display: "inline-block",
+        padding: "6px 14px",
+        background: "#D4AF37",
+        color: "#111827",
+        borderRadius: 999,
+        fontWeight: 700,
+        fontSize: 11,
+        letterSpacing: ".05em",
+        marginBottom: 12,
+      }}
+    >
+      OFFICIAL CHANNELS
+    </div>
+    <h1
+      style={{
+        margin: 0,
+        color: "#fff",
+        fontSize: "clamp(24px, 7vw, 32px)",
+        fontWeight: 800,
+        lineHeight: 1.15,
+        letterSpacing: "-0.02em",
+      }}
+    >
+      The Retire Wealthy Guides
+    </h1>
+  </div>
+</div>
+
+{/* Profile Image */}
+<div style={{ display: "flex", justifyContent: "center", marginTop: "-55px", position: "relative", zIndex: 10 }}>
+  <div
+    style={{
+      width: 100,
+      height: 100,
+      borderRadius: "50%",
+      overflow: "hidden",
+      border: "5px solid #ffffff",
+      background: "#ffffff",
+      boxShadow: "0 10px 25px rgba(0, 0, 0, 0.08)",
+      position: "relative",
+    }}
+  >
+    <Image src="/profile.jpg" alt="Profile" fill style={{ objectFit: "cover" }} />
+  </div>
+</div>
 
         {/* Body Content */}
         <div style={{ padding: "20px 18px", textAlign: "center" }}>
