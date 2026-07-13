@@ -84,7 +84,7 @@ export default function Home() {
     marginBottom: 16,
     textAlign: "center",
     fontWeight: "normal",
-    fontFamily: "var(--font-inter), sans-serif",
+    fontFamily: "var(--font-inter), Arial Black", Arial, sans-serif",
   }}
 >
   <div style={{ display: "inline-block", textAlign: "left" }}>
