@@ -93,7 +93,7 @@ export default function Home() {
                   fontStyle: "bold",
                   fontWeight: 400,
                   gap: 3,
-                  <br/>
+                  
                 }}
               >
                 The Retire Wealthy Guides 
