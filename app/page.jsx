@@ -6,16 +6,17 @@ export default function Home() {
   const TELEGRAM_URL = "https://t.me/RW_Trade_Guides";
 
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background: "#fff",
-        display: "flex",
-        justifyContent: "center",
-        padding: "16px 12px",
-        fontFamily:
-          '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif',
-      }}
+  <main
+  style={{
+    minHeight: "100vh",
+    background: "#fff",
+    display: "flex",
+    justifyContent: "center",
+    padding: "8px 6px",   // was "16px 12px"
+    fontFamily:
+      '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif',
+  }}
+
     >
       <div
         style={{
