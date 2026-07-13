@@ -93,6 +93,7 @@ export default function Home() {
                   fontStyle: "bold",
                   fontWeight: 400,
                   gap: 3,
+                  <br/>
                 }}
               >
                 Your Wealth
