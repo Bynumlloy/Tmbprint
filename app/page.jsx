@@ -86,16 +86,16 @@ export default function Home() {
     fontFamily: "var(--font-inter), sans-serif",
   }}
 >
-  <span style={{ fontWeight: 900 }}>
-    The Retire{" "}
+  <span style={{ fontWeight: 400 }}>
+    The {" "}
   </span>
   <span
     style={{
       color: "#cfa043",
-      fontWeight: 700,
+      fontWeight: 900,
     }}
   >
-    Wealthy <br /> Guides
+   Retire Wealthy  Guides
   </span>
 </h1>
 
