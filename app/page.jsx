@@ -84,8 +84,8 @@ export default function Home() {
                 marginBottom: 16,
               }}
             >
-              The Retire 
-              <br />
+              The Retire  
+              
               <span
                 style={{
                   color: "#cfa043",
@@ -94,7 +94,7 @@ export default function Home() {
                   fontWeight: 500,
                 }}
               >
-                Wealthy Guides 
+                 Wealthy Guides 
               </span>
             </h1>
 
