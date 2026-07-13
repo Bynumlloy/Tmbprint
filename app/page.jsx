@@ -106,8 +106,8 @@ export default function Home() {
                 marginBottom: 36,
               }}
             >
-              A community for sharing retirement ideas and insights —
-              connect, learn, and build lasting financial freedom together.
+              A community for sharing retirement ideas and insights. 
+              Connect, learn, and build lasting financial freedom together.
             </p>
 
             <div
