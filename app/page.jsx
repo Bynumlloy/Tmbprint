@@ -164,10 +164,10 @@ export default function Home() {
           <div style={{ marginTop: 28, borderTop: "1px solid #ebe5d8", paddingTop: 20, color: "#64748b", fontSize: 13, lineHeight: 1.8 }}>
             <strong style={{ color: "#0f172a", fontSize: 14 }}>Official Communication Channels</strong>
             <p style={{ margin: "6px 0 12px 0" }}>
-              We are committed to providing guides to investors on the journey toward financial growth.
+              Committed to providing trading guides to investors on the journey toward financial growth.
             </p>
             <p style={{ color: "#94a3b8", fontSize: 11, letterSpacing: "0.02em", margin: 0 }}>
-              🔒 Secure Communication • 🌍 Global Community • 📚 Educational Resources
+              🔒 Secure Communication • 🌍 Global Community • 📚 wealth building Resources
             </p>
           </div>
         </div>
