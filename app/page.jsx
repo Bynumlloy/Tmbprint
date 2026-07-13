@@ -84,7 +84,7 @@ export default function Home() {
                 marginBottom: 16,
               }}
             >
-              The Retire 
+              Let's Build 
               
               <span
                 style={{
@@ -95,7 +95,7 @@ export default function Home() {
                   gap: 3,
                 }}
               >
-                Wealthy Guides
+                Your Wealth
               </span>
             </h1>
 
