@@ -84,7 +84,7 @@ export default function Home() {
                 marginBottom: 16,
               }}
             >
-              Let's Build 
+            
               
               <span
                 style={{
@@ -96,7 +96,7 @@ export default function Home() {
                   <br/>
                 }}
               >
-                Your Wealth
+                The Retire Wealthy Guides 
               </span>
             </h1>
 
@@ -108,9 +108,8 @@ export default function Home() {
                 marginBottom: 36,
               }}
             >
-            Helping you build lasting wealth through education, discipline
-            and smart opportunities. Connect with us directly for more information on becoming a member of the trading 
-              and wealth building group. 
+            Helping you build lasting wealth through education, discipline and smart opportunities.
+              Join us on WhatsApp or Telegram 
 
             </p>
 
