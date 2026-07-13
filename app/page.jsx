@@ -66,7 +66,7 @@ export default function Home() {
                 inset: 0,
                 background: "linear-gradient(to bottom, rgba(22, 37, 47, 0.1), #16252f)",
               }}
-              />
+              
             />
           </div>
 
