@@ -82,22 +82,17 @@ export default function Home() {
     lineHeight: 1.2,
     marginBottom: 16,
     textAlign: "center",
-    fontWeight: "normal", // 1. Strips default browser h1 heavy weight to stop the gold from bloating
+    fontWeight: "normal",
+    fontFamily: "var(--font-inter), sans-serif",
   }}
 >
-  <span
-    style={{
-      fontFamily: '"Arial Black", Arial, sans-serif', // 2. Forces a naturally ultra-thick font stack
-      fontWeight: 900, 
-    }}
-  >
+  <span style={{ fontWeight: 900 }}>
     The Retire{" "}
   </span>
   <span
     style={{
       color: "#cfa043",
-      fontFamily: "Georgia, serif",
-      fontWeight: 700, // 3. Explicitly locks Georgia to standard bold so it stays clean and elegant
+      fontWeight: 700,
     }}
   >
     Wealthy <br /> Guides
