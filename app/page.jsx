@@ -99,9 +99,9 @@ export default function Home() {
 
           <p style={{ color: "#475569", lineHeight: 1.7, fontSize: 15, marginBottom: 24 }}>
             Helping you build lasting wealth through education, discipline
-            and smart opportunities. Connect with us directly to access our
-            exclusive community, market insights, and wealth-building
-            resources.
+            and smart opportunities. Connect with us directly for more information on membership and joinning the trading 
+              and wealth building group. 
+
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 8 }}>
