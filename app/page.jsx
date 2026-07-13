@@ -12,7 +12,7 @@ export default function Home() {
     background: "#fff",
     display: "flex",
     justifyContent: "center",
-    padding: "5px 3px",   // was "16px 12px"
+    padding: "3px 1px",   // was "16px 12px"
     fontFamily:
       '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif',
   }}
