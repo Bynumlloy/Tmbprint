@@ -91,7 +91,7 @@ export default function Home() {
     <span style={{ fontSize: 18, fontWeight: 400, display: "block" }}>
       The
     </span>
-    <span style={{ fontWeight: 900 }}>
+    <span style={{ fontWeight: 700 }}>
       {" "}
     </span>
     <span
