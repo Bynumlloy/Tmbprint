@@ -37,7 +37,7 @@ export default function Home() {
     style={{
       position: "absolute",
       inset: 0,
-      background: "linear-gradient(to top, rgba(15, 28, 36, 0.9) 25%, rgba(15, 28, 36, 0.25) 100%)",
+      
     }}
   />
   <div style={{ position: "absolute", left: 24, right: 24, top: 24 }}>
