@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-// Optimize and load the Inter font family
-const inter = Inter({ 
+// Optimize and load the Inter font family (body text, small labels)
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "700", "900"],
   variable: "--font-inter",
 });
 
+// Bold serif display font for the main heading (matches brand banner)
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["700", "900"],
+  variable: "--font-playfair",
+});
+
 // SEO and Page Metadata
 export const metadata: Metadata = {
   title: "The Retire Wealthy Guides",
-  description: "Opt in to our daily tips and guides",
+  description: "Join our daily tips channels .",
   keywords: [" Retire", "Wealth Guides", "Finance"],
 };
 
@@ -23,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${inter.variable} font-sans antialiased bg-[#f5f2eb] text-gray-900 min-h-full m-0 p-0`}>
+      <body
+        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-[#f5f2eb] text-gray-900 min-h-full m-0 p-0`}
+      >
         {children}
       </body>
     </html>
