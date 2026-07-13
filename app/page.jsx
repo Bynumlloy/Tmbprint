@@ -79,7 +79,7 @@ export default function Home() {
   style={{
     color: "#fff",
     fontSize: 34,
-    fontWeight: 700, // This makes "The Retire" bold
+    fontWeight: 900, // This makes "The Retire" bold
     lineHeight: 1.2,
     marginBottom: 16,
   }}
@@ -89,7 +89,7 @@ export default function Home() {
     style={{
       color: "#cfa043",
       fontFamily: "Georgia, serif",
-      fontWeight: 800, // Keeps the gold text slightly cleaner/thinner for contrast, or change to 700 to match
+      fontWeight: 400, // Keeps the gold text slightly cleaner/thinner for contrast, or change to 700 to match
     }}
   >
     Wealthy Guides
