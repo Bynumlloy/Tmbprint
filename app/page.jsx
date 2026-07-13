@@ -75,6 +75,7 @@ export default function Home() {
               textAlign: "center",
             }}
           >
+            <p>The </p>
 <h1
   style={{
     color: "#fff",
