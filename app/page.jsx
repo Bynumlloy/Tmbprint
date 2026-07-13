@@ -42,9 +42,7 @@ export default function Home() {
         }}
       >
         <div>
-
           {/* Banner */}
-
           <div
             style={{
               position: "relative",
@@ -71,16 +69,12 @@ export default function Home() {
           </div>
 
           {/* Content */}
-
           <div
             style={{
               padding: "0 24px 40px",
               textAlign: "center",
             }}
           >
-          
-            </div>
-
             <h1
               style={{
                 color: "#fff",
@@ -161,76 +155,71 @@ export default function Home() {
               <h2
                 style={{
                   color: "#fff",
-                  fontSize: 22,
-                  marginBottom: 14,
+                  fontSize: 24,
+                  marginTop: 40,
+                  marginBottom: 24,
                 }}
               >
-                About RWG
-             <h2
-  style={{
-    color: "#fff",
-    fontSize: 24,
-    marginTop: 40,
-    marginBottom: 24,
-  }}
->
-  About Retire Wealthy Guides
-</h2>
+                About Retire Wealthy Guides
+              </h2>
 
-<div
-  style={{
-    display: "flex",
-    flexDirection: "column",
-    gap: 24,
-    textAlign: "left",
-  }}
->
-  <p
-    style={{
-      color: "#9fb0bc",
-      lineHeight: 1.8,
-      fontSize: 15,
-      margin: 0,
-    }}
-  >
-    The Retire Wealthy Guides (RWG) is a global community where people
-    share retirement ideas, learn from one another, and find inspiration
-    for the next chapter of life.
-  </p>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 24,
+                  textAlign: "left",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#9fb0bc",
+                    lineHeight: 1.8,
+                    fontSize: 15,
+                    margin: 0,
+                  }}
+                >
+                  The Retire Wealthy Guides (RWG) is a global community where people
+                  share retirement ideas, learn from one another, and find inspiration
+                  for the next chapter of life.
+                </p>
 
-  <p
-    style={{
-      color: "#9fb0bc",
-      lineHeight: 1.8,
-      fontSize: 15,
-      margin: 0,
-    }}
-  >
-    Our worldwide community is supported from the <strong>United States</strong>,
-    <strong> Australia</strong>, and the <strong>United Kingdom</strong>,
-    bringing together members from across the globe in a diverse environment
-    where people from different cultures and backgrounds can connect, learn,
-    and inspire one another.
-  </p>
+                <p
+                  style={{
+                    color: "#9fb0bc",
+                    lineHeight: 1.8,
+                    fontSize: 15,
+                    margin: 0,
+                  }}
+                >
+                  Our worldwide community is supported from the <strong>United States</strong>,
+                  <strong> Australia</strong>, and the <strong>United Kingdom</strong>,
+                  bringing together members from across the globe in a diverse environment
+                  where people from different cultures and backgrounds can connect, learn,
+                  and inspire one another.
+                </p>
 
-  <p
-    style={{
-      color: "#9fb0bc",
-      lineHeight: 1.8,
-      fontSize: 15,
-      margin: 0,
-    }}
-  >
-    The Retire Wealthy Guides also unites top financial experts to help you
-    <strong> invest smarter</strong>,
-    <strong> trade confidently</strong>,
-    <strong> eliminate debt</strong>,
-    <strong> build wealth</strong>, and strengthen your retirement finances.
-    With shared tools, free education, support, insights, and step-by-step
-    guidance, we're here to help you grow residual income and achieve your
-    long-term financial freedom and retirement goals.
-  </p>
-</div>
+                <p
+                  style={{
+                    color: "#9fb0bc",
+                    lineHeight: 1.8,
+                    fontSize: 15,
+                    margin: 0,
+                  }}
+                >
+                  The Retire Wealthy Guides also unites top financial experts to help you
+                  <strong> invest smarter</strong>,
+                  <strong> trade confidently</strong>,
+                  <strong> eliminate debt</strong>,
+                  <strong> build wealth</strong>, and strengthen your retirement finances.
+                  With shared tools, free education, support, insights, and step-by-step
+                  guidance, we're here to help you grow residual income and achieve your
+                  long-term financial freedom and retirement goals.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
 
         <footer
           style={{
