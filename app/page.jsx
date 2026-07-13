@@ -78,7 +78,7 @@ export default function Home() {
             <h1
               style={{
                 color: "#fff",
-                fontSize: 34,
+                fontSize: 30,
                 fontWeight: 700,
                 lineHeight: 1.2,
                 marginBottom: 16,
@@ -92,6 +92,7 @@ export default function Home() {
                   fontFamily: "Georgia, serif",
                   fontStyle: "bold",
                   fontWeight: 400,
+                  gap: 3,
                 }}
               >
                 Wealthy Guides
