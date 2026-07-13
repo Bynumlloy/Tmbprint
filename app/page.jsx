@@ -9,10 +9,10 @@ export default function Home() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#fff",
+        background: "#fff", // Warm cream backdrop synced with layout
         display: "flex",
         justifyContent: "center",
-        padding: "10px 15px",
+        padding: "30px 15px",
         fontFamily:
           '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif',
       }}
@@ -28,11 +28,11 @@ export default function Home() {
           boxShadow: "0 20px 40px rgba(45, 42, 38, 0.06)",
         }}
       >
-        {/* Banner - Stretched & Improved Hero */}
+        {/* Banner */}
         <div
           style={{
             position: "relative",
-            height: "295px",
+            height: "250px",
           }}
         >
           <Image
@@ -43,13 +43,13 @@ export default function Home() {
             style={{ objectFit: "cover" }}
           />
 
-          {/* Dark Overlay */}
+          {/* Dark Overlay for typography protection */}
           <div
             style={{
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(to top, rgba(15, 28, 36, 0.88) 28%, rgba(15, 28, 36, 0.4) 65%, rgba(15, 28, 36, 0.15) 100%)",
+                "linear-gradient(to top, rgba(15, 28, 36, 0.85) 15%, rgba(15, 28, 36, 0.2) 100%)",
             }}
           />
 
@@ -59,7 +59,7 @@ export default function Home() {
               position: "absolute",
               left: 24,
               right: 24,
-              bottom: 32,
+              bottom: 24,
               color: "#fff",
             }}
           >
@@ -82,10 +82,10 @@ export default function Home() {
             <h1
               style={{
                 margin: 0,
-                fontSize: 27,
+                fontSize: 32,
                 fontWeight: 800,
-                lineHeight: 1.08,
-                letterSpacing: "-0.03em",
+                lineHeight: 1.15,
+                letterSpacing: "-0.02em",
               }}
             >
               The Retire Wealthy Guides
@@ -158,7 +158,7 @@ export default function Home() {
             resources.
           </p>
 
-          {/* Action Buttons */}
+          {/* Action Buttons Funnel */}
           <div
             style={{
               display: "flex",
@@ -167,6 +167,7 @@ export default function Home() {
               marginBottom: 10,
             }}
           >
+            {/* Primary Action Button */}
             <Link
               href={WHATSAPP_URL}
               target="_blank"
@@ -184,6 +185,7 @@ export default function Home() {
               💬 Chat on WhatsApp
             </Link>
 
+            {/* Secondary Light Teal Ghost Button */}
             <Link
               href={TELEGRAM_URL}
               target="_blank"
@@ -197,7 +199,7 @@ export default function Home() {
                 fontSize: 16,
                 border: "2px solid #21BEDE",
               }}
-            >
+                 >
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="18" 
@@ -211,7 +213,7 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Footer */}
+          {/* Minimal Clean Footer */}
           <div
             style={{
               marginTop: 35,
@@ -227,7 +229,7 @@ export default function Home() {
             </strong>
             <p style={{ margin: "6px 0 12px 0" }}>
               We are committed to providing guide to 
-              investors on the journey toward financial growth.
+             investors on the journey toward financial growth.
             </p>
             <p
               style={{
