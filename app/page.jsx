@@ -75,26 +75,33 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-         <h1
+      <h1
   style={{
     color: "#fff",
     fontSize: 34,
-    fontWeight: 900, // This makes "The Retire" bold
     lineHeight: 1.2,
     marginBottom: 16,
+    textAlign: "center", // Center-aligns the entire headline block
+    fontWeight: 700, // Provides the heavy weight for "The Retire"
   }}
 >
-  The Retire{" "}
   <span
     style={{
-      color: "#cfa043",
-      fontFamily: "Georgia, serif",
-      fontWeight: 400, // Keeps the gold text slightly cleaner/thinner for contrast, or change to 700 to match
+      fontFamily: "Arial, Helvetica, sans-serif", // Applies the client's desired sans-serif look
+    }}
+  >
+    The Retire{" "}
+  </span>
+  <span
+    style={{
+      color: "#cfa043", // Gold color
+      fontFamily: "Georgia, serif", // Client's desired serif look
     }}
   >
     Wealthy Guides
   </span>
 </h1>
+
 
 
             <p
