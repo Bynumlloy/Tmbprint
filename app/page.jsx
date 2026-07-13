@@ -18,17 +18,20 @@ export default function Home() {
   }}
 
     >
-      <div
-        style={{
-          width: "100%",
-          maxWidth: "460px",
-          background: "#ffffff",
-          borderRadius: "28px",
-          overflow: "hidden",
-          border: "1px solid #EFF6F1",
-          
-        }}
-      >
+    <div
+  style={{
+    width: "100%",
+    maxWidth: "460px",
+    background: "#ffffff",
+    borderTopLeftRadius: "12px",
+    borderTopRightRadius: "12px",
+    borderBottomLeftRadius: "28px",
+    borderBottomRightRadius: "28px",
+    overflow: "hidden",
+    border: "1px solid #EFF6F1",
+    boxShadow: "0 20px 40px rgba(45, 42, 38, 0.06)",
+  }}
+>
         
 
         {/* Banner */}
