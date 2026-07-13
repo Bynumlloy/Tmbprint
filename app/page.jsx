@@ -109,7 +109,7 @@ export default function Home() {
               }}
             >
             Helping you build lasting wealth through education, discipline and smart opportunities.
-              Join us on WhatsApp or Telegram 
+            <p>  Join us on WhatsApp or Telegram </p>
 
             </p>
 
