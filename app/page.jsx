@@ -86,20 +86,22 @@ export default function Home() {
     fontFamily: "var(--font-inter), sans-serif",
   }}
 >
-  <span style={{ fontSize: 18, fontWeight: 400, display: "block" }}>
-    The
-  </span>
-  <span style={{ fontWeight: 900 }}>
-    Retire{" "}
-  </span>
-  <span
-    style={{
-      color: "#cfa043",
-      fontWeight: 700,
-    }}
-  >
-    Wealthy <br /> Guides
-  </span>
+  <div style={{ display: "inline-block", textAlign: "left" }}>
+    <span style={{ fontSize: 18, fontWeight: 400, display: "block" }}>
+      The
+    </span>
+    <span style={{ fontWeight: 900 }}>
+      Retire{" "}
+    </span>
+    <span
+      style={{
+        color: "#cfa043",
+        fontWeight: 700,
+      }}
+    >
+      Wealthy <br /> Guides
+    </span>
+  </div>
 </h1>
 
 
