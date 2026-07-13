@@ -78,7 +78,7 @@ export default function Home() {
 <h1
   style={{
     color: "#fff",
-    fontSize: 34,
+    fontSize: 47,
     lineHeight: 1.2,
     marginBottom: 16,
     textAlign: "center",
