@@ -141,7 +141,7 @@ export default function Home() {
               marginBottom: 12,
             }}
           >
-            Plan Today for a Wealthy Tomorrow
+            The information you need for a comfortable Tomorrow
           </p>
 
           <p
@@ -152,10 +152,10 @@ export default function Home() {
               marginBottom: 28,
             }}
           >
-            Helping you build lasting wealth through education,
+            Helping you build lasting retirement plan through education,
             discipline and smart opportunities. Connect with us directly to
             access our exclusive community, market insights, and wealth-building
-            resources.
+            Daily tips. No investment, no commitment.
           </p>
 
           {/* Action Buttons Funnel */}
@@ -182,7 +182,7 @@ export default function Home() {
                 boxShadow: "0 8px 20px rgba(22, 163, 74, 0.15)",
               }}
             >
-              💬 Chat on WhatsApp
+              💬 WhatsApp channel 
             </Link>
 
             {/* Secondary Light Teal Ghost Button */}
@@ -209,7 +209,7 @@ export default function Home() {
               >
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.53-1.39.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.24.37-.49 1.03-.75 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.13-.03.19z"/>
               </svg>
-                Chat on Telegram
+                 Telegram channel 
             </Link>
           </div>
 
@@ -228,8 +228,8 @@ export default function Home() {
               Official Communication Channels
             </strong>
             <p style={{ margin: "6px 0 12px 0" }}>
-              We are committed to providing guide to 
-             investors on the journey toward financial growth.
+              We are committed to providing tips 
+              on the journey toward financial growth.
             </p>
             <p
               style={{
