@@ -87,7 +87,7 @@ export default function Home() {
   }}
 >
   <span style={{ fontWeight: 400 }}>
-    The <br/>{" "}
+    <br>The </br>{" "}
 
   <span
     style={{
