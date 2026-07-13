@@ -89,7 +89,7 @@ export default function Home() {
     style={{
       color: "#cfa043",
       fontFamily: "Georgia, serif",
-      fontWeight: 500, // Keeps the gold text slightly cleaner/thinner for contrast, or change to 700 to match
+      fontWeight: 800, // Keeps the gold text slightly cleaner/thinner for contrast, or change to 700 to match
     }}
   >
     Wealthy Guides
