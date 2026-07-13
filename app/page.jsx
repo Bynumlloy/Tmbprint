@@ -6,43 +6,41 @@ export default function Home() {
   const TELEGRAM_URL = "https://t.me/RW_Trade_Guides";
 
   return (
-<main
-  style={{
-    minHeight: "100vh",
-    width: "100%",
-    background: "#0b1319", // slightly darker than the card so the card reads as a distinct surface
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "flex-start",
-    fontFamily:
-      '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif',
-  }}
->
-  <style
-    dangerouslySetInnerHTML={{
-      __html: `
-        html,body{
-          margin:0;
-          padding:0;
-          background:#0b1319;
-          overflow-x:hidden;
-        }
-      `,
-    }}
-  />
+    <main
+      style={{
+        minHeight: "100vh",
+        width: "100%",
+        background: "#16252f",
+        display: "flex",
+        justifyContent: "center",
+        fontFamily:
+          '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif',
+      }}
+    >
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+            html,body{
+              margin:0;
+              padding:0;
+              background:#16252f;
+              overflow-x:hidden;
+            }
+          `,
+        }}
+      />
 
-  <div
-    style={{
-      width: "100%",
-      maxWidth: 460,
-      minHeight: "100vh",
-      background: "#16252f",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
-      boxShadow: "0 0 60px rgba(0,0,0,.5)", // gives the card a defined edge on wide screens
-    }}
-  >
+      <div
+        style={{
+          width: "100%",
+          maxWidth: 460,
+          minHeight: "100vh",
+          background: "#16252f",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
         <div>
           {/* Banner */}
           <div
