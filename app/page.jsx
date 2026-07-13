@@ -9,14 +9,28 @@ export default function Home() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#0f171e",
+        width: "100%",
+        background: "#16252f", /* Matched to core background to prevent color flashing */
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "flex-start",
         padding: "0",
+        margin: "0",
         fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif',
       }}
     >
+      {/* Global CSS Inject to obliterate default browser margins/padding and white spaces */}
+      <style dangerouslySetInnerHTML={{__html: `
+        html, body {
+          margin: 0 !important;
+          padding: 0 !important;
+          background-color: #16252f !important;
+          width: 100%;
+          height: 100%;
+          overflow-x: hidden;
+        }
+      `}} />
+
       <div
         style={{
           width: "100%",
@@ -26,7 +40,7 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
+          margin: "0 auto",
         }}
       >
         <div>
@@ -63,7 +77,7 @@ export default function Home() {
           </div>
 
           {/* Hero Banner Area */}
-          <div style={{ position: "relative", height: "180px", width: "100%" }}>
+          <div style={{ position: "relative", height: "200px", width: "100%" }}>
             <Image src="/banner.jpg" alt="Banner" fill priority style={{ objectFit: "cover" }} />
             <div
               style={{
@@ -75,7 +89,7 @@ export default function Home() {
           </div>
 
           {/* Core Content Box */}
-          <div style={{ padding: "0 28px 40px 28px", textAlign: "center" }}>
+          <div style={{ padding: "0 24px 40px 24px", textAlign: "center" }}>
             
             {/* Elegant Serif Header Group */}
             <h1
@@ -101,17 +115,17 @@ export default function Home() {
               </span>
             </h1>
 
-            {/* Structured/Broken Down Descriptive Text */}
+            {/* Structured Descriptive Text */}
             <div style={{ display: "flex", flexDirection: "column", gap: 20, marginBottom: 36 }}>
-              <p style={{ color: "#9aaebc", fontSize: 15, lineHeight: 1.6, margin: 0 }}>
+              <p style={{ color: "#9aaebc", fontSize: 15, lineHeight: 1.6, margin: 0, textAlign: "center" }}>
                 The Retire Wealthy Guides (RWG) is a global community where people share retirement ideas, learn from one another, and find inspiration for the next chapter of life.
               </p>
 
-              <p style={{ color: "#9aaebc", fontSize: 15, lineHeight: 1.6, margin: 0 }}>
+              <p style={{ color: "#9aaebc", fontSize: 15, lineHeight: 1.6, margin: 0, textAlign: "center" }}>
                 Our worldwide community is supported from the <strong>United States, Australia, and the United Kingdom</strong>, bringing together members from across the globe in a diverse environment where people from different cultures and backgrounds can connect, learn, and inspire one another.
               </p>
 
-              <p style={{ color: "#9aaebc", fontSize: 15, lineHeight: 1.6, margin: 0 }}>
+              <p style={{ color: "#9aaebc", fontSize: 15, lineHeight: 1.6, margin: 0, textAlign: "center" }}>
                 The Retire Wealthy Guides also unites top financial experts to help you invest smarter, trade confidently, eliminate debt, build wealth, and strengthen your retirement finances. With shared tools, free education, support, insights, and step-by-step guidance, we're here to help you grow residual income and achieve your long-term financial freedom and retirement goals.
               </p>
             </div>
