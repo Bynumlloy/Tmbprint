@@ -12,7 +12,7 @@ export default function Home() {
         background: "#fff",
         display: "flex",
         justifyContent: "center",
-        padding: "12px 15px", // Reduced top padding
+        padding: "10px 15px",
         fontFamily:
           '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif',
       }}
@@ -28,11 +28,11 @@ export default function Home() {
           boxShadow: "0 20px 40px rgba(45, 42, 38, 0.06)",
         }}
       >
-        {/* Banner - Stretched Hero */}
+        {/* Banner - Stretched & Improved Hero */}
         <div
           style={{
             position: "relative",
-            height: "280px", // Increased height for more impact
+            height: "295px",
           }}
         >
           <Image
@@ -49,17 +49,17 @@ export default function Home() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(to top, rgba(15, 28, 36, 0.85) 20%, rgba(15, 28, 36, 0.25) 100%)",
+                "linear-gradient(to top, rgba(15, 28, 36, 0.88) 28%, rgba(15, 28, 36, 0.4) 65%, rgba(15, 28, 36, 0.15) 100%)",
             }}
           />
 
-          {/* Banner Text - One line title */}
+          {/* Banner Text */}
           <div
             style={{
               position: "absolute",
               left: 24,
               right: 24,
-              bottom: 28,
+              bottom: 32,
               color: "#fff",
             }}
           >
@@ -82,10 +82,10 @@ export default function Home() {
             <h1
               style={{
                 margin: 0,
-                fontSize: 29,        // Slightly smaller to keep it one line
+                fontSize: 27,
                 fontWeight: 800,
-                lineHeight: 1.1,
-                letterSpacing: "-0.025em",
+                lineHeight: 1.08,
+                letterSpacing: "-0.03em",
               }}
             >
               The Retire Wealthy Guides
@@ -124,7 +124,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Body Content - Rest unchanged */}
+        {/* Body Content */}
         <div
           style={{
             padding: "24px",
