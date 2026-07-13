@@ -63,7 +63,7 @@ export default function Home() {
                 position: "absolute",
                 inset: 0,
                 background:
-                  "linear-gradient(to bottom, rgba(22,37,47,0), rgba(22,37,47,.20), #16252f)",
+                  "linear-gradient(to bottom, rgba(22,37,47,0) 55%, rgba(22,37,47,.35) 80%, #16252f 100%)",
               }}
             />
           </div>
@@ -106,8 +106,8 @@ export default function Home() {
                 marginBottom: 36,
               }}
             >
-              Helping investors build wealth, trade confidently,
-              eliminate debt and retire with lasting financial freedom.
+              A community for sharing retirement ideas and insights —
+              connect, learn, and build lasting financial freedom together.
             </p>
 
             <div
