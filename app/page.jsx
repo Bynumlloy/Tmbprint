@@ -106,8 +106,16 @@ export default function Home() {
                 marginBottom: 36,
               }}
             >
-              Helping investors build wealth, trade confidently,
-              eliminate debt and retire with lasting financial freedom.
+              
+                  The Retire Wealthy Guides also unites top financial experts to help you
+                  <strong> invest smarter</strong>,
+                  <strong> trade confidently</strong>,
+                  <strong> eliminate debt</strong>,
+                  <strong> build wealth</strong>, and strengthen your retirement finances.
+                  With shared tools, free education, support, insights, and step-by-step
+                  guidance, we're here to help you grow residual income and achieve your
+                  long-term financial freedom and retirement goals.
+                
             </p>
 
             <div
@@ -147,7 +155,7 @@ export default function Home() {
                   fontSize: 16,
                 }}
               >
-                Join us on Telegram
+                Chat on Telegram
               </Link>
             </div>
 
@@ -199,23 +207,7 @@ export default function Home() {
                   and inspire one another.
                 </p>
 
-                <p
-                  style={{
-                    color: "#9fb0bc",
-                    lineHeight: 1.8,
-                    fontSize: 15,
-                    margin: 0,
-                  }}
-                >
-                  The Retire Wealthy Guides also unites top financial experts to help you
-                  <strong> invest smarter</strong>,
-                  <strong> trade confidently</strong>,
-                  <strong> eliminate debt</strong>,
-                  <strong> build wealth</strong>, and strengthen your retirement finances.
-                  With shared tools, free education, support, insights, and step-by-step
-                  guidance, we're here to help you grow residual income and achieve your
-                  long-term financial freedom and retirement goals.
-                </p>
+             
               </div>
             </section>
           </div>
