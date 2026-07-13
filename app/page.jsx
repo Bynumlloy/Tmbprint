@@ -87,8 +87,8 @@ export default function Home() {
   }}
 >
   <span style={{ fontWeight: 400 }}>
-    The {" "}
-  </span>
+    The <br/>{" "}
+
   <span
     style={{
       color: "#cfa043",
