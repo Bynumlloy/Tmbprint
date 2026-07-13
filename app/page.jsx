@@ -91,7 +91,7 @@ export default function Home() {
                   color: "#cfa043",
                   fontFamily: "Georgia, serif",
                   fontStyle: "bold",
-                  fontWeight: 400,
+                  fontWeight: 500,
                 }}
               >
                 Wealthy Guides 
