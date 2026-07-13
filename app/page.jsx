@@ -84,17 +84,17 @@ export default function Home() {
                 marginBottom: 16,
               }}
             >
-              Let's build
-              <br />
+              The Retire 
+              
               <span
                 style={{
                   color: "#cfa043",
                   fontFamily: "Georgia, serif",
-                  fontStyle: "italic",
+                  fontStyle: "bold",
                   fontWeight: 400,
                 }}
               >
-                your wealth.
+                Wealthy Guides
               </span>
             </h1>
 
@@ -106,8 +106,10 @@ export default function Home() {
                 marginBottom: 36,
               }}
             >
-              A community for sharing retirement ideas and insights. 
-              Connect, learn, and build lasting financial freedom together.
+            Helping you build lasting wealth through education, discipline
+            and smart opportunities. Connect with us directly for more information on becoming a member of the trading 
+              and wealth building group. 
+
             </p>
 
             <div
