@@ -11,8 +11,8 @@ const inter = Inter({
 // SEO and Page Metadata
 export const metadata: Metadata = {
   title: "The Retire Wealthy Guides",
-  description: "Join our daily tips market trends .",
-  keywords: ["The Retire", "Wealth Guides", "Finance"],
+  description: "Join our daily tips channels .",
+  keywords: [" Retire", "Wealth Guides", "Finance"],
 };
 
 export default function RootLayout({
