@@ -163,7 +163,7 @@ export default function Home() {
                   marginBottom: 24,
                 }}
               >
-                About Retire Wealthy Guides
+                
               </h2>
 
               <div
