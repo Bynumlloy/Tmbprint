@@ -25,7 +25,7 @@ export default function Home() {
           borderRadius: "28px",
           overflow: "hidden",
           border: "1px solid #EFF6F1",
-          boxShadow: "0 20px 40px rgba(45, 42, 38, 0.06)",
+          
         }}
       >
         
@@ -56,18 +56,7 @@ export default function Home() {
     >
       OFFICIAL CHANNELS
     </div>
-    <h1
-      style={{
-        margin: 0,
-        color: "#fff",
-        fontSize: "clamp(24px, 7vw, 32px)",
-        fontWeight: 800,
-        lineHeight: 1.15,
-        letterSpacing: "-0.02em",
-      }}
-    >
-      The Retire Wealthy Guides
-    </h1>
+    <
   </div>
 </div>
 
@@ -97,11 +86,11 @@ export default function Home() {
               fontWeight: 700,
               textTransform: "uppercase",
               letterSpacing: ".1em",
-              fontSize: 12,
+              fontSize: 19,
               marginBottom: 12,
             }}
           >
-            Plan Today for a Wealthy Tomorrow
+            The Retire Wealthy Guides
           </p>
 
           <p style={{ color: "#475569", lineHeight: 1.7, fontSize: 15, marginBottom: 24 }}>
