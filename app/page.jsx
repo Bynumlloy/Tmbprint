@@ -75,43 +75,56 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-            <h1
-              style={{
-                color: "#fff",
-                fontSize: 38,
-                lineHeight: 1.2,
-                marginBottom: 16,
-                textAlign: "center",
-                fontWeight: "normal",
-                fontFamily: "var(--font-playfair), Georgia, serif",
-              }}
-            >
-              <div style={{ display: "inline-block", textAlign: "left" }}>
-                <span
-                  style={{
-                    fontSize: 18,
-                    fontWeight: 400,
-                    display: "block",
-                    fontFamily: "var(--font-inter), sans-serif",
-                  }}
-                >
-                  The
-                </span>
-                <span style={{ fontWeight: 900 }}>{" "}</span>
-            <span
+         <h1
   style={{
-    color: "#cfa043",
-    fontWeight: 900,
-    display: "block",
-    paddingLeft: "24px", // Shifts the entire text block (both lines) to the right
+    color: "#fff",
+    fontSize: 38,
+    lineHeight: 1.2,
+    marginBottom: 16,
+    textAlign: "center",
+    fontWeight: "normal",
+    fontFamily: "var(--font-playfair), Georgia, serif",
   }}
 >
-  Retire Wealthy Guides
-</span>
+  <div style={{ display: "inline-block", textAlign: "left" }}>
+    {/* "The" */}
+    <span
+      style={{
+        fontSize: 18,
+        fontWeight: 400,
+        display: "block",
+        fontFamily: "var(--font-inter), sans-serif",
+      }}
+    >
+      The
+    </span>
 
+    {/* "Retire Wealthy" - Stays shifted to the right */}
+    <span
+      style={{
+        color: "#cfa043",
+        fontWeight: 900,
+        display: "block",
+        paddingLeft: "24px", 
+      }}
+    >
+      Retire Wealthy
+    </span>
 
-              </div>
-            </h1>
+    {/* "Guides" - Forced to a new line and centered */}
+    <span
+      style={{
+        color: "#cfa043",
+        fontWeight: 900,
+        display: "block",
+        textAlign: "center", // Pushes "Guides" to the middle of the block
+      }}
+    >
+      Guides
+    </span>
+  </div>
+</h1>
+
 
             <p
               style={{
