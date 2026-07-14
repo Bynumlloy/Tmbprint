@@ -75,41 +75,39 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-         <h1
-  style={{
-    color: "#fff",
-    fontSize: 38,
-    lineHeight: 1.2,
-    marginBottom: 16,
-    textAlign: "center",
-    fontWeight: "normal",
-    fontFamily: "var(--font-playfair), Georgia, serif",
-  }}
->
-  <div style={{ display: "inline-block", textAlign: "left" }}>
-    <span
-      style={{
-        fontSize: 18,
-        fontWeight: 400,
-        display: "block",
-        fontFamily: "var(--font-inter), sans-serif",
-      }}
-    >
-      The
-    </span>
-    {/* Removed the empty space span since we are using block display now */}
-    <span
-      style={{
-        color: "#cfa043",
-        fontWeight: 900,
-        display: "block",     {/* 1. Makes the span a block so indent works */}
-        textIndent: "24px",   {/* 2. Shifts ONLY the first line ("Retire Wealthy") */}
-      }}
-    >
-      Retire Wealthy Guides
-    </span>
-  </div>
-</h1>
+            <h1
+              style={{
+                color: "#fff",
+                fontSize: 38,
+                lineHeight: 1.2,
+                marginBottom: 16,
+                textAlign: "center",
+                fontWeight: "normal",
+                fontFamily: "var(--font-playfair), Georgia, serif",
+              }}
+            >
+              <div style={{ display: "inline-block", textAlign: "left" }}>
+                <span
+                  style={{
+                    fontSize: 18,
+                    fontWeight: 400,
+                    display: "block",
+                    fontFamily: "var(--font-inter), sans-serif",
+                  }}
+                >
+                  The
+                </span>
+                <span style={{ fontWeight: 900 }}>{" "}</span>
+                <span
+                  style={{
+                    color: "#cfa043",
+                    fontWeight: 900,
+                  }}
+                >
+                 Retire Wealthy Guides
+                </span>
+              </div>
+            </h1>
 
             <p
               style={{
