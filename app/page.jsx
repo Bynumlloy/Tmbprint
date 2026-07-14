@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   const WHATSAPP_URL = "https://wa.link/26glqx";
-  const TELEGRAM_URL = "https://t.me/RW_Trade_Guides";
+  const TELEGRAM_URL = "https://telegram.me/RetireWealthyGuides";
 
   return (
     <main
