@@ -98,16 +98,17 @@ export default function Home() {
                   The
                 </span>
                 <span style={{ fontWeight: 900 }}>{" "}</span>
-              <span
+            <span
   style={{
     color: "#cfa043",
     fontWeight: 900,
-    display: "block",     // 1. Makes the span a block so indent works
-    textIndent: "24px",   // 2. Shifts ONLY the first line ("Retire Wealthy")
+    display: "block",
+    paddingLeft: "24px", // Shifts the entire text block (both lines) to the right
   }}
 >
   Retire Wealthy Guides
 </span>
+
 
               </div>
             </h1>
