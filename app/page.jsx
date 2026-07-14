@@ -111,7 +111,6 @@ export default function Home() {
   </div>
 </h1>
 
-
             <p
               style={{
                 color: "#b7c6d1",
