@@ -89,7 +89,7 @@ export default function AdminPage() {
             gap: 16,
           }}
         >
-          <h1 style={{ color: "#fff", fontSize: 22, margin: 0 }}></h1>
+          <h1 style={{ color: "#fff", fontSize: 22, margin: 0 }}> STAFF ONLY </h1>
           <input
             type="password"
             value={password}
