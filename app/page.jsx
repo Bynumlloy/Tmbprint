@@ -1,9 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
+import { neon } from "@neondatabase/serverless";
 
-export default function Home() {
-  const WHATSAPP_URL = "https://wa.link/26glqx";
-  const TELEGRAM_URL = "https://telegram.me/RetireWealthyGuides";
+const sql = neon(process.env.DATABASE_URL!);
+
+async function getLinks() {
+  try {
+    const rows = await sql`SELECT whatsapp_url, telegram_url FROM site_links WHERE id = 1`;
+    const row = rows[0];
+    return {
+      whatsapp: (row?.whatsapp_url as string) || "https://wa.link/26glqx",
+      telegram: (row?.telegram_url as string) || "https://telegram.me/RetireWealthyGuides",
+    };
+  } catch {
+    // Fallback in case the table doesn't exist yet or DB is unreachable
+    return {
+      whatsapp: "https://wa.link/26glqx",
+      telegram: "https://telegram.me/RetireWealthyGuides",
+    };
+  }
+}
+
+// Always fetch fresh links on every request, never cache this page
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const { whatsapp: WHATSAPP_URL, telegram: TELEGRAM_URL } = await getLinks();
 
   return (
     <main
@@ -75,56 +97,55 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-         <h1
-  style={{
-    color: "#fff",
-    fontSize: 38,
-    lineHeight: 1.2,
-    marginBottom: 16,
-    textAlign: "center",
-    fontWeight: "normal",
-    fontFamily: "var(--font-playfair), Georgia, serif",
-  }}
->
-  <div style={{ display: "inline-block", textAlign: "left" }}>
-    {/* "The" */}
-    <span
-      style={{
-        fontSize: 18,
-        fontWeight: 400,
-        display: "block",
-        fontFamily: "var(--font-inter), sans-serif",
-      }}
-    >
-      The
-    </span>
+            <h1
+              style={{
+                color: "#fff",
+                fontSize: 38,
+                lineHeight: 1.2,
+                marginBottom: 16,
+                textAlign: "center",
+                fontWeight: "normal",
+                fontFamily: "var(--font-playfair), Georgia, serif",
+              }}
+            >
+              <div style={{ display: "inline-block", textAlign: "left" }}>
+                {/* "The" */}
+                <span
+                  style={{
+                    fontSize: 18,
+                    fontWeight: 400,
+                    display: "block",
+                    fontFamily: "var(--font-inter), sans-serif",
+                  }}
+                >
+                  The
+                </span>
 
-    {/* "Retire Wealthy" - Stays shifted to the right */}
-    <span
-      style={{
-        color: "#cfa043",
-        fontWeight: 900,
-        display: "block",
-        paddingLeft: "24px", 
-      }}
-    >
-      Retire Wealthy
-    </span>
+                {/* "Retire Wealthy" - Stays shifted to the right */}
+                <span
+                  style={{
+                    color: "#cfa043",
+                    fontWeight: 900,
+                    display: "block",
+                    paddingLeft: "24px",
+                  }}
+                >
+                  Retire Wealthy
+                </span>
 
-    {/* "Guides" - Forced to a new line and centered */}
-    <span
-      style={{
-        color: "#cfa043",
-        fontWeight: 900,
-        display: "block",
-        textAlign: "center", // Pushes "Guides" to the middle of the block
-      }}
-    >
-      Guides
-    </span>
-  </div>
-</h1>
-
+                {/* "Guides" - Forced to a new line and centered */}
+                <span
+                  style={{
+                    color: "#cfa043",
+                    fontWeight: 900,
+                    display: "block",
+                    textAlign: "center", // Pushes "Guides" to the middle of the block
+                  }}
+                >
+                  Guides
+                </span>
+              </div>
+            </h1>
 
             <p
               style={{
