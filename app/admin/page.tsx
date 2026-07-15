@@ -89,7 +89,7 @@ export default function AdminPage() {
             gap: 16,
           }}
         >
-          <h1 style={{ color: "#fff", fontSize: 22, margin: 0 }}>Admin Login</h1>
+          <h1 style={{ color: "#fff", fontSize: 22, margin: 0 }}></h1>
           <input
             type="password"
             value={password}
@@ -151,7 +151,7 @@ export default function AdminPage() {
           gap: 16,
         }}
       >
-        <h1 style={{ color: "#fff", fontSize: 22, margin: 0 }}>Edit Links</h1>
+        <h1 style={{ color: "#fff", fontSize: 22, margin: 0 }}></h1>
 
         {loading ? (
           <p style={{ color: "#b7c6d1" }}>Loading current links...</p>
