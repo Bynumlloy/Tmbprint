@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { neon } from "@neondatabase/serverless";
 
-const sql = neon(process.env.DATABASE_URL!);
+const sql = neon(process.env.DATABASE_URL);
 
 // Ensures the table exists. Safe to call every time (IF NOT EXISTS).
 async function ensureTable() {
@@ -12,15 +12,15 @@ async function ensureTable() {
       telegram_url TEXT NOT NULL
     )
   `;
-  // Seed a default row if none exists yet, using your current hardcoded links.
+  // Seed a default row if none exists yet, using your current links.
   await sql`
     INSERT INTO site_links (id, whatsapp_url, telegram_url)
-    VALUES (1, 'https://wa.link/26glqx', 'https://t.me/RW_Trade_Guides')
+    VALUES (1, 'https://wa.link/26glqx', 'https://telegram.me/RetireWealthyGuides')
     ON CONFLICT (id) DO NOTHING
   `;
 }
 
-function isAuthed(req: NextRequest) {
+function isAuthed(req) {
   const cookie = req.cookies.get("admin_session");
   return cookie?.value === process.env.ADMIN_PASSWORD;
 }
@@ -36,8 +36,8 @@ export async function GET() {
   });
 }
 
-// POST: log in with password -> sets a session cookie
-export async function POST(req: NextRequest) {
+// POST: log in with password -> sets a session cookie, or update links if already authed
+export async function POST(req) {
   const body = await req.json();
 
   if (body.action === "login") {
