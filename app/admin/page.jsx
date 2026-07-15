@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 export default function AdminPage() {
   const [authed, setAuthed] = useState(false);
-  const [checking, setChecking] = useState(true);
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState("");
 
@@ -13,13 +12,6 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState("");
-
-  // On load, try fetching links. If it works, we at least know the DB is reachable.
-  // We separately check auth by attempting a no-op update-less path: we just show
-  // the login form until the user logs in successfully.
-  useEffect(() => {
-    setChecking(false);
-  }, []);
 
   useEffect(() => {
     if (!authed) return;
@@ -32,7 +24,7 @@ export default function AdminPage() {
       });
   }, [authed]);
 
-  async function handleLogin(e: React.FormEvent) {
+  async function handleLogin(e) {
     e.preventDefault();
     setLoginError("");
     const res = await fetch("/api/admin", {
@@ -48,7 +40,7 @@ export default function AdminPage() {
     }
   }
 
-  async function handleSave(e: React.FormEvent) {
+  async function handleSave(e) {
     e.preventDefault();
     setSaving(true);
     setSaveMessage("");
@@ -61,8 +53,6 @@ export default function AdminPage() {
     setSaving(false);
     setSaveMessage(data.success ? "Saved!" : data.error || "Failed to save");
   }
-
-  if (checking) return null;
 
   if (!authed) {
     return (
@@ -89,7 +79,7 @@ export default function AdminPage() {
             gap: 16,
           }}
         >
-          <h1 style={{ color: "#fff", fontSize: 22, margin: 0 }}> STAFF ONLY </h1>
+          <h1 style={{ color: "#fff", fontSize: 22, margin: 0 }}>Admin Login</h1>
           <input
             type="password"
             value={password}
@@ -151,7 +141,7 @@ export default function AdminPage() {
           gap: 16,
         }}
       >
-        <h1 style={{ color: "#fff", fontSize: 22, margin: 0 }}></h1>
+        <h1 style={{ color: "#fff", fontSize: 22, margin: 0 }}>Edit Links</h1>
 
         {loading ? (
           <p style={{ color: "#b7c6d1" }}>Loading current links...</p>
