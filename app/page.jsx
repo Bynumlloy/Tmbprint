@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { neon } from "@neondatabase/serverless";
 
-const sql = neon(process.env.DATABASE_URL!);
+const sql = neon(process.env.DATABASE_URL);
 
 async function getLinks() {
   try {
