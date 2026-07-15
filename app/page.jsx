@@ -9,8 +9,8 @@ async function getLinks() {
     const rows = await sql`SELECT whatsapp_url, telegram_url FROM site_links WHERE id = 1`;
     const row = rows[0];
     return {
-      whatsapp: (row?.whatsapp_url as string) || "https://wa.link/26glqx",
-      telegram: (row?.telegram_url as string) || "https://telegram.me/RetireWealthyGuides",
+      whatsapp: row?.whatsapp_url || "https://wa.link/26glqx",
+      telegram: row?.telegram_url || "https://telegram.me/RetireWealthyGuides",
     };
   } catch {
     // Fallback in case the table doesn't exist yet or DB is unreachable
