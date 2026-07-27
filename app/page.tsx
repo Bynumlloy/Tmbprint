@@ -153,7 +153,9 @@ export default async function Home() {
               textTransform: "uppercase",
               color: theme.primary,
               margin: 0,
-              dropShadow: "0 1px 2px rgba(255,255,255,0.8)"
+              // ✅ Correct
+filter: "drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.8))"
+
             }}>
               LEARN, EARN, AND INSPIRE.
             </p>
