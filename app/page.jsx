@@ -107,48 +107,16 @@ export default async function Home() {
           >
             <h1
               style={{
-                color: theme.textPrimary,
-                fontSize: 38,
+                fontSize: 32,
                 lineHeight: 1.2,
                 marginBottom: 16,
                 textAlign: "center",
-                fontWeight: "normal",
-                fontFamily: "var(--font-playfair), Georgia, serif",
+                fontWeight: 800,
+                color: theme.textPrimary,
+                whiteSpace: "nowrap",
               }}
             >
-              <div style={{ display: "inline-block", textAlign: "left" }}>
-                <span
-                  style={{
-                    fontSize: 18,
-                    fontWeight: 400,
-                    display: "block",
-                    fontFamily: "var(--font-inter), sans-serif",
-                    color: theme.textMuted,
-                  }}
-                >
-                  Acme
-                </span>
-                <span
-                  style={{
-                    color: theme.accentGold,
-                    fontWeight: 900,
-                    display: "block",
-                    paddingLeft: "24px",
-                  }}
-                >
-                  MTC
-                </span>
-                <span
-                  style={{
-                    color: theme.accentGold,
-                    fontWeight: 900,
-                    display: "block",
-                    textAlign: "center",
-                  }}
-                >
-                  Guild
-                </span>
-              </div>
+              Acme<span style={{ color: theme.accentGold }}>MTCGuild</span>
             </h1>
 
             <p
