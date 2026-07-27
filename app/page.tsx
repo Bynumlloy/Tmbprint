@@ -116,16 +116,16 @@ export default async function Home() {
       <div style={{ width: "100%", maxWidth: 480, minHeight: "100vh", display: "flex", flexDirection: "column" }}>
 
         {/* Hero */}
-        <div style={{ position: "relative", width: "100%", height: 300 }}>
+        <div style={{ position: "relative", width: "100%", height: 280 }}>
           <Image src="/banner.jpg" alt="Acme MTC Guild" fill priority style={{ objectFit: "cover" }} />
           <div style={{ position: "absolute", inset: 0, background: `linear-gradient(to bottom, rgba(15,23,42,0) 25%, rgba(15,23,42,.55) 65%, ${theme.bg} 100%)` }} />
         </div>
 
-        {/* Name */}
-        <div style={{ padding: "0 28px", marginTop: -36, position: "relative", zIndex: 2 }}>
+        {/* Name — more breathing room from banner edge */}
+        <div style={{ padding: "0 28px", marginTop: 28, position: "relative", zIndex: 2 }}>
           <div className="fade-up" style={{ textAlign: "center" }}>
             <p style={{ fontSize: 11, letterSpacing: 2.5, textTransform: "uppercase", color: theme.accentDeep, fontWeight: 600, margin: "0 0 10px" }}>
-              
+              Retirement &amp; Investment Guidance
             </p>
             <h1 style={{ fontFamily: "var(--font-display), serif", fontWeight: 700, fontStyle: "italic", fontSize: 34, lineHeight: 1.05, margin: 0, color: theme.primary }}>
               Acme <span style={{ color: theme.accent, fontStyle: "normal" }}>MTC</span> Guild
@@ -133,7 +133,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <div style={{ padding: "36px 28px 0" }}>
+        <div style={{ padding: "44px 28px 0" }}>
 
           {/* ─── Contact Us ─── */}
           <section className="fade-up-d1" style={{ marginBottom: 44 }}>
@@ -191,7 +191,7 @@ export default async function Home() {
 
             <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
               {pillars.map((p, i) => (
-                <div key={p.title} style={{ display: "flex", gap: 18, alignItems: "flex-start" }}>
+                <div key={p.title} style={{ display: "flex", gap: 18, alignItems: "flex-start", position: "relative" }}>
                   <div style={{ width: 36, height: 36, borderRadius: "50%", border: `1.5px solid ${theme.line}`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>
                     <PillarIcon kind={p.icon} />
                   </div>
@@ -200,7 +200,7 @@ export default async function Home() {
                     <p style={{ margin: 0, fontSize: 14, lineHeight: 1.65, color: theme.muted }}>{p.copy}</p>
                   </div>
                   {i < pillars.length - 1 && (
-                    <div style={{ position: "absolute", left: 46, marginTop: 44, width: 1, height: 28, background: theme.line }} />
+                    <div style={{ position: "absolute", left: 18, top: 46, width: 1, height: 20, background: theme.line }} />
                   )}
                 </div>
               ))}
