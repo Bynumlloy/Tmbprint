@@ -30,7 +30,7 @@ export default async function Home() {
     cardBg: "#111827",
     cardBorder: "rgba(255, 255, 255, 0.08)",
     textPrimary: "#050505",
-    textMuted: "#9ca3af",
+    textMuted: "#0f2535",
     accentGold: "#f59e0b",
     whatsapp: "#10b981",
     telegram: "#0ea5e9",
