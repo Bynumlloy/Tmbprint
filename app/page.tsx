@@ -115,18 +115,54 @@ export default async function Home() {
 
       <div style={{ width: "100%", maxWidth: 480, minHeight: "100vh", display: "flex", flexDirection: "column" }}>
 
-        {/* Hero */}
-        <div style={{ position: "relative", width: "100%", height: 280 }}>
+        {/* Hero Section */}
+        <div style={{ position: "relative", width: "100%", height: 310 }}>
           <Image src="/banner.jpg" alt="Acme MTC Guild" fill priority style={{ objectFit: "cover" }} />
-          <div style={{ position: "absolute", inset: 0, background: `linear-gradient(to bottom, rgba(15,23,42,0) 25%, rgba(15,23,42,.55) 65%, ${theme.bg} 100%)` }} />
+          
+          {/* Subtle scrim behind text to ensure crisp legibility on top of the image */}
+          <div style={{ 
+            position: "absolute", 
+            inset: 0, 
+            background: "radial-gradient(circle at 50% 60%, rgba(250, 248, 245, 0.35) 0%, rgba(250, 248, 245, 0) 70%)" 
+          }} />
+
+          {/* Smooth fade transition to page background starting beneath the tagline */}
+          <div style={{ 
+            position: "absolute", 
+            bottom: 0, 
+            left: 0, 
+            right: 0, 
+            height: 60, 
+            background: `linear-gradient(to bottom, transparent 0%, ${theme.bg} 100%)` 
+          }} />
+
+          {/* Tagline Overlay directly inside Hero */}
+          <div style={{ 
+            position: "absolute", 
+            bottom: 24, 
+            left: 0, 
+            right: 0, 
+            textAlign: "center", 
+            zIndex: 2, 
+            padding: "0 16px" 
+          }}>
+            <p style={{
+              fontSize: 13,
+              fontWeight: 700,
+              letterSpacing: 2.2,
+              textTransform: "uppercase",
+              color: theme.primary,
+              margin: 0,
+              dropShadow: "0 1px 2px rgba(255,255,255,0.8)"
+            }}>
+              LEARN, EARN, AND INSPIRE.
+            </p>
+          </div>
         </div>
 
-        {/* Name — more breathing room from banner edge */}
-        <div style={{ padding: "0 28px", marginTop: 28, position: "relative", zIndex: 2 }}>
+        {/* Heading — positioned with clean spacing under the hero */}
+        <div style={{ padding: "0 28px", marginTop: 24, position: "relative", zIndex: 2 }}>
           <div className="fade-up" style={{ textAlign: "center" }}>
-            <p style={{ fontSize: 11, letterSpacing: 2.5, textTransform: "uppercase", color: theme.accentDeep, fontWeight: 600, margin: "0 0 10px" }}>
-              
-            </p>
             <h1 style={{ fontFamily: "var(--font-display), serif", fontWeight: 700, fontStyle: "italic", fontSize: 34, lineHeight: 1.05, margin: 0, color: theme.primary }}>
               Acme <span style={{ color: theme.accent, fontStyle: "normal" }}>MTC</span> Guild
             </h1>
