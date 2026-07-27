@@ -27,8 +27,8 @@ export default async function Home() {
 
   const theme = {
     bg: "#DBE3BA",
-    cardBg: "#487866",
-    cardBorder: "rgba(255, 255, 255, 0.08)",
+    cardBg: "#DBE3BA",
+    cardBorder: "rgba(255, 255, 255, 0.01)",
     textPrimary: "#050505",
     textMuted: "#0f2535",
     accentGold: "#f59e0b",
