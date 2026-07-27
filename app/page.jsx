@@ -26,7 +26,7 @@ export default async function Home() {
   const { whatsapp: WHATSAPP_URL, telegram: TELEGRAM_URL } = await getLinks();
 
   const theme = {
-    bg: "#759E8F",
+    bg: "#DBE3BA",
     cardBg: "#487866",
     cardBorder: "rgba(255, 255, 255, 0.08)",
     textPrimary: "#050505",
