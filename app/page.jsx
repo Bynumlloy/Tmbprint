@@ -29,7 +29,7 @@ export default async function Home() {
     bg: "#759E8F",
     cardBg: "#111827",
     cardBorder: "rgba(255, 255, 255, 0.08)",
-    textPrimary: "#f3f4f6",
+    textPrimary: "#050505",
     textMuted: "#9ca3af",
     accentGold: "#f59e0b",
     whatsapp: "#10b981",
