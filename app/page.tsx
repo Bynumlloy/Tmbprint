@@ -125,7 +125,7 @@ export default async function Home() {
         <div style={{ padding: "0 28px", marginTop: -36, position: "relative", zIndex: 2 }}>
           <div className="fade-up" style={{ textAlign: "center" }}>
             <p style={{ fontSize: 11, letterSpacing: 2.5, textTransform: "uppercase", color: theme.accentDeep, fontWeight: 600, margin: "0 0 10px" }}>
-              Retirement &amp; Investment Guidance
+              
             </p>
             <h1 style={{ fontFamily: "var(--font-display), serif", fontWeight: 700, fontStyle: "italic", fontSize: 34, lineHeight: 1.05, margin: 0, color: theme.primary }}>
               Acme <span style={{ color: theme.accent, fontStyle: "normal" }}>MTC</span> Guild
