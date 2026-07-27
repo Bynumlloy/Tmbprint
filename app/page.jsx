@@ -9,19 +9,17 @@ async function getLinks() {
     const rows = await sql`SELECT whatsapp_url, telegram_url FROM site_links WHERE id = 1`;
     const row = rows[0];
     return {
-      whatsapp: row?.whatsapp_url || "https://wa.link/26glqx",
-      telegram: row?.telegram_url || "https://telegram.me/RetireWealthyGuides",
+      whatsapp: row?.whatsapp_url || "https://wa.link/b21m33",
+      telegram: row?.telegram_url || "https://t.me/KatieMTC",
     };
   } catch {
-    // Fallback in case the table doesn't exist yet or DB is unreachable
     return {
-      whatsapp: "https://wa.link/26glqx",
-      telegram: "https://telegram.me/RetireWealthyGuides",
+      whatsapp: "https://wa.link/b21m33",
+      telegram: "https://t.me/KatieMTC",
     };
   }
 }
 
-// Always fetch fresh links on every request, never cache this page
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
@@ -74,7 +72,7 @@ export default async function Home() {
           >
             <Image
               src="/banner.jpg"
-              alt="Banner"
+              alt="Acme MTC Guild Banner"
               fill
               priority
               style={{ objectFit: "cover" }}
@@ -109,7 +107,6 @@ export default async function Home() {
               }}
             >
               <div style={{ display: "inline-block", textAlign: "left" }}>
-                {/* "The" */}
                 <span
                   style={{
                     fontSize: 18,
@@ -118,10 +115,8 @@ export default async function Home() {
                     fontFamily: "var(--font-inter), sans-serif",
                   }}
                 >
-                  The
+                  Acme
                 </span>
-
-                {/* "Retire Wealthy" - Stays shifted to the right */}
                 <span
                   style={{
                     color: "#cfa043",
@@ -130,19 +125,17 @@ export default async function Home() {
                     paddingLeft: "24px",
                   }}
                 >
-                  Retire Wealthy
+                  MTC
                 </span>
-
-                {/* "Guides" - Forced to a new line and centered */}
                 <span
                   style={{
                     color: "#cfa043",
                     fontWeight: 900,
                     display: "block",
-                    textAlign: "center", // Pushes "Guides" to the middle of the block
+                    textAlign: "center",
                   }}
                 >
-                  Guides
+                  Guild
                 </span>
               </div>
             </h1>
@@ -155,9 +148,11 @@ export default async function Home() {
                 marginBottom: 36,
               }}
             >
-              Helping you build lasting wealth through education, discipline
-              and smart opportunities.
-              <p> Join us on WhatsApp or Telegram </p>
+              Welcome to Acme MTC Guild. We are a global group based in the
+              United States, made up of members from diverse cultures and
+              countries. We specialize in personalized retirement planning and
+              strategic investment guidance, with a mission to deliver clear,
+              client-focused solutions for lasting success.
             </p>
 
             <div
@@ -237,7 +232,9 @@ export default async function Home() {
                   marginTop: 40,
                   marginBottom: 24,
                 }}
-              ></h2>
+              >
+                Our MTC Framework
+              </h2>
 
               <div
                 style={{
@@ -255,10 +252,34 @@ export default async function Home() {
                     margin: 0,
                   }}
                 >
-                  The Retire Wealthy Guides (RWG) is a global community where
-                  people share retirement ideas, learn from one another, and
-                  find inspiration for the next chapter of life.
+                  Our team brings deep experience in retirement planning,
+                  investment strategies, and estate preparation all grounded
+                  in our proven MTC framework:
                 </p>
+
+                <ul
+                  style={{
+                    color: "#9fb0bc",
+                    lineHeight: 1.8,
+                    fontSize: 15,
+                    margin: 0,
+                    paddingLeft: "20px",
+                    listStyleType: "disc",
+                  }}
+                >
+                  <li>
+                    <strong>Mindset</strong> – Building the right habits:
+                    patience, discipline, and long-term focus
+                  </li>
+                  <li>
+                    <strong>Time</strong> – Leveraging consistency and the
+                    power of compounding
+                  </li>
+                  <li>
+                    <strong>Capital</strong> – Putting your resources to work
+                    through diversified strategies and smart decision making
+                  </li>
+                </ul>
 
                 <p
                   style={{
@@ -268,33 +289,9 @@ export default async function Home() {
                     margin: 0,
                   }}
                 >
-                  Our worldwide community is supported from the{" "}
-                  <strong>United States</strong>,
-                  <strong> Australia</strong>, and the{" "}
-                  <strong>United Kingdom</strong>, bringing together members
-                  from across the globe in a diverse environment where people
-                  from different cultures and backgrounds can connect, learn,
-                  and inspire one another.
-                </p>
-
-                <p
-                  style={{
-                    color: "#9fb0bc",
-                    lineHeight: 1.8,
-                    fontSize: 15,
-                    margin: 0,
-                  }}
-                >
-                  The Retire Wealthy Guides also unites top financial experts
-                  to help you
-                  <strong> invest smarter</strong>,
-                  <strong> trade confidently</strong>,
-                  <strong> eliminate debt</strong>,
-                  <strong> build wealth</strong>, and strengthen your
-                  retirement finances. With shared tools, free education,
-                  support, insights, and step-by-step guidance, we're here to
-                  help you grow residual income and achieve your long-term
-                  financial freedom and retirement goals.
+                  Whether you're nearing retirement, exploring opportunities,
+                  or following proven signals, Acme MTC Guild keeps you
+                  aligned with what truly matter.
                 </p>
               </div>
             </section>
@@ -313,11 +310,19 @@ export default async function Home() {
             style={{
               color: "#526675",
               fontSize: 12,
+              margin: "0 0 4px 0",
+            }}
+          >
+            📞 +1 (929) 607‑2719
+          </p>
+          <p
+            style={{
+              color: "#526675",
+              fontSize: 12,
               margin: 0,
             }}
           >
-            © {new Date().getFullYear()} Retire Wealthy Guides. All rights
-            reserved.
+            © {new Date().getFullYear()} Acme MTC Guild. All rights reserved.
           </p>
         </footer>
       </div>
