@@ -49,6 +49,7 @@ const theme = {
   line: "#E2E8F0",
   whatsapp: "#25D366",
   telegram: "#0088CC",
+  credi:    "#EDE9E4", 
 };
 
 function PillarIcon({ kind }: { kind: "seed" | "hourglass" | "sprout" }) {
@@ -256,7 +257,7 @@ Our team brings deep experience in retirement planning, investment strategies, a
         <div style={{ flex: 1 }} />
 
         {/* Footer */}
-        <footer style={{ background: theme.muted, padding: "32px 28px", textAlign: "center", marginTop: 48 }}>
+        <footer style={{ background: theme.credi, padding: "32px 28px", textAlign: "center", marginTop: 48 }}>
           <p style={{ color: theme.primary, fontSize: 13, margin: "0 0 6px", fontWeight: 600, letterSpacing: 0.5 }}>
             +1 (929) 607‑2719
           </p>
