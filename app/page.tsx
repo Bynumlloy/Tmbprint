@@ -16,7 +16,7 @@ const figtree = Figtree({
   variable: "--font-body",
 });
 
-const sql = neon(process.env.DATABASE_URL);
+const sql = neon(process.env.DATABASE_URL!);
 
 async function getLinks() {
   try {
@@ -49,7 +49,7 @@ const theme = {
   line: "#E2E8F0",
   whatsapp: "#25D366",
   telegram: "#0088CC",
-  credi:    "#EDE9E4", 
+  credi: "#EDE9E4", 
 };
 
 function PillarIcon({ kind }: { kind: "seed" | "hourglass" | "sprout" }) {
@@ -117,25 +117,23 @@ export default async function Home() {
       <div style={{ width: "100%", maxWidth: 480, minHeight: "100vh", display: "flex", flexDirection: "column" }}>
 
         {/* Hero Section */}
-<div style={{ position: "relative", width: "100%", height: 260 }}>
-  <Image 
-    src="/banner.jpg" 
-    alt="Acme MTC Guild" 
-    fill 
-    priority 
-    style={{ objectFit: "cover", objectPosition: "center" }} 
-  />
+        <div style={{ position: "relative", width: "100%", height: 260 }}>
+          <Image 
+            src="/banner.jpg" 
+            alt="Acme MTC Guild" 
+            fill 
+            priority 
+            style={{ objectFit: "cover", objectPosition: "center" }} 
+          />
 
-  {/* Clean bottom fade into page background without washing out the center logo */}
-  <div 
-    style={{ 
-      position: "absolute", 
-      inset: 0, 
-      background: `linear-gradient(to bottom, transparent 60%, ${theme.bg} 100%)` 
-    }} 
-  />
-</div>
-
+          {/* Clean bottom fade into page background */}
+          <div 
+            style={{ 
+              position: "absolute", 
+              inset: 0, 
+              background: `linear-gradient(to bottom, transparent 60%, ${theme.bg} 100%)` 
+            }} 
+          />
 
           {/* Tagline Overlay directly inside Hero */}
           <div style={{ 
@@ -154,9 +152,7 @@ export default async function Home() {
               textTransform: "uppercase",
               color: theme.primary,
               margin: 0,
-              // ✅ Correct
-filter: "drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.8))"
-
+              filter: "drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.8))"
             }}>
               LEARN, EARN, AND INSPIRE.
             </p>
@@ -174,15 +170,13 @@ filter: "drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.8))"
 
         <div style={{ padding: "44px 28px 0" }}>
 
-          {/* ─── Contact Us ─── */}
+          {/* Contact Us */}
           <section className="fade-up-d1" style={{ marginBottom: 44 }}>
             <h2 style={{ fontFamily: "var(--font-display), serif", fontStyle: "italic", fontWeight: 600, color: theme.primary, fontSize: 26, textAlign: "center", margin: "0 0 10px" }}>
               Contact Us
             </h2>
             <p style={{ textAlign: "center", color: theme.muted, fontSize: 14, lineHeight: 1.7, margin: "0 auto 24px", maxWidth: 340 }}>
-              Helping you build lasting wealth with smart investment and retirement plans  through education, discipline, and personal guidance.
-
-Join us on WhatsApp or Telegram 
+              Helping you build lasting wealth with smart investment and retirement plans through education, discipline, and personal guidance. Join us on WhatsApp or Telegram.
             </p>
 
             <div style={{ display: "flex", gap: 12 }}>
@@ -208,21 +202,20 @@ Join us on WhatsApp or Telegram
           {/* Thin divider */}
           <div className="fade-up-d2" style={{ height: 1, background: theme.line, margin: "0 0 44px" }} />
 
-          {/* ─── About ─── */}
+          {/* About */}
           <section className="fade-up-d2" style={{ marginBottom: 44 }}>
             <h2 style={{ fontFamily: "var(--font-display), serif", fontStyle: "italic", fontWeight: 600, color: theme.primary, fontSize: 26, textAlign: "center", margin: "0 0 16px" }}>
               About Us
             </h2>
             <p style={{ color: theme.text, fontSize: 15.5, lineHeight: 1.85, textAlign: "center", margin: 0 }}>
-              Welcome to Acme MTC Guild. We are a global group based in the United States, made up of members from diverse cultures and countries.  We specialize in personalized retirement planning and strategic investment guidance, with a mission to deliver clear, client-focused solutions for lasting success.
-Our team brings deep experience in retirement planning, investment strategies, and estate preparation all grounded in our proven MTC tramework;
+              Welcome to Acme MTC Guild. We are a global group based in the United States, made up of members from diverse cultures and countries. We specialize in personalized retirement planning and strategic investment guidance, with a mission to deliver clear, client-focused solutions for lasting success. Our team brings deep experience in retirement planning, investment strategies, and estate preparation all grounded in our proven MTC framework.
             </p>
           </section>
 
           {/* Thin divider */}
           <div className="fade-up-d3" style={{ height: 1, background: theme.line, margin: "0 0 44px" }} />
 
-          {/* ─── Framework ─── */}
+          {/* Framework */}
           <section className="fade-up-d3" style={{ marginBottom: 8 }}>
             <h2 style={{ fontFamily: "var(--font-display), serif", fontStyle: "italic", fontWeight: 600, color: theme.primary, fontSize: 26, textAlign: "center", margin: "0 0 6px" }}>
               The MTC Framework
@@ -259,9 +252,9 @@ Our team brings deep experience in retirement planning, investment strategies, a
         {/* Footer */}
         <footer style={{ background: theme.credi, padding: "32px 28px", textAlign: "center", marginTop: 48 }}>
           <p style={{ color: theme.primary, fontSize: 13, margin: "0 0 6px", fontWeight: 600, letterSpacing: 0.5 }}>
-            +1 (929) 607‑2719
+            +1 (929) 607-2719
           </p>
-          <p style={{ color: "rgba(15, 37, 54)", fontSize: 11, margin: 0 }}>
+          <p style={{ color: "rgba(15, 37, 54, 0.7)", fontSize: 11, margin: 0 }}>
             &copy; {new Date().getFullYear()} Acme MTC Guild. All rights reserved.
           </p>
         </footer>
