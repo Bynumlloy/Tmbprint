@@ -246,7 +246,7 @@ export default function AdminPage() {
           <button
             onClick={() => setAuthed(false)}
             style={{
-              background: "transparent",
+              background: "#F2BDBE",
               border: `1px solid ${theme.border}`,
               color: theme.muted,
               padding: "8px 12px",
