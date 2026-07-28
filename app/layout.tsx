@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: "Acme MTC Guild - Learn, Earn, and Inspire",
     description: "Personalized retirement planning and strategic investment guidance",
     type: "website",
+  }, 
 };
 
 export default function RootLayout({
