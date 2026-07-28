@@ -256,7 +256,7 @@ export default function AdminPage() {
               cursor: "pointer",
             }}
           >
-            Sign Out
+            Lock
           </button>
         </div>
 
