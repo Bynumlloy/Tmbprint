@@ -41,7 +41,7 @@ export const dynamic = "force-dynamic";
 // ---------------------------------------------------------------------------
 const theme = {
   bg: "#FAF8F5",
-  primary: "#0F172A",
+  primary: "#0f2535",
   accent: "#C9A87C",
   accentDeep: "#A68B5C",
   text: "#1E293B",
