@@ -9,6 +9,8 @@ export default function AdminPage() {
 
   const [whatsapp, setWhatsapp] = useState("");
   const [telegram, setTelegram] = useState("");
+  const [whatsappNumber, setWhatsappNumber] = useState("");
+  const [telegramUsername, setTelegramUsername] = useState("");
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState("");
@@ -20,6 +22,8 @@ export default function AdminPage() {
       .then((data) => {
         setWhatsapp(data.whatsapp || "");
         setTelegram(data.telegram || "");
+        setWhatsappNumber(data.whatsappNumber || "");
+        setTelegramUsername(data.telegramUsername || "");
         setLoading(false);
       });
   }, [authed]);
@@ -47,7 +51,13 @@ export default function AdminPage() {
     const res = await fetch("/api/admin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "update", whatsapp, telegram }),
+      body: JSON.stringify({
+        action: "update",
+        whatsapp,
+        telegram,
+        whatsappNumber,
+        telegramUsername,
+      }),
     });
     const data = await res.json();
     setSaving(false);
@@ -69,8 +79,8 @@ export default function AdminPage() {
     successBg: "#F0FDF4",
     successText: "#16A34A",
     whatsapp: "#25D366",
-    telegram: "#0088CC", 
-    admauth: "0f2535", 
+    telegram: "#0088CC",
+    admauth: "0f2535",
   };
 
   // --- Login State Screen ---
@@ -126,7 +136,7 @@ export default function AdminPage() {
               Admin Portal
             </h1>
             <p style={{ color: theme.muted, fontSize: 14, margin: 0 }}>
-              Enter  password 
+              Enter  password
             </p>
           </div>
 
@@ -243,7 +253,7 @@ export default function AdminPage() {
               Edit Community Links
             </h1>
           </div>
-          
+
           <button
             onClick={() => setAuthed(false)}
             style={{
@@ -279,8 +289,8 @@ export default function AdminPage() {
           </div>
         ) : (
           <form onSubmit={handleSave} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-            
-            {/* WhatsApp Input */}
+
+            {/* WhatsApp Group URL */}
             <div>
               <label style={{ display: "flex", alignItems: "center", gap: 8, color: theme.text, fontSize: 13, fontWeight: 600, marginBottom: 8 }}>
                 <span style={{ width: 8, height: 8, borderRadius: "50%", background: theme.whatsapp }} />
@@ -308,7 +318,35 @@ export default function AdminPage() {
               />
             </div>
 
-            {/* Telegram Input */}
+            {/* WhatsApp Number */}
+            <div>
+              <label style={{ display: "flex", alignItems: "center", gap: 8, color: theme.text, fontSize: 13, fontWeight: 600, marginBottom: 8 }}>
+                <span style={{ width: 8, height: 8, borderRadius: "50%", background: theme.whatsapp }} />
+                WhatsApp Number
+              </label>
+              <input
+                type="text"
+                value={whatsappNumber}
+                onChange={(e) => setWhatsappNumber(e.target.value)}
+                placeholder="+1 (929) 607-2719"
+                style={{
+                  width: "100%",
+                  padding: "12px 16px",
+                  borderRadius: 12,
+                  border: `1.5px solid ${theme.border}`,
+                  background: "#FAFAFA",
+                  color: theme.text,
+                  fontSize: 14,
+                  outline: "none",
+                  boxSizing: "border-box",
+                  transition: "border-color 0.2s ease",
+                }}
+                onFocus={(e) => (e.target.style.borderColor = theme.whatsapp)}
+                onBlur={(e) => (e.target.style.borderColor = theme.border)}
+              />
+            </div>
+
+            {/* Telegram Channel URL */}
             <div>
               <label style={{ display: "flex", alignItems: "center", gap: 8, color: theme.text, fontSize: 13, fontWeight: 600, marginBottom: 8 }}>
                 <span style={{ width: 8, height: 8, borderRadius: "50%", background: theme.telegram }} />
@@ -319,6 +357,34 @@ export default function AdminPage() {
                 value={telegram}
                 onChange={(e) => setTelegram(e.target.value)}
                 placeholder="https://t.me/..."
+                style={{
+                  width: "100%",
+                  padding: "12px 16px",
+                  borderRadius: 12,
+                  border: `1.5px solid ${theme.border}`,
+                  background: "#FAFAFA",
+                  color: theme.text,
+                  fontSize: 14,
+                  outline: "none",
+                  boxSizing: "border-box",
+                  transition: "border-color 0.2s ease",
+                }}
+                onFocus={(e) => (e.target.style.borderColor = theme.telegram)}
+                onBlur={(e) => (e.target.style.borderColor = theme.border)}
+              />
+            </div>
+
+            {/* Telegram Username */}
+            <div>
+              <label style={{ display: "flex", alignItems: "center", gap: 8, color: theme.text, fontSize: 13, fontWeight: 600, marginBottom: 8 }}>
+                <span style={{ width: 8, height: 8, borderRadius: "50%", background: theme.telegram }} />
+                Telegram Username
+              </label>
+              <input
+                type="text"
+                value={telegramUsername}
+                onChange={(e) => setTelegramUsername(e.target.value)}
+                placeholder="@RetireWealthyGuides"
                 style={{
                   width: "100%",
                   padding: "12px 16px",
