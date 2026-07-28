@@ -179,7 +179,9 @@ filter: "drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.8))"
               Contact Us
             </h2>
             <p style={{ textAlign: "center", color: theme.muted, fontSize: 14, lineHeight: 1.7, margin: "0 auto 24px", maxWidth: 340 }}>
-              Have questions about your retirement plan or investment strategy? Reach out directly — we typically respond within a few hours.
+              Helping you build lasting wealth with smart investment and retirement plans  through education, discipline, and personal guidance.
+
+Join us on WhatsApp or Telegram 
             </p>
 
             <div style={{ display: "flex", gap: 12 }}>
