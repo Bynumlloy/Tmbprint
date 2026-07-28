@@ -311,7 +311,7 @@ export default async function Home() {
         {/* Footer */}
         <footer style={{ background: theme.credi, padding: "32px 28px", textAlign: "center", marginTop: 48 }}>
           <p style={{ color: theme.primary, fontSize: 13, margin: "0 0 6px", fontWeight: 600, letterSpacing: 0.5 }}>
-            +1 (929) 607-2719
+            
           </p>
           <p style={{ color: "rgba(15, 37, 54, 0.7)", fontSize: 11, margin: 0 }}>
             &copy; {new Date().getFullYear()} Acme MTC Guild. All rights reserved.
