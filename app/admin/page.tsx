@@ -248,7 +248,7 @@ export default function AdminPage() {
             style={{
               background: "#FA7578",
               border: `1px solid ${theme.text}`,
-              color: theme.muted,
+              color: theme.text,
               padding: "8px 12px",
               borderRadius: 10,
               fontSize: 12,
