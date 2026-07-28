@@ -41,11 +41,12 @@ export const dynamic = "force-dynamic";
 // ---------------------------------------------------------------------------
 const theme = {
   bg: "#FAF8F5",
-  primary: "#0f2535",
+  // Softer slate navy to match the hero text tone instead of harsh pure black/dark navy
+  primary: "#1E293B",  
   accent: "#C9A87C",
   accentDeep: "#A68B5C",
-  text: "#1E293B",
-  muted: "#64748B",
+  text: "#334155",      // Softer body text
+  muted: "#64748B",     // Secondary text
   line: "#E2E8F0",
   whatsapp: "#25D366",
   telegram: "#0088CC",
