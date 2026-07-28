@@ -18,15 +18,20 @@ const playfair = Playfair_Display({
 
 // SEO and Page Metadata
 export const metadata: Metadata = {
-  title: "Acme MTC Guild - Learn, Earn, and Inspire",
-  description: "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven MTC framework.",
-  keywords: "retirement planning, investment guidance, wealth building, financial planning, MTC framework",
-  authors: [{ name: "Acme MTC Guild" }],
+  title: "AcmeMTCGuild.com | Learn, Earn, and Inspire",
+  description:
+    "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven MTC framework.",
+  keywords:
+    "AcmeMTCGuild, retirement planning, investment guidance, wealth building, financial planning, MTC framework",
+  authors: [{ name: "AcmeMTCGuild.com" }],
   openGraph: {
-    title: "Acme MTC Guild - Learn, Earn, and Inspire",
-    description: "Personalized retirement planning and strategic investment guidance",
+    title: "AcmeMTCGuild.com | Learn, Earn, and Inspire",
+    description:
+      "Personalized retirement planning and strategic investment guidance",
+    url: "https://acmemtcguild.com",
+    siteName: "AcmeMTCGuild.com",
     type: "website",
-  }, 
+  },
 };
 
 export default function RootLayout({
