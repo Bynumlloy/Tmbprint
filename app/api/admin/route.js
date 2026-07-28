@@ -3,19 +3,32 @@ import { neon } from "@neondatabase/serverless";
 
 const sql = neon(process.env.DATABASE_URL);
 
-// Ensures the table exists. Safe to call every time (IF NOT EXISTS).
+// Ensures the table exists and has all required columns.
 async function ensureTable() {
   await sql`
     CREATE TABLE IF NOT EXISTS site_links (
       id INT PRIMARY KEY DEFAULT 1,
       whatsapp_url TEXT NOT NULL,
-      telegram_url TEXT NOT NULL
+      telegram_url TEXT NOT NULL,
+      whatsapp_number TEXT NOT NULL DEFAULT '',
+      telegram_username TEXT NOT NULL DEFAULT ''
     )
   `;
-  // Seed a default row if none exists yet, using your current links.
+
+  // Backfill: add columns if the table was created before this update
+  await sql`ALTER TABLE site_links ADD COLUMN IF NOT EXISTS whatsapp_number TEXT NOT NULL DEFAULT ''`;
+  await sql`ALTER TABLE site_links ADD COLUMN IF NOT EXISTS telegram_username TEXT NOT NULL DEFAULT ''`;
+
+  // Seed a default row if none exists yet
   await sql`
-    INSERT INTO site_links (id, whatsapp_url, telegram_url)
-    VALUES (1, 'https://wa.link/26glqx', 'https://telegram.me/RetireWealthyGuides')
+    INSERT INTO site_links (id, whatsapp_url, telegram_url, whatsapp_number, telegram_username)
+    VALUES (
+      1,
+      'https://wa.link/26glqx',
+      'https://telegram.me/RetireWealthyGuides',
+      '+1 (929) 607-2719',
+      '@RetireWealthyGuides'
+    )
     ON CONFLICT (id) DO NOTHING
   `;
 }
@@ -28,11 +41,16 @@ function isAuthed(req) {
 // GET: fetch current links (public — used by homepage)
 export async function GET() {
   await ensureTable();
-  const rows = await sql`SELECT whatsapp_url, telegram_url FROM site_links WHERE id = 1`;
+  const rows = await sql`
+    SELECT whatsapp_url, telegram_url, whatsapp_number, telegram_username
+    FROM site_links WHERE id = 1
+  `;
   const row = rows[0];
   return NextResponse.json({
     whatsapp: row?.whatsapp_url ?? "",
     telegram: row?.telegram_url ?? "",
+    whatsappNumber: row?.whatsapp_number ?? "",
+    telegramUsername: row?.telegram_username ?? "",
   });
 }
 
@@ -62,7 +80,11 @@ export async function POST(req) {
     await ensureTable();
     await sql`
       UPDATE site_links
-      SET whatsapp_url = ${body.whatsapp}, telegram_url = ${body.telegram}
+      SET
+        whatsapp_url = ${body.whatsapp},
+        telegram_url = ${body.telegram},
+        whatsapp_number = ${body.whatsappNumber ?? body.whatsapp_number ?? ""},
+        telegram_username = ${body.telegramUsername ?? body.telegram_username ?? ""}
       WHERE id = 1
     `;
     return NextResponse.json({ success: true });
