@@ -213,7 +213,8 @@ Join us on WhatsApp or Telegram
               About Us
             </h2>
             <p style={{ color: theme.text, fontSize: 15.5, lineHeight: 1.85, textAlign: "center", margin: 0 }}>
-              We&apos;re a global community based in the United States, with members from many cultures and countries. Our focus is personalized retirement planning and strategic investment guidance — clear, client-first, and built for the long run.
+              Welcome to Acme MTC Guild. We are a global group based in the United States, made up of members from diverse cultures and countries. O We specialize in personalized retirement planning and strategic investment guidance, with a mission to deliver clear, client-focused solutions for lasting success.
+Our team brings deep experience in retirement planning, investment strategies, and estate preparation all grounded in our proven MTC tramework;
             </p>
           </section>
 
