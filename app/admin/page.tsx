@@ -69,7 +69,8 @@ export default function AdminPage() {
     successBg: "#F0FDF4",
     successText: "#16A34A",
     whatsapp: "#25D366",
-    telegram: "#0088CC",
+    telegram: "#0088CC", 
+    admauth: "0f2535", 
   };
 
   // --- Login State Screen ---
@@ -248,7 +249,7 @@ export default function AdminPage() {
             style={{
               background: "#FA7578",
               border: `1px solid ${theme.text}`,
-              color: theme.text,
+              color: theme.admauth,
               padding: "8px 12px",
               borderRadius: 10,
               fontSize: 12,
