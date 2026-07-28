@@ -102,6 +102,11 @@ export default async function Home() {
         fontFamily: "var(--font-body), sans-serif",
       }}
     >
+      {/* Prevents Mobile Safari from automatically detecting and hyperlinking phone numbers */}
+      <head>
+        <meta name="format-detection" content="telephone=no" />
+      </head>
+
       <style
         dangerouslySetInnerHTML={{
           __html: `
