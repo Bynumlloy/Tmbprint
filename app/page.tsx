@@ -257,10 +257,10 @@ Our team brings deep experience in retirement planning, investment strategies, a
 
         {/* Footer */}
         <footer style={{ background: theme.bg, padding: "32px 28px", textAlign: "center", marginTop: 48 }}>
-          <p style={{ color: theme.accent, fontSize: 13, margin: "0 0 6px", fontWeight: 600, letterSpacing: 0.5 }}>
+          <p style={{ color: theme.primary, fontSize: 13, margin: "0 0 6px", fontWeight: 600, letterSpacing: 0.5 }}>
             +1 (929) 607‑2719
           </p>
-          <p style={{ color: "rgba(250, 248, 245)", fontSize: 11, margin: 0 }}>
+          <p style={{ color: "rgba(15, 37, 54)", fontSize: 11, margin: 0 }}>
             &copy; {new Date().getFullYear()} Acme MTC Guild. All rights reserved.
           </p>
         </footer>
