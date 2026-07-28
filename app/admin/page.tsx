@@ -440,7 +440,7 @@ export default function AdminPage() {
                   textAlign: "center",
                 }}
               >
-                {saveMessage === "Saved!" ? "✓ Dynamic URLs successfully updated!" : saveMessage}
+                {saveMessage === "Saved!" ? "✓ saved successfully!" : saveMessage}
               </div>
             )}
           </form>
