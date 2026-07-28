@@ -117,25 +117,25 @@ export default async function Home() {
       <div style={{ width: "100%", maxWidth: 480, minHeight: "100vh", display: "flex", flexDirection: "column" }}>
 
         {/* Hero Section */}
-        <div style={{ position: "relative", width: "100%", height: 310 }}>
-          <Image src="/banner.jpg" alt="Acme MTC Guild" fill priority style={{ objectFit: "cover" }} />
-          
-          {/* Subtle scrim behind text to ensure crisp legibility on top of the image */}
-          <div style={{ 
-            position: "absolute", 
-            inset: 0, 
-            background: "radial-gradient(circle at 50% 60%, rgba(250, 248, 245, 0.35) 0%, rgba(250, 248, 245, 0) 70%)" 
-          }} />
+<div style={{ position: "relative", width: "100%", height: 260 }}>
+  <Image 
+    src="/banner.jpg" 
+    alt="Acme MTC Guild" 
+    fill 
+    priority 
+    style={{ objectFit: "cover", objectPosition: "center" }} 
+  />
 
-          {/* Smooth fade transition to page background starting beneath the tagline */}
-          <div style={{ 
-            position: "absolute", 
-            bottom: 0, 
-            left: 0, 
-            right: 0, 
-            height: 60, 
-            background: `linear-gradient(to bottom, transparent 0%, ${theme.bg} 100%)` 
-          }} />
+  {/* Clean bottom fade into page background without washing out the center logo */}
+  <div 
+    style={{ 
+      position: "absolute", 
+      inset: 0, 
+      background: `linear-gradient(to bottom, transparent 60%, ${theme.bg} 100%)` 
+    }} 
+  />
+</div>
+
 
           {/* Tagline Overlay directly inside Hero */}
           <div style={{ 
