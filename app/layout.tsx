@@ -18,9 +18,14 @@ const playfair = Playfair_Display({
 
 // SEO and Page Metadata
 export const metadata: Metadata = {
-  title: "The Retire Wealthy Guides",
-  description: "Join our daily tips channels .",
-  keywords: [" Retire", "Wealth Guides", "Finance"],
+  title: "Acme MTC Guild - Learn, Earn, and Inspire",
+  description: "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven MTC framework.",
+  keywords: "retirement planning, investment guidance, wealth building, financial planning, MTC framework",
+  authors: [{ name: "Acme MTC Guild" }],
+  openGraph: {
+    title: "Acme MTC Guild - Learn, Earn, and Inspire",
+    description: "Personalized retirement planning and strategic investment guidance",
+    type: "website",
 };
 
 export default function RootLayout({
