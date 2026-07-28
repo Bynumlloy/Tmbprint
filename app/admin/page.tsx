@@ -132,7 +132,7 @@ export default function AdminPage() {
           <form onSubmit={handleLogin} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
             <div>
               <label style={{ display: "block", color: theme.text, fontSize: 13, fontWeight: 600, marginBottom: 8 }}>
-                Master Password
+                Password
               </label>
               <input
                 type="password"
