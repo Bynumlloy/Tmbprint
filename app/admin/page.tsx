@@ -125,7 +125,7 @@ export default function AdminPage() {
               Admin Portal
             </h1>
             <p style={{ color: theme.muted, fontSize: 14, margin: 0 }}>
-              Enter your password to manage site links
+              Enter  password 
             </p>
           </div>
 
