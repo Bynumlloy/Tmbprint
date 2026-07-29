@@ -27,10 +27,25 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AcmeMTCGuild.com | Learn, Earn, and Inspire",
     description:
-      "Personalized retirement planning and strategic investment guidance",
+      "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven MTC framework.",
     url: "https://acmemtcguild.com",
     siteName: "AcmeMTCGuild.com",
+    images: [
+      {
+        url: "https://acmemtcguild.com/og-image.png", // Absolute URL required for WhatsApp & social platforms
+        width: 1200,
+        height: 630,
+        alt: "AcmeMTCGuild.com Banner",
+      },
+    ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AcmeMTCGuild.com | Learn, Earn, and Inspire",
+    description:
+      "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven MTC framework.",
+    images: ["https://acmemtcguild.com/og-image.png"],
   },
 };
 
