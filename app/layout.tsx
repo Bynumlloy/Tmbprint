@@ -9,7 +9,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-// Bold serif display font for the main heading (matches brand banner)
+// Bold serif display font for the main heading
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["700", "900"],
@@ -18,34 +18,55 @@ const playfair = Playfair_Display({
 
 // SEO and Page Metadata
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.acmemtcguild.com"),
+
   title: "AcmeMTCGuild.com | Learn, Earn, and Inspire",
+
   description:
     "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven MTC framework.",
-  keywords:
-    "AcmeMTCGuild, retirement planning, investment guidance, wealth building, financial planning, MTC framework",
+
+  keywords: [
+    "AcmeMTCGuild",
+    "retirement planning",
+    "investment guidance",
+    "wealth building",
+    "financial planning",
+    "MTC framework",
+  ],
+
   authors: [{ name: "AcmeMTCGuild.com" }],
+
   openGraph: {
     title: "AcmeMTCGuild.com | Learn, Earn, and Inspire",
+
     description:
       "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven MTC framework.",
-    url: "https://acmemtcguild.com",
+
+    url: "https://www.acmemtcguild.com",
+
     siteName: "AcmeMTCGuild.com",
+
+    type: "website",
+
     images: [
       {
-        url: "https://acmemtcguild.com/og-image.png", // Absolute URL required for WhatsApp & social platforms
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "AcmeMTCGuild.com Banner",
       },
     ],
-    type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
+
     title: "AcmeMTCGuild.com | Learn, Earn, and Inspire",
+
     description:
       "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven MTC framework.",
-    images: ["https://acmemtcguild.com/og-image.png"],
+
+    images: ["/og-image.png"],
   },
 };
 
