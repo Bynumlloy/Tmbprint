@@ -65,8 +65,8 @@ const theme = {
 function ArrowIcon() {
   return (
     <svg
-      width="17"
-      height="17"
+      width="13"
+      height="13"
       viewBox="0 0 24 24"
       fill="none"
       aria-hidden="true"
@@ -74,13 +74,13 @@ function ArrowIcon() {
       <path
         d="M5 19L19 5"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         d="M9 5H19V15"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -91,8 +91,8 @@ function ArrowIcon() {
 function WhatsAppIcon() {
   return (
     <svg
-      width="23"
-      height="23"
+      width="16"
+      height="16"
       viewBox="0 0 24 24"
       fill="currentColor"
       aria-hidden="true"
@@ -106,8 +106,8 @@ function WhatsAppIcon() {
 function TelegramIcon() {
   return (
     <svg
-      width="23"
-      height="23"
+      width="16"
+      height="16"
       viewBox="0 0 24 24"
       fill="currentColor"
       aria-hidden="true"
@@ -167,23 +167,6 @@ export default async function Home() {
             }
 
             /* =========================================
-               HERO IMAGE
-            ========================================= */
-
-            .hero {
-              width: 100%;
-              background: ${theme.navy};
-              line-height: 0;
-            }
-
-            .hero-image {
-              display: block;
-              width: 100%;
-              height: auto;
-              object-fit: contain;
-            }
-
-            /* =========================================
                BRAND BAR
             ========================================= */
 
@@ -238,93 +221,46 @@ export default async function Home() {
             }
 
             /* =========================================
-               QUICK CONTACT ACTIONS
+               HERO IMAGE — with bottom fade
             ========================================= */
 
-            .quick-actions {
+            .hero {
+              width: 100%;
               background: ${theme.navy};
-              padding: 4px 20px 30px;
+              position: relative;
+              line-height: 0;
             }
 
-            .quick-actions-inner {
-              width: min(760px, 100%);
-              margin: 0 auto;
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 12px;
+            .hero-image {
+              display: block;
+              width: 100%;
+              height: auto;
+              object-fit: contain;
             }
 
-            .action {
-              min-height: 78px;
-              padding: 14px 16px;
-              display: flex;
-              align-items: center;
-              gap: 13px;
-              border-radius: 12px;
-              color: white;
-              text-decoration: none;
-              transition:
-                transform .2s ease,
-                box-shadow .2s ease;
-            }
-
-            .action:hover {
-              transform: translateY(-2px);
-            }
-
-            .action.whatsapp {
-              background: ${theme.whatsapp};
-              box-shadow: 0 7px 22px rgba(37,211,102,.18);
-            }
-
-            .action.telegram {
-              background: ${theme.telegram};
-              box-shadow: 0 7px 22px rgba(34,158,217,.18);
-            }
-
-            .action-icon {
-              width: 43px;
-              height: 43px;
-              flex: 0 0 43px;
-              display: grid;
-              place-items: center;
-              border-radius: 50%;
-              background: rgba(255,255,255,.18);
-            }
-
-            .action-copy {
-              min-width: 0;
-              flex: 1;
-              display: flex;
-              flex-direction: column;
-              gap: 4px;
-            }
-
-            .action-copy strong {
-              font-size: 13px;
-              line-height: 1.2;
-              font-weight: 800;
-            }
-
-            .action-copy span {
-              font-size: 10.5px;
-              line-height: 1.2;
-              opacity: .88;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            }
-
-            .action-arrow {
-              opacity: .8;
+            /* Gradient overlay that fades the bottom of the image into cream */
+            .hero-fade {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 38%;
+              background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                rgba(247, 243, 235, 0.18) 40%,
+                rgba(247, 243, 235, 0.72) 70%,
+                ${theme.cream} 100%
+              );
+              pointer-events: none;
             }
 
             /* =========================================
-               INTRO
+               INTRO  (now includes contact buttons)
             ========================================= */
 
             .intro {
-              padding: 76px 22px 70px;
+              padding: 56px 22px 72px;
               background: ${theme.cream};
               text-align: center;
             }
@@ -364,6 +300,79 @@ export default async function Home() {
               color: ${theme.muted};
               font-size: 14px;
               line-height: 1.9;
+            }
+
+            /* =========================================
+               CONTACT PILL BUTTONS (inside cream)
+            ========================================= */
+
+            .contact-pills {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              flex-wrap: wrap;
+              margin-top: 30px;
+            }
+
+            .pill {
+              display: inline-flex;
+              align-items: center;
+              gap: 7px;
+              height: 40px;
+              padding: 0 18px;
+              border-radius: 100px;
+              text-decoration: none;
+              font-size: 11px;
+              font-weight: 700;
+              letter-spacing: 0.5px;
+              white-space: nowrap;
+              transition:
+                transform 0.18s ease,
+                box-shadow 0.18s ease,
+                opacity 0.18s ease;
+            }
+
+            .pill:hover {
+              transform: translateY(-2px);
+              opacity: 0.92;
+            }
+
+            .pill-icon {
+              display: grid;
+              place-items: center;
+              flex-shrink: 0;
+            }
+
+            .pill.whatsapp {
+              background: ${theme.whatsapp};
+              color: white;
+              box-shadow: 0 3px 14px rgba(37, 211, 102, 0.22);
+            }
+
+            .pill.telegram {
+              background: ${theme.telegram};
+              color: white;
+              box-shadow: 0 3px 14px rgba(34, 158, 217, 0.22);
+            }
+
+            .pill-label {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              line-height: 1;
+            }
+
+            .pill-label strong {
+              font-size: 11px;
+              font-weight: 700;
+            }
+
+            .pill-sub {
+              font-size: 9px;
+              font-weight: 500;
+              opacity: 0.82;
+              margin-top: 2px;
             }
 
             /* =========================================
@@ -623,28 +632,20 @@ export default async function Home() {
                 display: none;
               }
 
-              .quick-actions {
-                padding: 5px 14px 22px;
-              }
-
-              .quick-actions-inner {
-                grid-template-columns: 1fr;
-                gap: 9px;
-              }
-
-              .action {
-                min-height: 69px;
-                padding: 12px 14px;
-              }
-
-              .action-icon {
-                width: 40px;
-                height: 40px;
-                flex-basis: 40px;
-              }
-
               .intro {
-                padding: 64px 20px 60px;
+                padding: 48px 20px 60px;
+              }
+
+              .contact-pills {
+                flex-direction: column;
+                align-items: stretch;
+                max-width: 280px;
+                margin-left: auto;
+                margin-right: auto;
+              }
+
+              .pill {
+                justify-content: center;
               }
 
               .pillars {
@@ -741,7 +742,7 @@ export default async function Home() {
         </header>
 
         {/* =========================================
-            MAIN IMAGE
+            MAIN IMAGE — fade overlay bleeds into cream
         ========================================= */}
 
         <section className="hero">
@@ -754,60 +755,12 @@ export default async function Home() {
             sizes="100vw"
             className="hero-image"
           />
+          {/* Gradient that dissolves the bottom of the image into the cream background */}
+          <div className="hero-fade" aria-hidden="true" />
         </section>
 
         {/* =========================================
-            IMMEDIATE CONTACT ACTIONS
-        ========================================= */}
-
-        <section className="quick-actions" aria-label="Contact options">
-          <div className="quick-actions-inner">
-
-            <Link
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="action whatsapp"
-            >
-              <div className="action-icon">
-                <WhatsAppIcon />
-              </div>
-
-              <div className="action-copy">
-                <strong>Connect on WhatsApp</strong>
-                <span>{whatsappNumber}</span>
-              </div>
-
-              <span className="action-arrow">
-                <ArrowIcon />
-              </span>
-            </Link>
-
-            <Link
-              href={TELEGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="action telegram"
-            >
-              <div className="action-icon">
-                <TelegramIcon />
-              </div>
-
-              <div className="action-copy">
-                <strong>Join us on Telegram</strong>
-                <span>{telegramUsername}</span>
-              </div>
-
-              <span className="action-arrow">
-                <ArrowIcon />
-              </span>
-            </Link>
-
-          </div>
-        </section>
-
-        {/* =========================================
-            INTRODUCTION
+            INTRODUCTION + CONTACT PILLS
         ========================================= */}
 
         <section className="intro">
@@ -830,6 +783,43 @@ export default async function Home() {
               long-term planning, and preparing for the life
               you want to enjoy.
             </p>
+
+            {/* Compact contact pills — live in the cream section */}
+            <div className="contact-pills">
+
+              <Link
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pill whatsapp"
+              >
+                <span className="pill-icon">
+                  <WhatsAppIcon />
+                </span>
+                <span className="pill-label">
+                  <strong>WhatsApp</strong>
+                  <span className="pill-sub">{whatsappNumber}</span>
+                </span>
+                <ArrowIcon />
+              </Link>
+
+              <Link
+                href={TELEGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pill telegram"
+              >
+                <span className="pill-icon">
+                  <TelegramIcon />
+                </span>
+                <span className="pill-label">
+                  <strong>Telegram</strong>
+                  <span className="pill-sub">{telegramUsername}</span>
+                </span>
+                <ArrowIcon />
+              </Link>
+
+            </div>
 
           </div>
         </section>
