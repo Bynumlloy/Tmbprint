@@ -178,12 +178,13 @@ export default async function Home() {
             }
 
             .brand-name-sub {
-              font-size: 7px;
+              font-size: 7.5px;
               font-weight: 500;
-              letter-spacing: 2.5px;
+              letter-spacing: 1.8px;
               text-transform: uppercase;
               color: ${theme.textMuted};
               line-height: 1;
+              opacity: 0.8;
             }
 
             .brand-link {
@@ -568,38 +569,40 @@ export default async function Home() {
           <div className="brand-bar-inner">
 
             <Link href="/" className="brand">
+              {/* Mark: teal-bordered square, clean S + upward tick */}
               <svg
                 className="brand-logo-svg"
-                width="38"
-                height="38"
+                width="42"
+                height="42"
                 viewBox="0 0 56 56"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
               >
-                <rect width="56" height="56" rx="12" fill="#0B1C3A" />
-                <rect x="10" y="10" width="22" height="15" rx="3" fill="#2dd4bf" />
+                {/* Background */}
+                <rect width="56" height="56" rx="11" fill="#0f2744" />
+                {/* Teal border */}
+                <rect x="1.5" y="1.5" width="53" height="53" rx="9.5" stroke="#2dd4bf" strokeWidth="2" />
+
+                {/* S letterform — bold, clean, readable at small sizes */}
                 <path
-                  d="M10 25 H36 Q38 25 38 27 V31 Q38 33 36 33 H10"
-                  fill="#2dd4bf"
-                  opacity="0.2"
-                />
-                <line
-                  x1="10" y1="33" x2="46" y2="10"
+                  d="M35 19.5C35 15.4 31.6 12 27.5 12H22C17.6 12 14 15.6 14 20C14 24.4 17.6 28 22 28H27C29.8 28 32 30.2 32 33C32 35.8 29.8 38 27 38H21C18.5 38 16.4 36.3 15.5 34"
                   stroke="#2dd4bf"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  opacity="0.35"
-                />
-                <rect x="24" y="31" width="22" height="15" rx="3" fill="#2dd4bf" />
-                <path
-                  d="M33 16 C33 13.2 30.8 11 28 11 L19 11 C16.2 11 14 13.2 14 16 C14 18.8 16.2 21 19 21 L26 21 C30.4 21 34 24.6 34 29 C34 33.4 30.4 37 26 37 L17 37 C13.7 37 11 34.3 11 31"
-                  stroke="white"
-                  strokeWidth="3"
+                  strokeWidth="3.5"
                   strokeLinecap="round"
                   fill="none"
                 />
-                <circle cx="44" cy="13" r="3.5" fill="#2dd4bf" />
+
+                {/* Upward tick — the "blueprint" accent */}
+                <polyline
+                  points="36,38 36,24 43,18"
+                  stroke="#2dd4bf"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  opacity="0.5"
+                />
+                <circle cx="43" cy="18" r="2.5" fill="#2dd4bf" />
               </svg>
 
               <div className="brand-name">
