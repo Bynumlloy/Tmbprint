@@ -49,15 +49,15 @@ export const dynamic = "force-dynamic";
 
 const theme = {
   navy: "#071A2B",
-  navy2: "#0D263B",
+  navyLight: "#0D263B",
   gold: "#C9A35B",
-  goldLight: "#E0C487",
-  ivory: "#F7F3EB",
-  cream: "#EEE8DC",
+  goldLight: "#E2C789",
+  cream: "#F7F3EB",
+  creamDark: "#ECE5D8",
   text: "#172535",
-  muted: "#66727D",
+  muted: "#687580",
+  line: "#DCD6CA",
   white: "#FFFFFF",
-  line: "rgba(201,163,91,.28)",
   whatsapp: "#25D366",
   telegram: "#229ED9",
 };
@@ -65,16 +65,22 @@ const theme = {
 function ArrowIcon() {
   return (
     <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
+      width="17"
+      height="17"
+      viewBox="0 0 24 24"
       fill="none"
       aria-hidden="true"
     >
       <path
-        d="M3 13L13 3M5 3H13V11"
+        d="M5 19L19 5"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+      <path
+        d="M9 5H19V15"
+        stroke="currentColor"
+        strokeWidth="1.8"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -82,36 +88,32 @@ function ArrowIcon() {
   );
 }
 
-function CheckIcon() {
+function WhatsAppIcon() {
   return (
     <svg
-      width="18"
-      height="18"
-      viewBox="0 0 18 18"
-      fill="none"
+      width="23"
+      height="23"
+      viewBox="0 0 24 24"
+      fill="currentColor"
       aria-hidden="true"
     >
-      <circle cx="9" cy="9" r="8" stroke={theme.gold} />
-      <path
-        d="M5.5 9.2L7.7 11.2L12.5 6.7"
-        stroke={theme.gold}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+      <path d="M20.5 3.5A11.9 11.9 0 0 0 12.04 0C5.47 0 .13 5.34.13 11.91c0 2.1.55 4.15 1.6 5.96L.04 24l6.28-1.65a11.88 11.88 0 0 0 5.71 1.46h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.18-3.44-8.41ZM12.04 21.8h-.01a9.88 9.88 0 0 1-5.04-1.38l-.36-.21-3.73.98 1-3.64-.24-.37a9.88 9.88 0 0 1-1.52-5.28C2.14 6.43 6.57 2 12.04 2c2.65 0 5.14 1.03 7.01 2.9a9.86 9.86 0 0 1 2.9 7c0 5.47-4.44 9.9-9.91 9.9Z" />
+      <path d="M17.55 14.52c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" />
     </svg>
   );
 }
 
-function PillarIcon({
-  number,
-}: {
-  number: string;
-}) {
+function TelegramIcon() {
   return (
-    <div className="pillar-number">
-      {number}
-    </div>
+    <svg
+      width="23"
+      height="23"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M21.9 3.2 18.5 20c-.26 1.19-.97 1.48-1.97.92l-5.43-4-2.62 2.52c-.29.29-.53.53-1.09.53l.39-5.52 10.05-9.08c.44-.39-.1-.61-.68-.22L4.73 12.2l-5.38-1.68c-1.17-.37-1.19-1.17.24-1.73L20.62.81c.98-.36 1.84.24 1.28 2.39Z" />
+    </svg>
   );
 }
 
@@ -124,9 +126,7 @@ export default async function Home() {
   } = await getLinks();
 
   return (
-    <main
-      className={`${display.variable} ${body.variable}`}
-    >
+    <main className={`${display.variable} ${body.variable}`}>
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -142,7 +142,7 @@ export default async function Home() {
             body {
               margin: 0;
               padding: 0;
-              background: ${theme.ivory};
+              background: ${theme.cream};
             }
 
             body {
@@ -155,261 +155,233 @@ export default async function Home() {
             }
 
             a:focus-visible {
-              outline: 2px solid ${theme.gold};
-              outline-offset: 4px;
+              outline: 3px solid ${theme.gold};
+              outline-offset: 3px;
             }
 
             .page {
+              width: 100%;
               min-height: 100vh;
-              overflow: hidden;
-              background: ${theme.ivory};
+              overflow-x: hidden;
+              background: ${theme.cream};
             }
 
-            /* --------------------------------
-               HERO
-            -------------------------------- */
+            /* =========================================
+               HERO IMAGE
+            ========================================= */
 
             .hero {
-              position: relative;
-              min-height: 670px;
-              color: white;
+              width: 100%;
               background: ${theme.navy};
-              overflow: hidden;
+              line-height: 0;
             }
 
             .hero-image {
-              position: absolute;
-              inset: 0;
+              display: block;
+              width: 100%;
+              height: auto;
+              object-fit: contain;
             }
 
-            .hero-image img {
-              object-fit: cover;
-              object-position: center;
+            /* =========================================
+               BRAND BAR
+            ========================================= */
+
+            .brand-bar {
+              background: ${theme.navy};
+              color: white;
+              padding: 17px 20px;
             }
 
-            .hero-overlay {
-              position: absolute;
-              inset: 0;
-              background:
-                linear-gradient(
-                  90deg,
-                  rgba(5,20,34,.98) 0%,
-                  rgba(5,20,34,.87) 34%,
-                  rgba(5,20,34,.30) 70%,
-                  rgba(5,20,34,.05) 100%
-                ),
-                linear-gradient(
-                  0deg,
-                  rgba(5,20,34,.90) 0%,
-                  transparent 38%,
-                  rgba(5,20,34,.18) 100%
-                );
-            }
-
-            .hero-inner {
-              position: relative;
-              z-index: 2;
-              width: min(1120px, calc(100% - 40px));
-              min-height: 670px;
+            .brand-bar-inner {
+              width: min(100%, 760px);
               margin: 0 auto;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-              padding: 28px 0 38px;
-            }
-
-            .topbar {
               display: flex;
               align-items: center;
               justify-content: space-between;
+              gap: 20px;
             }
 
             .brand {
               display: flex;
               align-items: center;
-              gap: 12px;
+              gap: 10px;
               text-decoration: none;
             }
 
             .brand-mark {
-              width: 38px;
-              height: 38px;
-              border: 1px solid ${theme.gold};
+              width: 31px;
+              height: 31px;
               display: grid;
               place-items: center;
+              border: 1px solid ${theme.gold};
               color: ${theme.goldLight};
               font-family: var(--font-display), serif;
-              font-size: 19px;
+              font-size: 17px;
               font-weight: 700;
             }
 
             .brand-name {
-              font-size: 11px;
+              font-size: 10px;
               font-weight: 800;
-              letter-spacing: 2.5px;
+              letter-spacing: 2.2px;
               text-transform: uppercase;
             }
 
-            .nav-link {
-              color: rgba(255,255,255,.78);
+            .brand-link {
+              color: ${theme.goldLight};
               text-decoration: none;
-              font-size: 11px;
-              font-weight: 700;
-              letter-spacing: 1.8px;
+              font-size: 10px;
+              font-weight: 800;
+              letter-spacing: 1.5px;
               text-transform: uppercase;
             }
 
-            .hero-content {
-              max-width: 680px;
-              padding-bottom: 20px;
+            /* =========================================
+               QUICK CONTACT ACTIONS
+            ========================================= */
+
+            .quick-actions {
+              background: ${theme.navy};
+              padding: 4px 20px 30px;
             }
 
-            .eyebrow {
-              display: flex;
-              align-items: center;
+            .quick-actions-inner {
+              width: min(760px, 100%);
+              margin: 0 auto;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
               gap: 12px;
-              margin-bottom: 22px;
-              color: ${theme.goldLight};
-              font-size: 10px;
-              font-weight: 800;
-              letter-spacing: 3px;
-              text-transform: uppercase;
             }
 
-            .eyebrow::before {
-              content: "";
-              width: 42px;
-              height: 1px;
-              background: ${theme.gold};
-            }
-
-            .hero-title {
-              margin: 0;
-              font-family: var(--font-display), serif;
-              font-size: clamp(64px, 10vw, 108px);
-              line-height: .79;
-              font-weight: 700;
-              letter-spacing: -3px;
-              text-transform: uppercase;
-            }
-
-            .hero-title span {
-              display: block;
-              color: ${theme.goldLight};
-              font-style: italic;
-              text-transform: none;
-              letter-spacing: -4px;
-              margin-left: 5px;
-            }
-
-            .hero-subtitle {
-              max-width: 490px;
-              margin: 28px 0 0;
-              color: rgba(255,255,255,.78);
-              font-size: 15px;
-              line-height: 1.8;
-            }
-
-            .hero-bottom {
-              display: flex;
-              align-items: flex-end;
-              justify-content: space-between;
-              gap: 30px;
-              padding-top: 34px;
-              border-top: 1px solid rgba(255,255,255,.18);
-            }
-
-            .hero-motto {
-              color: white;
-              font-size: 12px;
-              font-weight: 800;
-              letter-spacing: 2.5px;
-              text-transform: uppercase;
-            }
-
-            .hero-motto span {
-              color: ${theme.goldLight};
-            }
-
-            .scroll-note {
+            .action {
+              min-height: 78px;
+              padding: 14px 16px;
               display: flex;
               align-items: center;
-              gap: 10px;
-              color: rgba(255,255,255,.55);
-              font-size: 10px;
-              letter-spacing: 2px;
-              text-transform: uppercase;
+              gap: 13px;
+              border-radius: 12px;
+              color: white;
+              text-decoration: none;
+              transition:
+                transform .2s ease,
+                box-shadow .2s ease;
             }
 
-            .scroll-line {
-              width: 45px;
-              height: 1px;
-              background: rgba(255,255,255,.4);
+            .action:hover {
+              transform: translateY(-2px);
             }
 
-            /* --------------------------------
+            .action.whatsapp {
+              background: ${theme.whatsapp};
+              box-shadow: 0 7px 22px rgba(37,211,102,.18);
+            }
+
+            .action.telegram {
+              background: ${theme.telegram};
+              box-shadow: 0 7px 22px rgba(34,158,217,.18);
+            }
+
+            .action-icon {
+              width: 43px;
+              height: 43px;
+              flex: 0 0 43px;
+              display: grid;
+              place-items: center;
+              border-radius: 50%;
+              background: rgba(255,255,255,.18);
+            }
+
+            .action-copy {
+              min-width: 0;
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+            }
+
+            .action-copy strong {
+              font-size: 13px;
+              line-height: 1.2;
+              font-weight: 800;
+            }
+
+            .action-copy span {
+              font-size: 10.5px;
+              line-height: 1.2;
+              opacity: .88;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            .action-arrow {
+              opacity: .8;
+            }
+
+            /* =========================================
                INTRO
-            -------------------------------- */
+            ========================================= */
 
             .intro {
-              background: ${theme.ivory};
-              padding: 90px 20px 82px;
-            }
-
-            .intro-inner {
-              width: min(940px, 100%);
-              margin: 0 auto;
+              padding: 76px 22px 70px;
+              background: ${theme.cream};
               text-align: center;
             }
 
-            .section-label {
+            .content-width {
+              width: min(760px, 100%);
+              margin: 0 auto;
+            }
+
+            .eyebrow {
+              margin-bottom: 16px;
               color: ${theme.gold};
               font-size: 10px;
               font-weight: 800;
               letter-spacing: 3px;
               text-transform: uppercase;
-              margin-bottom: 20px;
             }
 
-            .intro h2 {
+            .intro h1 {
               margin: 0 auto;
-              max-width: 780px;
+              max-width: 680px;
+              color: ${theme.navy};
               font-family: var(--font-display), serif;
-              font-size: clamp(38px, 6vw, 64px);
+              font-size: clamp(42px, 8vw, 65px);
               line-height: .98;
               font-weight: 600;
-              color: ${theme.navy};
             }
 
-            .intro h2 em {
+            .intro h1 em {
               color: ${theme.gold};
               font-style: italic;
             }
 
-            .intro-copy {
-              max-width: 640px;
-              margin: 28px auto 0;
+            .intro p {
+              max-width: 625px;
+              margin: 25px auto 0;
               color: ${theme.muted};
-              font-size: 15px;
+              font-size: 14px;
               line-height: 1.9;
             }
 
-            /* --------------------------------
-               PILLARS
-            -------------------------------- */
+            /* =========================================
+               THREE PILLARS
+            ========================================= */
 
             .pillars {
               background: ${theme.navy};
               color: white;
-              padding: 82px 20px;
+              padding: 75px 22px;
             }
 
-            .pillars-inner {
-              width: min(1000px, 100%);
+            .section-width {
+              width: min(900px, 100%);
               margin: 0 auto;
             }
 
-            .dark-label {
+            .dark-eyebrow {
               color: ${theme.goldLight};
               font-size: 10px;
               font-weight: 800;
@@ -417,12 +389,12 @@ export default async function Home() {
               text-transform: uppercase;
             }
 
-            .pillars-heading {
-              max-width: 600px;
-              margin: 18px 0 55px;
+            .pillars-title {
+              margin: 15px 0 42px;
+              max-width: 620px;
               font-family: var(--font-display), serif;
-              font-size: clamp(38px, 6vw, 58px);
-              line-height: 1;
+              font-size: clamp(40px, 7vw, 58px);
+              line-height: .98;
               font-weight: 600;
             }
 
@@ -434,8 +406,8 @@ export default async function Home() {
             }
 
             .pillar {
-              min-height: 300px;
-              padding: 34px 28px;
+              min-height: 285px;
+              padding: 30px 25px;
               border-right: 1px solid ${theme.line};
             }
 
@@ -444,67 +416,67 @@ export default async function Home() {
             }
 
             .pillar-number {
-              width: 42px;
-              height: 42px;
-              border: 1px solid ${theme.gold};
+              width: 39px;
+              height: 39px;
+              margin-bottom: 42px;
               display: grid;
               place-items: center;
+              border: 1px solid ${theme.gold};
               color: ${theme.goldLight};
               font-family: var(--font-display), serif;
-              font-size: 20px;
-              font-weight: 600;
-              margin-bottom: 48px;
+              font-size: 19px;
             }
 
-            .pillar h3 {
-              margin: 0 0 13px;
-              font-family: var(--font-display), serif;
+            .pillar h2 {
+              margin: 0 0 12px;
               color: white;
-              font-size: 30px;
+              font-family: var(--font-display), serif;
+              font-size: 31px;
+              line-height: 1;
               font-weight: 600;
             }
 
             .pillar p {
               margin: 0;
               color: rgba(255,255,255,.62);
-              font-size: 13px;
-              line-height: 1.85;
+              font-size: 12.5px;
+              line-height: 1.8;
             }
 
-            /* --------------------------------
-               APPROACH
-            -------------------------------- */
+            /* =========================================
+               PHILOSOPHY
+            ========================================= */
 
-            .approach {
-              background: ${theme.cream};
-              padding: 90px 20px;
+            .philosophy {
+              background: ${theme.creamDark};
+              padding: 76px 22px;
             }
 
-            .approach-inner {
-              width: min(1000px, 100%);
+            .philosophy-grid {
+              width: min(900px, 100%);
               margin: 0 auto;
               display: grid;
-              grid-template-columns: .85fr 1.15fr;
-              gap: 80px;
+              grid-template-columns: .8fr 1.2fr;
+              gap: 70px;
               align-items: start;
             }
 
-            .approach-title {
-              margin: 15px 0 0;
-              font-family: var(--font-display), serif;
+            .philosophy h2 {
+              margin: 14px 0 0;
               color: ${theme.navy};
-              font-size: clamp(42px, 6vw, 64px);
-              line-height: .95;
+              font-family: var(--font-display), serif;
+              font-size: clamp(43px, 7vw, 63px);
+              line-height: .92;
               font-weight: 600;
             }
 
-            .approach-title em {
+            .philosophy h2 em {
               color: ${theme.gold};
               font-style: italic;
             }
 
-            .approach-copy {
-              margin: 0 0 34px;
+            .philosophy-copy {
+              margin: 0 0 27px;
               color: ${theme.muted};
               font-size: 14px;
               line-height: 1.9;
@@ -512,8 +484,9 @@ export default async function Home() {
 
             .principle {
               display: flex;
-              gap: 15px;
-              padding: 17px 0;
+              gap: 14px;
+              align-items: flex-start;
+              padding: 16px 0;
               border-top: 1px solid rgba(23,37,53,.13);
             }
 
@@ -521,193 +494,161 @@ export default async function Home() {
               border-bottom: 1px solid rgba(23,37,53,.13);
             }
 
-            .principle strong {
-              color: ${theme.navy};
-              font-size: 13px;
-              line-height: 1.5;
-            }
-
-            /* --------------------------------
-               CTA
-            -------------------------------- */
-
-            .contact {
-              position: relative;
-              background: ${theme.navy2};
-              color: white;
-              padding: 88px 20px;
-              overflow: hidden;
-            }
-
-            .contact::after {
-              content: "";
-              position: absolute;
-              width: 420px;
-              height: 420px;
-              right: -180px;
-              top: -180px;
-              border: 1px solid rgba(201,163,91,.17);
+            .check {
+              width: 19px;
+              height: 19px;
+              flex: 0 0 19px;
+              border: 1px solid ${theme.gold};
               border-radius: 50%;
-              box-shadow:
-                0 0 0 70px rgba(201,163,91,.04),
-                0 0 0 140px rgba(201,163,91,.025);
+              display: grid;
+              place-items: center;
+              color: ${theme.gold};
+              font-size: 10px;
+              margin-top: 1px;
             }
 
-            .contact-inner {
-              position: relative;
-              z-index: 1;
-              width: min(820px, 100%);
-              margin: 0 auto;
+            .principle span {
+              color: ${theme.navy};
+              font-size: 12px;
+              line-height: 1.55;
+              font-weight: 700;
+            }
+
+            /* =========================================
+               SECOND CTA
+            ========================================= */
+
+            .cta {
+              background: ${theme.navyLight};
+              color: white;
+              padding: 80px 22px;
               text-align: center;
             }
 
-            .contact h2 {
+            .cta h2 {
+              max-width: 680px;
               margin: 15px auto 18px;
-              max-width: 650px;
               font-family: var(--font-display), serif;
-              font-size: clamp(44px, 7vw, 70px);
-              line-height: .95;
+              font-size: clamp(43px, 8vw, 68px);
+              line-height: .94;
               font-weight: 600;
             }
 
-            .contact h2 em {
+            .cta h2 em {
               color: ${theme.goldLight};
               font-style: italic;
             }
 
-            .contact-copy {
+            .cta p {
               max-width: 560px;
-              margin: 0 auto 34px;
-              color: rgba(255,255,255,.65);
-              font-size: 14px;
+              margin: 0 auto 30px;
+              color: rgba(255,255,255,.63);
+              font-size: 13.5px;
               line-height: 1.85;
             }
 
-            .contact-actions {
+            .cta-buttons {
               display: flex;
               justify-content: center;
-              gap: 12px;
+              gap: 11px;
               flex-wrap: wrap;
             }
 
-            .contact-button {
-              min-width: 185px;
-              padding: 15px 20px;
+            .cta-button {
+              min-width: 190px;
+              min-height: 49px;
+              padding: 13px 18px;
               display: inline-flex;
               align-items: center;
               justify-content: center;
-              gap: 9px;
-              border-radius: 0;
+              gap: 8px;
               text-decoration: none;
-              font-size: 12px;
+              font-size: 11px;
               font-weight: 800;
-              letter-spacing: 1px;
+              letter-spacing: 1.1px;
               text-transform: uppercase;
-              transition: transform .2s ease, opacity .2s ease;
+              transition: transform .2s ease;
             }
 
-            .contact-button:hover {
+            .cta-button:hover {
               transform: translateY(-2px);
             }
 
-            .button-whatsapp {
-              background: ${theme.whatsapp};
-              color: white;
+            .cta-button.primary {
+              background: ${theme.gold};
+              color: ${theme.navy};
             }
 
-            .button-telegram {
-              background: transparent;
-              color: white;
+            .cta-button.secondary {
               border: 1px solid rgba(255,255,255,.28);
+              color: white;
             }
 
-            .contact-details {
-              margin-top: 24px;
-              color: rgba(255,255,255,.42);
-              font-size: 11px;
-              letter-spacing: .5px;
-            }
-
-            /* --------------------------------
+            /* =========================================
                FOOTER
-            -------------------------------- */
+            ========================================= */
 
             footer {
-              background: #041421;
-              color: rgba(255,255,255,.45);
-              padding: 30px 20px;
+              padding: 30px 22px;
+              background: #041522;
               text-align: center;
             }
 
-            .footer-brand {
+            .footer-name {
+              margin-bottom: 8px;
               color: ${theme.goldLight};
               font-family: var(--font-display), serif;
-              font-size: 20px;
-              margin-bottom: 8px;
+              font-size: 21px;
+              font-weight: 600;
             }
 
             .footer-copy {
-              margin: 0;
-              font-size: 10px;
+              max-width: 600px;
+              margin: 0 auto;
+              color: rgba(255,255,255,.4);
+              font-size: 9.5px;
               line-height: 1.7;
             }
 
-            /* --------------------------------
+            /* =========================================
                MOBILE
-            -------------------------------- */
+            ========================================= */
 
-            @media (max-width: 700px) {
-              .hero {
-                min-height: 640px;
+            @media (max-width: 650px) {
+              .brand-bar {
+                padding: 14px 15px;
               }
 
-              .hero-inner {
-                width: min(100% - 32px, 540px);
-                min-height: 640px;
-                padding-top: 20px;
-                padding-bottom: 25px;
-              }
-
-              .nav-link {
+              .brand-link {
                 display: none;
               }
 
-              .hero-overlay {
-                background:
-                  linear-gradient(
-                    90deg,
-                    rgba(5,20,34,.95) 0%,
-                    rgba(5,20,34,.65) 55%,
-                    rgba(5,20,34,.12) 100%
-                  ),
-                  linear-gradient(
-                    0deg,
-                    rgba(5,20,34,.96) 0%,
-                    rgba(5,20,34,.12) 58%,
-                    rgba(5,20,34,.28) 100%
-                  );
+              .quick-actions {
+                padding: 5px 14px 22px;
               }
 
-              .hero-title {
-                font-size: clamp(57px, 17vw, 82px);
-                letter-spacing: -2px;
+              .quick-actions-inner {
+                grid-template-columns: 1fr;
+                gap: 9px;
               }
 
-              .hero-title span {
-                letter-spacing: -2px;
+              .action {
+                min-height: 69px;
+                padding: 12px 14px;
               }
 
-              .hero-subtitle {
-                max-width: 330px;
-                font-size: 13px;
+              .action-icon {
+                width: 40px;
+                height: 40px;
+                flex-basis: 40px;
               }
 
-              .hero-bottom {
-                display: block;
+              .intro {
+                padding: 64px 20px 60px;
               }
 
-              .scroll-note {
-                display: none;
+              .pillars {
+                padding: 64px 20px;
               }
 
               .pillar-grid {
@@ -716,7 +657,7 @@ export default async function Home() {
 
               .pillar {
                 min-height: auto;
-                padding: 30px 0;
+                padding: 28px 0;
                 border-right: 0;
                 border-bottom: 1px solid ${theme.line};
               }
@@ -726,40 +667,45 @@ export default async function Home() {
               }
 
               .pillar-number {
-                margin-bottom: 26px;
+                margin-bottom: 25px;
               }
 
-              .approach-inner {
+              .philosophy {
+                padding: 64px 20px;
+              }
+
+              .philosophy-grid {
                 display: block;
               }
 
-              .approach-copy-wrap {
-                margin-top: 45px;
+              .philosophy-copy-wrap {
+                margin-top: 42px;
               }
 
-              .contact-actions {
+              .cta {
+                padding: 65px 20px;
+              }
+
+              .cta-buttons {
                 flex-direction: column;
               }
 
-              .contact-button {
+              .cta-button {
                 width: 100%;
               }
             }
 
             @media (prefers-reduced-motion: no-preference) {
-              .reveal {
-                animation: reveal .8s cubic-bezier(.22,1,.36,1) both;
+              .fade-up {
+                animation: fadeUp .7s cubic-bezier(.22,1,.36,1) both;
               }
 
-              .reveal-delay {
-                animation: reveal .8s cubic-bezier(.22,1,.36,1) .12s both;
-              }
-
-              @keyframes reveal {
+              @keyframes fadeUp {
                 from {
                   opacity: 0;
-                  transform: translateY(18px);
+                  transform: translateY(14px);
                 }
+
                 to {
                   opacity: 1;
                   transform: none;
@@ -772,150 +718,182 @@ export default async function Home() {
 
       <div className="page">
 
-        {/* ================================
-            HERO
-        ================================= */}
+        {/* =========================================
+            BRAND BAR
+        ========================================= */}
+
+        <header className="brand-bar">
+          <div className="brand-bar-inner">
+
+            <Link href="/" className="brand">
+              <div className="brand-mark">S</div>
+
+              <span className="brand-name">
+                Smart Money Blueprint
+              </span>
+            </Link>
+
+            <a href="#contact" className="brand-link">
+              Connect With Us
+            </a>
+
+          </div>
+        </header>
+
+        {/* =========================================
+            MAIN IMAGE
+        ========================================= */}
 
         <section className="hero">
-          <div className="hero-image">
-            <Image
-              src="/banner.jpg"
-              alt="Couple watching the sunset by the ocean"
-              fill
-              priority
-              sizes="100vw"
-            />
-          </div>
+          <Image
+            src="/banner.jpg"
+            alt="The Smart Money Blueprint — Invest. Save. Retire."
+            width={1536}
+            height={802}
+            priority
+            sizes="100vw"
+            className="hero-image"
+          />
+        </section>
 
-          <div className="hero-overlay" />
+        {/* =========================================
+            IMMEDIATE CONTACT ACTIONS
+        ========================================= */}
 
-          <div className="hero-inner">
+        <section className="quick-actions" aria-label="Contact options">
+          <div className="quick-actions-inner">
 
-            <div className="topbar">
-              <Link href="/" className="brand">
-                <div className="brand-mark">S</div>
-                <span className="brand-name">
-                  Smart Money
-                </span>
-              </Link>
-
-              <a href="#contact" className="nav-link">
-                Start a Conversation
-              </a>
-            </div>
-
-            <div className="hero-content reveal">
-              <div className="eyebrow">
-                A Practical Guide to Wealth
+            <Link
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="action whatsapp"
+            >
+              <div className="action-icon">
+                <WhatsAppIcon />
               </div>
 
-              <h1 className="hero-title">
-                The Smart
-                <span>Money Blueprint</span>
-              </h1>
-
-              <p className="hero-subtitle">
-                A thoughtful approach to building financial
-                confidence—through better decisions, consistent
-                saving, purposeful investing, and a retirement
-                plan built for the life you actually want.
-              </p>
-            </div>
-
-            <div className="hero-bottom">
-              <div className="hero-motto">
-                Invest. <span>Save.</span> Retire.
+              <div className="action-copy">
+                <strong>Connect on WhatsApp</strong>
+                <span>{whatsappNumber}</span>
               </div>
 
-              <div className="scroll-note">
-                <div className="scroll-line" />
-                Explore the blueprint
+              <span className="action-arrow">
+                <ArrowIcon />
+              </span>
+            </Link>
+
+            <Link
+              href={TELEGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="action telegram"
+            >
+              <div className="action-icon">
+                <TelegramIcon />
               </div>
-            </div>
+
+              <div className="action-copy">
+                <strong>Join us on Telegram</strong>
+                <span>{telegramUsername}</span>
+              </div>
+
+              <span className="action-arrow">
+                <ArrowIcon />
+              </span>
+            </Link>
+
           </div>
         </section>
 
-        {/* ================================
-            INTRO
-        ================================= */}
+        {/* =========================================
+            INTRODUCTION
+        ========================================= */}
 
         <section className="intro">
-          <div className="intro-inner reveal">
+          <div className="content-width fade-up">
 
-            <div className="section-label">
-              The philosophy
+            <div className="eyebrow">
+              A smarter approach to money
             </div>
 
-            <h2>
-              Wealth is built through
-              <em> small decisions</em>
-              made consistently.
-            </h2>
+            <h1>
+              Build wealth with
+              <em> intention.</em>
+            </h1>
 
-            <p className="intro-copy">
-              The Smart Money Blueprint is designed to make
-              financial planning feel less complicated and more
-              intentional. Instead of chasing quick wins, we focus
-              on the fundamentals that can stand the test of time:
-              clarity, discipline, diversification, and patience.
+            <p>
+              The Smart Money Blueprint is about making your
+              financial future easier to understand and easier
+              to act on. We focus on the fundamentals that
+              matter: disciplined saving, thoughtful investing,
+              long-term planning, and preparing for the life
+              you want to enjoy.
             </p>
 
           </div>
         </section>
 
-        {/* ================================
+        {/* =========================================
             THREE PILLARS
-        ================================= */}
+        ========================================= */}
 
         <section className="pillars">
-          <div className="pillars-inner">
+          <div className="section-width">
 
-            <div className="dark-label">
-              The three pillars
+            <div className="dark-eyebrow">
+              The blueprint
             </div>
 
-            <h2 className="pillars-heading">
-              A smarter way to think about your money.
+            <h2 className="pillars-title">
+              Three simple ideas.
+              <br />
+              One stronger financial future.
             </h2>
 
             <div className="pillar-grid">
 
               <article className="pillar">
-                <PillarIcon number="01" />
+                <div className="pillar-number">
+                  01
+                </div>
 
-                <h3>Invest</h3>
+                <h2>Invest</h2>
 
                 <p>
-                  Put your money to work with a long-term
-                  perspective. Understand risk, diversification,
-                  and the role each investment plays in your
-                  bigger financial picture.
+                  Put your money to work with purpose.
+                  Understand risk, think long term, and
+                  build an investment approach that fits
+                  your goals.
                 </p>
               </article>
 
               <article className="pillar">
-                <PillarIcon number="02" />
+                <div className="pillar-number">
+                  02
+                </div>
 
-                <h3>Save</h3>
+                <h2>Save</h2>
 
                 <p>
-                  Build financial breathing room before you need
-                  it. Strong saving habits create flexibility,
-                  resilience, and the freedom to make better
-                  decisions when life changes.
+                  Strong financial foundations start with
+                  consistent saving. Create flexibility,
+                  protect your future, and give yourself
+                  room to make better decisions.
                 </p>
               </article>
 
               <article className="pillar">
-                <PillarIcon number="03" />
+                <div className="pillar-number">
+                  03
+                </div>
 
-                <h3>Retire</h3>
+                <h2>Retire</h2>
 
                 <p>
-                  Turn today's decisions into tomorrow's options.
-                  A thoughtful retirement strategy connects your
-                  income, investments, goals, and the lifestyle
-                  you hope to enjoy later.
+                  Retirement is about more than a number.
+                  Plan for income, lifestyle, independence,
+                  and the freedom to enjoy the years ahead.
                 </p>
               </article>
 
@@ -923,99 +901,107 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* ================================
-            APPROACH
-        ================================= */}
+        {/* =========================================
+            PHILOSOPHY
+        ========================================= */}
 
-        <section className="approach">
-          <div className="approach-inner">
+        <section className="philosophy">
+          <div className="philosophy-grid">
 
             <div>
-              <div className="section-label">
-                Our approach
+              <div className="eyebrow">
+                Our philosophy
               </div>
 
-              <h2 className="approach-title">
+              <h2>
                 Less noise.
                 <br />
                 More <em>clarity.</em>
               </h2>
             </div>
 
-            <div className="approach-copy-wrap">
+            <div className="philosophy-copy-wrap">
 
-              <p className="approach-copy">
-                Financial planning should help you feel more
-                confident—not more overwhelmed. The blueprint
-                keeps the process grounded in a handful of
-                principles that can guide decisions through
-                different seasons of life.
+              <p className="philosophy-copy">
+                Money can become complicated quickly. Our
+                approach starts by bringing the conversation
+                back to the things you can control: your goals,
+                your habits, your time horizon, and the choices
+                you make consistently.
               </p>
 
               <div className="principle">
-                <CheckIcon />
-                <strong>
-                  Know where you are before deciding where to go.
-                </strong>
+                <div className="check">✓</div>
+
+                <span>
+                  Understand your starting point before
+                  planning your next move.
+                </span>
               </div>
 
               <div className="principle">
-                <CheckIcon />
-                <strong>
-                  Build habits that can survive changing markets.
-                </strong>
+                <div className="check">✓</div>
+
+                <span>
+                  Build habits that remain useful through
+                  changing markets and circumstances.
+                </span>
               </div>
 
               <div className="principle">
-                <CheckIcon />
-                <strong>
-                  Diversify thoughtfully rather than chasing trends.
-                </strong>
+                <div className="check">✓</div>
+
+                <span>
+                  Think long term rather than reacting to
+                  every short-term headline.
+                </span>
               </div>
 
               <div className="principle">
-                <CheckIcon />
-                <strong>
-                  Give long-term decisions enough time to compound.
-                </strong>
+                <div className="check">✓</div>
+
+                <span>
+                  Keep your financial strategy aligned with
+                  the life you actually want.
+                </span>
               </div>
 
             </div>
           </div>
         </section>
 
-        {/* ================================
-            CONTACT
-        ================================= */}
+        {/* =========================================
+            FINAL CTA
+        ========================================= */}
 
-        <section className="contact" id="contact">
-          <div className="contact-inner reveal">
+        <section className="cta" id="contact">
+          <div className="content-width">
 
-            <div className="dark-label">
-              Begin the conversation
+            <div className="dark-eyebrow">
+              Start the conversation
             </div>
 
             <h2>
-              Your financial future deserves a
+              Your future deserves a
               <em> blueprint.</em>
             </h2>
 
-            <p className="contact-copy">
-              Have questions about investing, saving, or
-              preparing for retirement? Connect with us and
-              take the first step toward a more intentional
-              financial plan.
+            <p>
+              Whether you're beginning to invest, working on
+              your savings, or preparing for retirement, a
+              thoughtful conversation can be a useful first
+              step.
             </p>
 
-            <div className="contact-actions">
+            <div className="cta-buttons">
 
               <Link
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-button button-whatsapp"
+                className="cta-button primary"
               >
-                WhatsApp
+                WhatsApp Us
                 <ArrowIcon />
               </Link>
 
@@ -1023,38 +1009,33 @@ export default async function Home() {
                 href={TELEGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-button button-telegram"
+                className="cta-button secondary"
               >
-                Telegram
+                Message on Telegram
                 <ArrowIcon />
               </Link>
 
             </div>
 
-            <div className="contact-details">
-              {whatsappNumber}
-              {" · "}
-              {telegramUsername}
-            </div>
-
           </div>
         </section>
 
-        {/* ================================
+        {/* =========================================
             FOOTER
-        ================================= */}
+        ========================================= */}
 
         <footer>
-          <div className="footer-brand">
+          <div className="footer-name">
             The Smart Money Blueprint
           </div>
 
           <p className="footer-copy">
             © {new Date().getFullYear()} The Smart Money Blueprint.
+            All rights reserved.
             <br />
-            Educational information only. Investment decisions
-            should be based on your individual circumstances,
-            objectives, and risk tolerance.
+            Educational information only. Financial decisions
+            should be considered in light of your individual
+            circumstances, objectives, and risk tolerance.
           </p>
         </footer>
 
