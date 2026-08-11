@@ -409,16 +409,12 @@ export default async function Home() {
               border-right: 0;
             }
 
-            .pillar-number {
-              width: 39px;
-              height: 39px;
-              margin-bottom: 42px;
-              display: grid;
-              place-items: center;
-              border: 1px solid ${theme.gold};
-              color: ${theme.goldLight};
-              font-family: var(--font-display), serif;
-              font-size: 19px;
+            .pillar-dot {
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              background: ${theme.gold};
+              margin-bottom: 28px;
             }
 
             .pillar h2 {
@@ -557,14 +553,14 @@ export default async function Home() {
               }
 
               .contact-pills {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
               }
 
               .contact-pill {
-                width: 100%;
-                max-width: 260px;
-                justify-content: center;
+                padding: 10px 18px;
+                font-size: 12px;
               }
 
               .pillars {
@@ -584,10 +580,6 @@ export default async function Home() {
 
               .pillar:last-child {
                 border-bottom: 0;
-              }
-
-              .pillar-number {
-                margin-bottom: 25px;
               }
 
               .philosophy {
@@ -741,9 +733,7 @@ export default async function Home() {
             <div className="pillar-grid">
 
               <article className="pillar">
-                <div className="pillar-number">
-                  01
-                </div>
+                <div className="pillar-dot" />
 
                 <h2>Invest</h2>
 
@@ -756,9 +746,7 @@ export default async function Home() {
               </article>
 
               <article className="pillar">
-                <div className="pillar-number">
-                  02
-                </div>
+                <div className="pillar-dot" />
 
                 <h2>Save</h2>
 
@@ -771,9 +759,7 @@ export default async function Home() {
               </article>
 
               <article className="pillar">
-                <div className="pillar-number">
-                  03
-                </div>
+                <div className="pillar-dot" />
 
                 <h2>Retire</h2>
 
