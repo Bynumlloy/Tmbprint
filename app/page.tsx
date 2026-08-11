@@ -766,9 +766,9 @@ Earn
             © {new Date().getFullYear()} TheSmartMoneyBlueprint.
             All rights reserved.
             <br />
-            Educational information only. Financial decisions
-            should be considered in light of your individual
-            circumstances, objectives, and risk tolerance.
+            Financial decision should be considered in light of your individual
+            position . 
+        
           </p>
         </footer>
 
