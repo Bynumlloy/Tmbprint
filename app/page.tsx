@@ -350,14 +350,11 @@ export default async function Home() {
             .pillar-grid {
               display: grid;
               grid-template-columns: repeat(3, 1fr);
-              border-top: 1px solid ${theme.line};
-              border-bottom: 1px solid ${theme.line};
             }
 
             .pillar {
               min-height: 285px;
               padding: 30px 25px;
-              border-right: 1px solid ${theme.line};
             }
 
             .pillar:last-child {
@@ -428,11 +425,6 @@ export default async function Home() {
               gap: 14px;
               align-items: flex-start;
               padding: 16px 0;
-              border-top: 1px solid ${theme.line};
-            }
-
-            .principle:last-child {
-              border-bottom: 1px solid ${theme.line};
             }
 
             .check {
@@ -517,8 +509,6 @@ export default async function Home() {
               .pillar {
                 min-height: auto;
                 padding: 28px 0;
-                border-right: 0;
-                border-bottom: 1px solid ${theme.line};
               }
 
               .pillar:last-child {
