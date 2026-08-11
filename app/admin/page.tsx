@@ -64,26 +64,22 @@ export default function AdminPage() {
     setSaveMessage(data.success ? "Saved!" : data.error || "Failed to save");
   }
 
-  // --- Design Tokens ---
   const theme = {
-    bg: "#FAF8F5",
-    cardBg: "#FFFFFF",
-    primary: "#0F2535",
-    accent: "#C9A87C",
-    accentHover: "#B8966A",
-    text: "#1E293B",
-    muted: "#64748B",
-    border: "#E2E8F0",
-    errorBg: "#FEF2F2",
-    errorText: "#EF4444",
-    successBg: "#F0FDF4",
-    successText: "#16A34A",
+    navy: "#0c1622",
+    navyLight: "#111d2e",
+    navyLighter: "#162536",
+    gold: "#C9A35B",
+    goldLight: "#E2C789",
+    text: "#e8e4da",
+    textMuted: "#9a958a",
+    line: "#1e2d3d",
+    error: "#EF4444",
+    success: "#25D366",
     whatsapp: "#25D366",
-    telegram: "#0088CC",
-    admauth: "0f2535",
+    telegram: "#229ED9",
   };
 
-  // --- Login State Screen ---
+  // --- Login Screen ---
   if (!authed) {
     return (
       <main
@@ -93,7 +89,7 @@ export default function AdminPage() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: theme.bg,
+          background: theme.navy,
           padding: 24,
           fontFamily: "var(--font-body), sans-serif",
         }}
@@ -101,89 +97,124 @@ export default function AdminPage() {
         <div
           style={{
             width: "100%",
-            maxWidth: 400,
-            background: theme.cardBg,
-            padding: "40px 32px",
-            borderRadius: 20,
-            border: `1px solid ${theme.border}`,
-            boxShadow: "0 12px 32px rgba(15, 37, 53, 0.06)",
+            maxWidth: 420,
+            background: theme.navyLight,
+            padding: "48px 36px",
+            borderRadius: 16,
+            border: `1px solid ${theme.line}`,
             display: "flex",
             flexDirection: "column",
-            gap: 24,
+            gap: 28,
           }}
         >
           {/* Header */}
           <div style={{ textAlign: "center" }}>
             <div
               style={{
-                width: 48,
-                height: 48,
+                width: 52,
+                height: 52,
                 borderRadius: "50%",
-                background: "rgba(201, 168, 124, 0.15)",
-                color: theme.accent,
+                border: `1px solid ${theme.gold}`,
+                color: theme.goldLight,
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
-                marginBottom: 16,
+                marginBottom: 20,
+                fontFamily: "var(--font-display), serif",
+                fontSize: 22,
+                fontWeight: 700,
               }}
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-              </svg>
+              S
             </div>
-            <h1 style={{ fontFamily: "var(--font-display), serif", fontStyle: "italic", color: theme.primary, fontSize: 28, margin: "0 0 6px", fontWeight: 700 }}>
+            <h1
+              style={{
+                fontFamily: "var(--font-display), serif",
+                color: theme.text,
+                fontSize: 26,
+                margin: "0 0 8px",
+                fontWeight: 600,
+              }}
+            >
               Admin Portal
             </h1>
-            <p style={{ color: theme.muted, fontSize: 14, margin: 0 }}>
-              Enter  password
+            <p style={{ color: theme.textMuted, fontSize: 13, margin: 0 }}>
+              TheSmartMoneyBlueprint
             </p>
           </div>
 
-          <form onSubmit={handleLogin} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+          <form
+            onSubmit={handleLogin}
+            style={{ display: "flex", flexDirection: "column", gap: 20 }}
+          >
             <div>
-              <label style={{ display: "block", color: theme.text, fontSize: 13, fontWeight: 600, marginBottom: 8 }}>
+              <label
+                style={{
+                  display: "block",
+                  color: theme.textMuted,
+                  fontSize: 11,
+                  fontWeight: 700,
+                  letterSpacing: "1.5px",
+                  textTransform: "uppercase",
+                  marginBottom: 10,
+                }}
+              >
                 Password
               </label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••••••"
+                placeholder="Enter your password"
                 required
                 style={{
                   width: "100%",
-                  padding: "12px 16px",
-                  borderRadius: 12,
-                  border: `1.5px solid ${theme.border}`,
-                  background: "#FAFAFA",
+                  padding: "14px 16px",
+                  borderRadius: 10,
+                  border: `1px solid ${theme.line}`,
+                  background: theme.navy,
                   color: theme.text,
                   fontSize: 15,
                   outline: "none",
                   boxSizing: "border-box",
                   transition: "border-color 0.2s ease",
                 }}
-                onFocus={(e) => (e.target.style.borderColor = theme.accent)}
-                onBlur={(e) => (e.target.style.borderColor = theme.border)}
+                onFocus={(e) =>
+                  (e.target.style.borderColor = theme.gold)
+                }
+                onBlur={(e) =>
+                  (e.target.style.borderColor = theme.line)
+                }
               />
             </div>
 
             {loginError && (
               <div
                 style={{
-                  padding: "10px 14px",
+                  padding: "12px 16px",
                   borderRadius: 10,
-                  background: theme.errorBg,
+                  background: "rgba(239, 68, 68, 0.1)",
                   border: `1px solid rgba(239, 68, 68, 0.2)`,
-                  color: theme.errorText,
+                  color: theme.error,
                   fontSize: 13,
-                  fontWeight: 500,
+                  fontWeight: 600,
                   display: "flex",
                   alignItems: "center",
                   gap: 8,
                 }}
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
                 {loginError}
               </div>
             )}
@@ -191,20 +222,25 @@ export default function AdminPage() {
             <button
               type="submit"
               style={{
-                marginTop: 6,
-                padding: "14px",
-                borderRadius: 12,
+                marginTop: 4,
+                padding: "16px",
+                borderRadius: 10,
                 border: "none",
-                background: theme.primary,
-                color: "#FFFFFF",
-                fontWeight: 600,
-                fontSize: 15,
+                background: theme.gold,
+                color: theme.navy,
+                fontWeight: 800,
+                fontSize: 13,
+                letterSpacing: "1px",
+                textTransform: "uppercase",
                 cursor: "pointer",
-                boxShadow: "0 4px 14px rgba(15, 37, 53, 0.15)",
-                transition: "transform 0.1s ease, background-color 0.2s ease",
+                transition: "transform 0.15s ease, opacity 0.2s ease",
               }}
-              onMouseDown={(e) => (e.currentTarget.style.transform = "scale(0.98)")}
-              onMouseUp={(e) => (e.currentTarget.style.transform = "scale(1)")}
+              onMouseDown={(e) =>
+                (e.currentTarget.style.transform = "scale(0.98)")
+              }
+              onMouseUp={(e) =>
+                (e.currentTarget.style.transform = "scale(1)")
+              }
             >
               Authenticate
             </button>
@@ -214,7 +250,7 @@ export default function AdminPage() {
     );
   }
 
-  // --- Authenticated Admin Dashboard ---
+  // --- Dashboard ---
   return (
     <main
       style={{
@@ -223,7 +259,7 @@ export default function AdminPage() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: theme.bg,
+        background: theme.navy,
         padding: 24,
         fontFamily: "var(--font-body), sans-serif",
       }}
@@ -231,25 +267,59 @@ export default function AdminPage() {
       <div
         style={{
           width: "100%",
-          maxWidth: 460,
-          background: theme.cardBg,
-          padding: "40px 32px",
-          borderRadius: 20,
-          border: `1px solid ${theme.border}`,
-          boxShadow: "0 12px 32px rgba(15, 37, 53, 0.06)",
+          maxWidth: 520,
+          background: theme.navyLight,
+          padding: "40px 36px",
+          borderRadius: 16,
+          border: `1px solid ${theme.line}`,
           display: "flex",
           flexDirection: "column",
           gap: 28,
         }}
       >
-        {/* Header Bar */}
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: `1px solid ${theme.border}`, paddingBottom: 20 }}>
+        {/* Header */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            borderBottom: `1px solid ${theme.line}`,
+            paddingBottom: 20,
+          }}
+        >
           <div>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(22, 163, 74, 0.1)", color: theme.successText, padding: "3px 10px", borderRadius: 20, fontSize: 12, fontWeight: 600, marginBottom: 8 }}>
-              <span style={{ width: 6, height: 6, borderRadius: "50%", background: theme.successText }}></span>
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+                color: theme.success,
+                fontSize: 11,
+                fontWeight: 800,
+                letterSpacing: "1.5px",
+                textTransform: "uppercase",
+                marginBottom: 8,
+              }}
+            >
+              <span
+                style={{
+                  width: 7,
+                  height: 7,
+                  borderRadius: "50%",
+                  background: theme.success,
+                }}
+              />
               Authenticated
             </div>
-            <h1 style={{ fontFamily: "var(--font-display), serif", fontStyle: "italic", color: theme.primary, fontSize: 26, margin: 0, fontWeight: 700 }}>
+            <h1
+              style={{
+                fontFamily: "var(--font-display), serif",
+                color: theme.text,
+                fontSize: 24,
+                margin: 0,
+                fontWeight: 600,
+              }}
+            >
               Edit Community Links
             </h1>
           </div>
@@ -257,14 +327,25 @@ export default function AdminPage() {
           <button
             onClick={() => setAuthed(false)}
             style={{
-              background: "#FA7578",
-              border: `1px solid ${theme.text}`,
-              color: theme.admauth,
-              padding: "8px 12px",
-              borderRadius: 10,
-              fontSize: 12,
-              fontWeight: 600,
+              background: "transparent",
+              border: `1px solid ${theme.line}`,
+              color: theme.textMuted,
+              padding: "8px 14px",
+              borderRadius: 8,
+              fontSize: 11,
+              fontWeight: 700,
+              letterSpacing: "1px",
+              textTransform: "uppercase",
               cursor: "pointer",
+              transition: "all 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = theme.gold;
+              e.currentTarget.style.color = theme.gold;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = theme.line;
+              e.currentTarget.style.color = theme.textMuted;
             }}
           >
             Lock
@@ -272,28 +353,60 @@ export default function AdminPage() {
         </div>
 
         {loading ? (
-          <div style={{ padding: "32px 0", textAlign: "center", color: theme.muted, fontSize: 14 }}>
+          <div
+            style={{
+              padding: "40px 0",
+              textAlign: "center",
+              color: theme.textMuted,
+              fontSize: 14,
+            }}
+          >
             <div
               style={{
                 width: 24,
                 height: 24,
-                border: `3px solid ${theme.border}`,
-                borderTopColor: theme.accent,
+                border: `2px solid ${theme.line}`,
+                borderTopColor: theme.gold,
                 borderRadius: "50%",
-                margin: "0 auto 12px",
+                margin: "0 auto 14px",
                 animation: "spin 0.8s linear infinite",
               }}
             />
-            <style dangerouslySetInnerHTML={{ __html: `@keyframes spin { to { transform: rotate(360deg); } }` }} />
+            <style
+              dangerouslySetInnerHTML={{
+                __html: `@keyframes spin { to { transform: rotate(360deg); } }`,
+              }}
+            />
             Retrieving database values...
           </div>
         ) : (
-          <form onSubmit={handleSave} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-
-            {/* WhatsApp Group URL */}
+          <form
+            onSubmit={handleSave}
+            style={{ display: "flex", flexDirection: "column", gap: 22 }}
+          >
+            {/* WhatsApp URL */}
             <div>
-              <label style={{ display: "flex", alignItems: "center", gap: 8, color: theme.text, fontSize: 13, fontWeight: 600, marginBottom: 8 }}>
-                <span style={{ width: 8, height: 8, borderRadius: "50%", background: theme.whatsapp }} />
+              <label
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 8,
+                  color: theme.textMuted,
+                  fontSize: 11,
+                  fontWeight: 700,
+                  letterSpacing: "1.5px",
+                  textTransform: "uppercase",
+                  marginBottom: 10,
+                }}
+              >
+                <span
+                  style={{
+                    width: 7,
+                    height: 7,
+                    borderRadius: "50%",
+                    background: theme.whatsapp,
+                  }}
+                />
                 WhatsApp Group URL
               </label>
               <input
@@ -303,25 +416,48 @@ export default function AdminPage() {
                 placeholder="https://wa.link/..."
                 style={{
                   width: "100%",
-                  padding: "12px 16px",
-                  borderRadius: 12,
-                  border: `1.5px solid ${theme.border}`,
-                  background: "#FAFAFA",
+                  padding: "14px 16px",
+                  borderRadius: 10,
+                  border: `1px solid ${theme.line}`,
+                  background: theme.navy,
                   color: theme.text,
                   fontSize: 14,
                   outline: "none",
                   boxSizing: "border-box",
                   transition: "border-color 0.2s ease",
                 }}
-                onFocus={(e) => (e.target.style.borderColor = theme.whatsapp)}
-                onBlur={(e) => (e.target.style.borderColor = theme.border)}
+                onFocus={(e) =>
+                  (e.target.style.borderColor = theme.whatsapp)
+                }
+                onBlur={(e) =>
+                  (e.target.style.borderColor = theme.line)
+                }
               />
             </div>
 
             {/* WhatsApp Number */}
             <div>
-              <label style={{ display: "flex", alignItems: "center", gap: 8, color: theme.text, fontSize: 13, fontWeight: 600, marginBottom: 8 }}>
-                <span style={{ width: 8, height: 8, borderRadius: "50%", background: theme.whatsapp }} />
+              <label
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 8,
+                  color: theme.textMuted,
+                  fontSize: 11,
+                  fontWeight: 700,
+                  letterSpacing: "1.5px",
+                  textTransform: "uppercase",
+                  marginBottom: 10,
+                }}
+              >
+                <span
+                  style={{
+                    width: 7,
+                    height: 7,
+                    borderRadius: "50%",
+                    background: theme.whatsapp,
+                  }}
+                />
                 WhatsApp Number
               </label>
               <input
@@ -331,25 +467,48 @@ export default function AdminPage() {
                 placeholder="+1 (929) 607-2719"
                 style={{
                   width: "100%",
-                  padding: "12px 16px",
-                  borderRadius: 12,
-                  border: `1.5px solid ${theme.border}`,
-                  background: "#FAFAFA",
+                  padding: "14px 16px",
+                  borderRadius: 10,
+                  border: `1px solid ${theme.line}`,
+                  background: theme.navy,
                   color: theme.text,
                   fontSize: 14,
                   outline: "none",
                   boxSizing: "border-box",
                   transition: "border-color 0.2s ease",
                 }}
-                onFocus={(e) => (e.target.style.borderColor = theme.whatsapp)}
-                onBlur={(e) => (e.target.style.borderColor = theme.border)}
+                onFocus={(e) =>
+                  (e.target.style.borderColor = theme.whatsapp)
+                }
+                onBlur={(e) =>
+                  (e.target.style.borderColor = theme.line)
+                }
               />
             </div>
 
-            {/* Telegram Channel URL */}
+            {/* Telegram URL */}
             <div>
-              <label style={{ display: "flex", alignItems: "center", gap: 8, color: theme.text, fontSize: 13, fontWeight: 600, marginBottom: 8 }}>
-                <span style={{ width: 8, height: 8, borderRadius: "50%", background: theme.telegram }} />
+              <label
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 8,
+                  color: theme.textMuted,
+                  fontSize: 11,
+                  fontWeight: 700,
+                  letterSpacing: "1.5px",
+                  textTransform: "uppercase",
+                  marginBottom: 10,
+                }}
+              >
+                <span
+                  style={{
+                    width: 7,
+                    height: 7,
+                    borderRadius: "50%",
+                    background: theme.telegram,
+                  }}
+                />
                 Telegram Channel URL
               </label>
               <input
@@ -359,46 +518,73 @@ export default function AdminPage() {
                 placeholder="https://t.me/..."
                 style={{
                   width: "100%",
-                  padding: "12px 16px",
-                  borderRadius: 12,
-                  border: `1.5px solid ${theme.border}`,
-                  background: "#FAFAFA",
+                  padding: "14px 16px",
+                  borderRadius: 10,
+                  border: `1px solid ${theme.line}`,
+                  background: theme.navy,
                   color: theme.text,
                   fontSize: 14,
                   outline: "none",
                   boxSizing: "border-box",
                   transition: "border-color 0.2s ease",
                 }}
-                onFocus={(e) => (e.target.style.borderColor = theme.telegram)}
-                onBlur={(e) => (e.target.style.borderColor = theme.border)}
+                onFocus={(e) =>
+                  (e.target.style.borderColor = theme.telegram)
+                }
+                onBlur={(e) =>
+                  (e.target.style.borderColor = theme.line)
+                }
               />
             </div>
 
             {/* Telegram Username */}
             <div>
-              <label style={{ display: "flex", alignItems: "center", gap: 8, color: theme.text, fontSize: 13, fontWeight: 600, marginBottom: 8 }}>
-                <span style={{ width: 8, height: 8, borderRadius: "50%", background: theme.telegram }} />
+              <label
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 8,
+                  color: theme.textMuted,
+                  fontSize: 11,
+                  fontWeight: 700,
+                  letterSpacing: "1.5px",
+                  textTransform: "uppercase",
+                  marginBottom: 10,
+                }}
+              >
+                <span
+                  style={{
+                    width: 7,
+                    height: 7,
+                    borderRadius: "50%",
+                    background: theme.telegram,
+                  }}
+                />
                 Telegram Username
               </label>
               <input
                 type="text"
                 value={telegramUsername}
                 onChange={(e) => setTelegramUsername(e.target.value)}
-                placeholder="@RetireWealthyGuides"
+                placeholder="@username"
                 style={{
                   width: "100%",
-                  padding: "12px 16px",
-                  borderRadius: 12,
-                  border: `1.5px solid ${theme.border}`,
-                  background: "#FAFAFA",
+                  padding: "14px 16px",
+                  borderRadius: 10,
+                  border: `1px solid ${theme.line}`,
+                  background: theme.navy,
                   color: theme.text,
                   fontSize: 14,
                   outline: "none",
                   boxSizing: "border-box",
                   transition: "border-color 0.2s ease",
                 }}
-                onFocus={(e) => (e.target.style.borderColor = theme.telegram)}
-                onBlur={(e) => (e.target.style.borderColor = theme.border)}
+                onFocus={(e) =>
+                  (e.target.style.borderColor = theme.telegram)
+                }
+                onBlur={(e) =>
+                  (e.target.style.borderColor = theme.line)
+                }
               />
             </div>
 
@@ -407,40 +593,55 @@ export default function AdminPage() {
               type="submit"
               disabled={saving}
               style={{
-                marginTop: 8,
-                padding: "14px",
-                borderRadius: 12,
+                marginTop: 6,
+                padding: "16px",
+                borderRadius: 10,
                 border: "none",
-                background: theme.accent,
-                color: "#FFFFFF",
-                fontWeight: 700,
-                fontSize: 15,
+                background: theme.gold,
+                color: theme.navy,
+                fontWeight: 800,
+                fontSize: 13,
+                letterSpacing: "1px",
+                textTransform: "uppercase",
                 cursor: saving ? "default" : "pointer",
-                opacity: saving ? 0.7 : 1,
-                boxShadow: "0 4px 14px rgba(201, 168, 124, 0.3)",
-                transition: "transform 0.1s ease, background-color 0.2s ease",
+                opacity: saving ? 0.6 : 1,
+                transition: "transform 0.15s ease, opacity 0.2s ease",
               }}
-              onMouseDown={(e) => !saving && (e.currentTarget.style.transform = "scale(0.98)")}
-              onMouseUp={(e) => !saving && (e.currentTarget.style.transform = "scale(1)")}
+              onMouseDown={(e) =>
+                !saving && (e.currentTarget.style.transform = "scale(0.98)")
+              }
+              onMouseUp={(e) =>
+                !saving && (e.currentTarget.style.transform = "scale(1)")
+              }
             >
-              {saving ? "Updating Database..." : "Save Changes"}
+              {saving ? "Updating..." : "Save Changes"}
             </button>
 
-            {/* Status Notifications */}
+            {/* Status */}
             {saveMessage && (
               <div
                 style={{
-                  padding: "12px 16px",
+                  padding: "14px 16px",
                   borderRadius: 10,
-                  background: saveMessage === "Saved!" ? theme.successBg : theme.errorBg,
-                  border: `1px solid ${saveMessage === "Saved!" ? "rgba(22, 163, 74, 0.2)" : "rgba(239, 68, 68, 0.2)"}`,
-                  color: saveMessage === "Saved!" ? theme.successText : theme.errorText,
+                  background:
+                    saveMessage === "Saved!"
+                      ? "rgba(37, 211, 102, 0.1)"
+                      : "rgba(239, 68, 68, 0.1)",
+                  border: `1px solid ${
+                    saveMessage === "Saved!"
+                      ? "rgba(37, 211, 102, 0.2)"
+                      : "rgba(239, 68, 68, 0.2)"
+                  }`,
+                  color:
+                    saveMessage === "Saved!" ? theme.success : theme.error,
                   fontSize: 13,
-                  fontWeight: 600,
+                  fontWeight: 700,
                   textAlign: "center",
                 }}
               >
-                {saveMessage === "Saved!" ? "✓ saved successfully!" : saveMessage}
+                {saveMessage === "Saved!"
+                  ? "✓ Changes saved successfully"
+                  : saveMessage}
               </div>
             )}
           </form>
