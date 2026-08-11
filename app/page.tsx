@@ -48,15 +48,15 @@ async function getLinks() {
 export const dynamic = "force-dynamic";
 
 const theme = {
-  navy: "#071A2B",
-  navyLight: "#0D263B",
+  navy: "#0c1622",
+  navyDark: "#080f18",
+  navyLight: "#111d2e",
+  navyLighter: "#162536",
   gold: "#C9A35B",
   goldLight: "#E2C789",
-  cream: "#F7F3EB",
-  creamDark: "#ECE5D8",
-  text: "#172535",
-  muted: "#687580",
-  line: "#DCD6CA",
+  text: "#e8e4da",
+  textMuted: "#9a958a",
+  line: "#1e2d3d",
   white: "#FFFFFF",
   whatsapp: "#25D366",
   telegram: "#229ED9",
@@ -142,7 +142,7 @@ export default async function Home() {
             body {
               margin: 0;
               padding: 0;
-              background: ${theme.cream};
+              background: ${theme.navy};
             }
 
             body {
@@ -163,7 +163,7 @@ export default async function Home() {
               width: 100%;
               min-height: 100vh;
               overflow-x: hidden;
-              background: ${theme.cream};
+              background: ${theme.navy};
             }
 
             /* =========================================
@@ -243,11 +243,11 @@ export default async function Home() {
               bottom: 0;
               left: 0;
               right: 0;
-              height: 100px;
+              height: 80px;
               background: linear-gradient(
                 to bottom,
                 transparent 0%,
-                ${theme.cream} 100%
+                ${theme.navy} 100%
               );
               pointer-events: none;
             }
@@ -258,7 +258,7 @@ export default async function Home() {
 
             .intro {
               padding: 56px 22px 64px;
-              background: ${theme.cream};
+              background: ${theme.navy};
               text-align: center;
             }
 
@@ -279,7 +279,7 @@ export default async function Home() {
             .intro h1 {
               margin: 0 auto;
               max-width: 680px;
-              color: ${theme.navy};
+              color: white;
               font-family: var(--font-display), serif;
               font-size: clamp(42px, 8vw, 65px);
               line-height: .98;
@@ -294,7 +294,7 @@ export default async function Home() {
             .intro p {
               max-width: 625px;
               margin: 25px auto 0;
-              color: ${theme.muted};
+              color: ${theme.textMuted};
               font-size: 14px;
               line-height: 1.9;
             }
@@ -327,7 +327,7 @@ export default async function Home() {
             }
 
             .contact-pill:hover {
-              background: ${theme.creamDark};
+              background: ${theme.navyLighter};
               border-color: ${theme.gold};
               transform: translateY(-1px);
             }
@@ -345,7 +345,7 @@ export default async function Home() {
             ========================================= */
 
             .pillars {
-              background: ${theme.navy};
+              background: ${theme.navyLight};
               color: white;
               padding: 75px 22px;
             }
@@ -412,7 +412,7 @@ export default async function Home() {
 
             .pillar p {
               margin: 0;
-              color: rgba(255,255,255,.62);
+              color: rgba(255,255,255,.55);
               font-size: 12.5px;
               line-height: 1.8;
             }
@@ -422,7 +422,7 @@ export default async function Home() {
             ========================================= */
 
             .philosophy {
-              background: ${theme.creamDark};
+              background: ${theme.navyLighter};
               padding: 76px 22px;
             }
 
@@ -437,7 +437,7 @@ export default async function Home() {
 
             .philosophy h2 {
               margin: 14px 0 0;
-              color: ${theme.navy};
+              color: white;
               font-family: var(--font-display), serif;
               font-size: clamp(43px, 7vw, 63px);
               line-height: .92;
@@ -451,7 +451,7 @@ export default async function Home() {
 
             .philosophy-copy {
               margin: 0 0 27px;
-              color: ${theme.muted};
+              color: ${theme.textMuted};
               font-size: 14px;
               line-height: 1.9;
             }
@@ -461,11 +461,11 @@ export default async function Home() {
               gap: 14px;
               align-items: flex-start;
               padding: 16px 0;
-              border-top: 1px solid rgba(23,37,53,.13);
+              border-top: 1px solid ${theme.line};
             }
 
             .principle:last-child {
-              border-bottom: 1px solid rgba(23,37,53,.13);
+              border-bottom: 1px solid ${theme.line};
             }
 
             .check {
@@ -482,7 +482,7 @@ export default async function Home() {
             }
 
             .principle span {
-              color: ${theme.navy};
+              color: ${theme.text};
               font-size: 12px;
               line-height: 1.55;
               font-weight: 700;
@@ -516,7 +516,7 @@ export default async function Home() {
             .cta p {
               max-width: 560px;
               margin: 0 auto 30px;
-              color: rgba(255,255,255,.63);
+              color: rgba(255,255,255,.55);
               font-size: 13.5px;
               line-height: 1.85;
             }
@@ -564,7 +564,7 @@ export default async function Home() {
 
             footer {
               padding: 30px 22px;
-              background: #041522;
+              background: ${theme.navyDark};
               text-align: center;
             }
 
@@ -579,7 +579,7 @@ export default async function Home() {
             .footer-copy {
               max-width: 600px;
               margin: 0 auto;
-              color: rgba(255,255,255,.4);
+              color: rgba(255,255,255,.35);
               font-size: 9.5px;
               line-height: 1.7;
             }
@@ -751,7 +751,7 @@ export default async function Home() {
               you want to enjoy.
             </p>
 
-            {/* Small elegant contact buttons in cream area */}
+            {/* Small elegant contact buttons in navy area */}
             <div className="contact-pills">
               <Link
                 href={WHATSAPP_URL}
