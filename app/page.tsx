@@ -52,11 +52,11 @@ const theme = {
   navyLight: "#0D263B",
   gold: "#C9A35B",
   goldLight: "#E2C789",
-  cream: "#F7F3EB",
-  creamDark: "#ECE5D8",
-  text: "#172535",
-  muted: "#687580",
-  line: "#DCD6CA",
+  cream: "#F5EAD4",      // warmer, amber-sand — pulls from the sunset golds
+  creamDark: "#EDE0C8",  // slightly deeper warm sand for philosophy section
+  text: "#1A2330",
+  muted: "#6B7A6A",      // warmer muted — less blue-grey
+  line: "#D9CCAF",       // warm divider
   white: "#FFFFFF",
   whatsapp: "#25D366",
   telegram: "#229ED9",
@@ -238,18 +238,21 @@ export default async function Home() {
               object-fit: contain;
             }
 
-            /* Gradient overlay that fades the bottom of the image into cream */
+            /* Gradient overlay that fades the bottom of the image into the warm sand background.
+               The amber mid-stop echoes the sunset's golden tones so the transition feels
+               continuous rather than cut off. */
             .hero-fade {
               position: absolute;
               bottom: 0;
               left: 0;
               right: 0;
-              height: 38%;
+              height: 42%;
               background: linear-gradient(
                 to bottom,
                 transparent 0%,
-                rgba(247, 243, 235, 0.18) 40%,
-                rgba(247, 243, 235, 0.72) 70%,
+                rgba(210, 155, 70, 0.08) 30%,
+                rgba(220, 168, 90, 0.28) 55%,
+                rgba(235, 195, 120, 0.62) 75%,
                 ${theme.cream} 100%
               );
               pointer-events: none;
@@ -599,7 +602,7 @@ export default async function Home() {
 
             footer {
               padding: 30px 22px;
-              background: #041522;
+              background: #04131F;
               text-align: center;
             }
 
