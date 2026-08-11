@@ -156,8 +156,15 @@ export default async function Home() {
               text-decoration: none;
             }
 
-            .brand-logo-svg {
-              display: block;
+            .brand-mark-s {
+              font-family: var(--font-display), serif;
+              font-size: 42px;
+              font-weight: 700;
+              font-style: italic;
+              color: ${theme.gold};
+              line-height: 1;
+              letter-spacing: -1px;
+              text-shadow: 0 0 18px rgba(45, 212, 191, 0.4);
               flex-shrink: 0;
             }
 
@@ -369,17 +376,23 @@ export default async function Home() {
               border-right: 0;
             }
 
+            .pillar-heading {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              margin: 0 0 12px;
+            }
+
             .pillar-dot {
               width: 8px;
               height: 8px;
+              flex-shrink: 0;
               border-radius: 50%;
               background: ${theme.gold};
-              margin-bottom: 28px;
-              margin-left: 0;
             }
 
             .pillar h2 {
-              margin: 0 0 12px;
+              margin: 0;
               color: white;
               font-family: var(--font-display), serif;
               font-size: 31px;
@@ -569,41 +582,7 @@ export default async function Home() {
           <div className="brand-bar-inner">
 
             <Link href="/" className="brand">
-              {/* Mark: teal-bordered square, clean S + upward tick */}
-              <svg
-                className="brand-logo-svg"
-                width="42"
-                height="42"
-                viewBox="0 0 56 56"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                {/* Background */}
-                <rect width="56" height="56" rx="11" fill="#0f2744" />
-                {/* Teal border */}
-                <rect x="1.5" y="1.5" width="53" height="53" rx="9.5" stroke="#2dd4bf" strokeWidth="2" />
-
-                {/* S letterform — bold, clean, readable at small sizes */}
-                <path
-                  d="M35 19.5C35 15.4 31.6 12 27.5 12H22C17.6 12 14 15.6 14 20C14 24.4 17.6 28 22 28H27C29.8 28 32 30.2 32 33C32 35.8 29.8 38 27 38H21C18.5 38 16.4 36.3 15.5 34"
-                  stroke="#2dd4bf"
-                  strokeWidth="3.5"
-                  strokeLinecap="round"
-                  fill="none"
-                />
-
-                {/* Upward tick — the "blueprint" accent */}
-                <polyline
-                  points="36,38 36,24 43,18"
-                  stroke="#2dd4bf"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  opacity="0.5"
-                />
-                <circle cx="43" cy="18" r="2.5" fill="#2dd4bf" />
-              </svg>
+              <span className="brand-mark-s" aria-hidden="true">S</span>
 
               <div className="brand-name">
                 <span className="brand-name-primary">TSMB</span>
@@ -693,16 +672,20 @@ export default async function Home() {
             <div className="pillar-grid">
 
               <article className="pillar">
-                <div className="pillar-dot" />
-                <h2>Invest</h2>
+                <div className="pillar-heading">
+                  <div className="pillar-dot" />
+                  <h2>Invest</h2>
+                </div>
                 <p>
                   Put your money to work with intention. Learn how to evaluate opportunities, manage risk, and build an investment strategy designed to grow your wealth over time.
                 </p>
               </article>
 
               <article className="pillar">
-                <div className="pillar-dot" />
-                <h2>Earn</h2>
+                <div className="pillar-heading">
+                  <div className="pillar-dot" />
+                  <h2>Earn</h2>
+                </div>
                 <p>
                   Put your money to work with purpose.
                   Develop income streams, invest strategically,
@@ -712,8 +695,10 @@ export default async function Home() {
               </article>
 
               <article className="pillar">
-                <div className="pillar-dot" />
-                <h2>Retire</h2>
+                <div className="pillar-heading">
+                  <div className="pillar-dot" />
+                  <h2>Retire</h2>
+                </div>
                 <p>
                   Turn today's discipline into tomorrow's freedom. Plan for the future, build lasting wealth, and create a financial foundation that allows you to retire with confidence and choice.
                 </p>
