@@ -161,22 +161,26 @@ export default async function Home() {
             }
 
             .brand-mark {
-              width: 31px;
-              height: 31px;
+              width: 38px;
+              height: 38px;
               display: grid;
               place-items: center;
-              border: 1px solid ${theme.gold};
-              color: ${theme.goldLight};
+              border: 2px solid ${theme.gold};
+              color: ${theme.gold};
               font-family: var(--font-display), serif;
-              font-size: 17px;
+              font-size: 20px;
               font-weight: 700;
+              border-radius: 8px;
+              box-shadow: 0 0 10px rgba(45, 212, 191, 0.2);
             }
 
             .brand-name {
-              font-size: 10px;
+              font-size: 16px;
               font-weight: 800;
-              letter-spacing: 2.2px;
+              letter-spacing: 3px;
               text-transform: uppercase;
+              color: ${theme.gold};
+              text-shadow: 0 0 12px rgba(45, 212, 191, 0.3);
             }
 
             .brand-link {
@@ -367,6 +371,7 @@ export default async function Home() {
               border-radius: 50%;
               background: ${theme.gold};
               margin-bottom: 28px;
+              margin-left: 0;
             }
 
             .pillar h2 {
@@ -388,6 +393,11 @@ export default async function Home() {
             .philosophy {
               background: ${theme.bgLighter};
               padding: 76px 22px;
+            }
+
+            .philosophy-eyebrow {
+              margin-left: 0;
+              padding-left: 0;
             }
 
             .philosophy-grid {
@@ -686,7 +696,7 @@ Earn
           <div className="philosophy-grid">
 
             <div>
-              <div className="eyebrow">
+              <div className="eyebrow philosophy-eyebrow">
                 Our philosophy
               </div>
 
