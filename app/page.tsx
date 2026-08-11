@@ -583,7 +583,7 @@ export default async function Home() {
           <div className="hero-fade-top" aria-hidden="true" />
           <Image
             src="/banner.jpg"
-            alt="TheSmartMoneyBlueprint — Learn. Earn. Inspire."
+            alt="TheSmartMoneyBlueprint — Invest. Earn. Retire."
             width={1536}
             height={802}
             priority
@@ -597,7 +597,7 @@ export default async function Home() {
           <div className="content-width fade-up">
 
             <div className="eyebrow">
-              Learn, earn, and inspire
+              Invest, earn, and Retire
             </div>
 
             <h1>
