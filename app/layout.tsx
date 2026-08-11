@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thesmartmoneyblueprint.vip"),
 
-  title: "TheSmartMoneyBlueprint.com Invest, Save, and Retire ",
+  title: "TheSmartMoneyBlueprint.vip | Invest, Save, and Retire",
 
   description:
     "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
   authors: [{ name: "TheSmartMoneyBlueprint.vip" }],
 
   openGraph: {
-    title: "TheSmartMoneyBlueprint.vip | Invest, Save, and Retire ",
+    title: "TheSmartMoneyBlueprint.vip | Invest, Save, and Retire",
 
     description:
       "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
 
     url: "https://www.thesmartmoneyblueprint.vip",
 
-    siteName: "TheSmartMoneyBlueprint.vip" ,
+    siteName: "TheSmartMoneyBlueprint.vip",
 
     type: "website",
 
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "TheSmartMoneyBlueprint.vip | Invest, Save, and Retire ",
+    title: "TheSmartMoneyBlueprint.vip | Invest, Save, and Retire",
 
     description:
       "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
@@ -67,15 +67,22 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full overflow-x-hidden">
+    <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-[#0c1622] text-gray-100 min-h-full m-0 p-0 overflow-x-hidden`}
+        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-[#0c1622] text-gray-100 min-h-screen m-0 p-0 overflow-x-hidden`}
       >
         {children}
       </body>
