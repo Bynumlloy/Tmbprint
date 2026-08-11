@@ -55,7 +55,7 @@ const theme = {
   gold: "#2dd4bf",
   goldLight: "#5eead4",
   text: "#e0f2f1",
-  textMuted: "#6b9e9a",
+  textMuted: "#A2C2BF",
   line: "#134e4a",
   white: "#FFFFFF",
   whatsapp: "#25D366",
