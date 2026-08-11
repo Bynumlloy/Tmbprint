@@ -64,13 +64,13 @@ export default function AdminPage() {
     setSaveMessage(data.success ? "Saved!" : data.error || "Failed to save");
   }
 
-  const navy = "#0c1622";
-  const navyLight = "#111d2e";
-  const gold = "#C9A35B";
-  const goldLight = "#E2C789";
-  const text = "#e8e4da";
-  const textMuted = "#9a958a";
-  const line = "#1e2d3d";
+  const navy = "#0A152E";
+  const navyLight = "#0d1f3c";
+  const gold = "#2dd4bf";
+  const goldLight = "#5eead4";
+  const text = "#e0f2f1";
+  const textMuted = "#A2C2BF";
+  const line = "#134e4a";
   const error = "#EF4444";
   const success = "#25D366";
   const whatsappColor = "#25D366";
@@ -84,11 +84,15 @@ export default function AdminPage() {
           minHeight: "100dvh",
           background: navy,
           padding: "32px 16px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <div
           style={{
             maxWidth: 380,
+            width: "100%",
             margin: "0 auto",
             background: navyLight,
             padding: "32px 24px",
@@ -214,11 +218,15 @@ export default function AdminPage() {
         minHeight: "100dvh",
         background: navy,
         padding: "32px 16px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <div
         style={{
           maxWidth: 480,
+          width: "100%",
           margin: "0 auto",
           background: navyLight,
           padding: "28px 24px",
