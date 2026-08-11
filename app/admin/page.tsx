@@ -86,11 +86,12 @@ export default function AdminPage() {
         style={{
           minHeight: "100vh",
           width: "100%",
+          overflowX: "hidden",
           display: "flex",
-          alignItems: "center",
+          alignItems: "flex-start",
           justifyContent: "center",
           background: theme.navy,
-          padding: 24,
+          padding: "40px 20px",
           fontFamily: "var(--font-body), sans-serif",
         }}
       >
@@ -99,12 +100,12 @@ export default function AdminPage() {
             width: "100%",
             maxWidth: 420,
             background: theme.navyLight,
-            padding: "48px 36px",
+            padding: "36px 28px",
             borderRadius: 16,
             border: `1px solid ${theme.line}`,
             display: "flex",
             flexDirection: "column",
-            gap: 28,
+            gap: 24,
           }}
         >
           {/* Header */}
@@ -169,7 +170,7 @@ export default function AdminPage() {
                 required
                 style={{
                   width: "100%",
-                  padding: "14px 16px",
+                  padding: "12px 14px",
                   borderRadius: 10,
                   border: `1px solid ${theme.line}`,
                   background: theme.navy,
@@ -256,11 +257,12 @@ export default function AdminPage() {
       style={{
         minHeight: "100vh",
         width: "100%",
+        overflowX: "hidden",
         display: "flex",
-        alignItems: "center",
+        alignItems: "flex-start",
         justifyContent: "center",
         background: theme.navy,
-        padding: 24,
+        padding: "40px 20px",
         fontFamily: "var(--font-body), sans-serif",
       }}
     >
@@ -382,7 +384,7 @@ export default function AdminPage() {
         ) : (
           <form
             onSubmit={handleSave}
-            style={{ display: "flex", flexDirection: "column", gap: 22 }}
+            style={{ display: "flex", flexDirection: "column", gap: 18 }}
           >
             {/* WhatsApp URL */}
             <div>
@@ -416,7 +418,7 @@ export default function AdminPage() {
                 placeholder="https://wa.link/..."
                 style={{
                   width: "100%",
-                  padding: "14px 16px",
+                  padding: "12px 14px",
                   borderRadius: 10,
                   border: `1px solid ${theme.line}`,
                   background: theme.navy,
@@ -467,7 +469,7 @@ export default function AdminPage() {
                 placeholder="+1 (929) 607-2719"
                 style={{
                   width: "100%",
-                  padding: "14px 16px",
+                  padding: "12px 14px",
                   borderRadius: 10,
                   border: `1px solid ${theme.line}`,
                   background: theme.navy,
@@ -518,7 +520,7 @@ export default function AdminPage() {
                 placeholder="https://t.me/..."
                 style={{
                   width: "100%",
-                  padding: "14px 16px",
+                  padding: "12px 14px",
                   borderRadius: 10,
                   border: `1px solid ${theme.line}`,
                   background: theme.navy,
@@ -569,7 +571,7 @@ export default function AdminPage() {
                 placeholder="@username"
                 style={{
                   width: "100%",
-                  padding: "14px 16px",
+                  padding: "12px 14px",
                   borderRadius: 10,
                   border: `1px solid ${theme.line}`,
                   background: theme.navy,
@@ -621,7 +623,7 @@ export default function AdminPage() {
             {saveMessage && (
               <div
                 style={{
-                  padding: "14px 16px",
+                  padding: "12px 14px",
                   borderRadius: 10,
                   background:
                     saveMessage === "Saved!"
