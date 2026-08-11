@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thesmartmoneyblueprint.vip"),
 
-  title: "TheSmartMoneyBlueprint.vip | Learn, Earn, and Inspire",
+  title: "TheSmartMoneyBlueprint.com Invest, Save, and Retire ",
 
   description:
     "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
   authors: [{ name: "TheSmartMoneyBlueprint.vip" }],
 
   openGraph: {
-    title: "TheSmartMoneyBlueprint.vip | Learn, Earn, and Inspire",
+    title: "TheSmartMoneyBlueprint.vip | Invest, Save, and Retire ",
 
     description:
       "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
 
     url: "https://www.thesmartmoneyblueprint.vip",
 
-    siteName: "TheSmartMoneyBlueprint.vip",
+    siteName: "TheSmartMoneyBlueprint.vip" ,
 
     type: "website",
 
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "TheSmartMoneyBlueprint.vip | Learn, Earn, and Inspire",
+    title: "TheSmartMoneyBlueprint.vip | Invest, Save, and Retire ",
 
     description:
       "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
@@ -73,9 +73,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full overflow-x-hidden">
       <body
-        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-[#0c1622] text-gray-100 min-h-full m-0 p-0`}
+        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-[#0c1622] text-gray-100 min-h-full m-0 p-0 overflow-x-hidden`}
       >
         {children}
       </body>
