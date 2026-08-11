@@ -1,4 +1,4 @@
- import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { neon } from "@neondatabase/serverless";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
@@ -26,14 +26,10 @@ async function getLinks() {
     const row = rows[0];
 
     return {
-      whatsapp:
-        row?.whatsapp_url || "https://wa.link/b21m33",
-      telegram:
-        row?.telegram_url || "https://t.me/KatieMTC",
-      whatsappNumber:
-        row?.whatsapp_number || "+1 (929) 607-2719",
-      telegramUsername:
-        row?.telegram_username || "@KatieMTC",
+      whatsapp: row?.whatsapp_url || "https://wa.link/b21m33",
+      telegram: row?.telegram_url || "https://t.me/KatieMTC",
+      whatsappNumber: row?.whatsapp_number || "+1 (929) 607-2719",
+      telegramUsername: row?.telegram_username || "@KatieMTC",
     };
   } catch {
     return {
@@ -160,27 +156,34 @@ export default async function Home() {
               text-decoration: none;
             }
 
-            .brand-mark {
-              width: 38px;
-              height: 38px;
-              display: grid;
-              place-items: center;
-              border: 2px solid ${theme.gold};
-              color: ${theme.gold};
-              font-family: var(--font-display), serif;
-              font-size: 20px;
-              font-weight: 700;
-              border-radius: 8px;
-              box-shadow: 0 0 10px rgba(45, 212, 191, 0.2);
+            .brand-logo-svg {
+              display: block;
+              flex-shrink: 0;
             }
 
             .brand-name {
+              display: flex;
+              flex-direction: column;
+              gap: 3px;
+            }
+
+            .brand-name-primary {
               font-size: 16px;
               font-weight: 800;
               letter-spacing: 3px;
               text-transform: uppercase;
               color: ${theme.gold};
               text-shadow: 0 0 12px rgba(45, 212, 191, 0.3);
+              line-height: 1;
+            }
+
+            .brand-name-sub {
+              font-size: 7px;
+              font-weight: 500;
+              letter-spacing: 2.5px;
+              text-transform: uppercase;
+              color: ${theme.textMuted};
+              line-height: 1;
             }
 
             .brand-link {
@@ -565,11 +568,44 @@ export default async function Home() {
           <div className="brand-bar-inner">
 
             <Link href="/" className="brand">
-              <div className="brand-mark">S</div>
+              <svg
+                className="brand-logo-svg"
+                width="38"
+                height="38"
+                viewBox="0 0 56 56"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <rect width="56" height="56" rx="12" fill="#0B1C3A" />
+                <rect x="10" y="10" width="22" height="15" rx="3" fill="#2dd4bf" />
+                <path
+                  d="M10 25 H36 Q38 25 38 27 V31 Q38 33 36 33 H10"
+                  fill="#2dd4bf"
+                  opacity="0.2"
+                />
+                <line
+                  x1="10" y1="33" x2="46" y2="10"
+                  stroke="#2dd4bf"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  opacity="0.35"
+                />
+                <rect x="24" y="31" width="22" height="15" rx="3" fill="#2dd4bf" />
+                <path
+                  d="M33 16 C33 13.2 30.8 11 28 11 L19 11 C16.2 11 14 13.2 14 16 C14 18.8 16.2 21 19 21 L26 21 C30.4 21 34 24.6 34 29 C34 33.4 30.4 37 26 37 L17 37 C13.7 37 11 34.3 11 31"
+                  stroke="white"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+                <circle cx="44" cy="13" r="3.5" fill="#2dd4bf" />
+              </svg>
 
-              <span className="brand-name">
-                TSMB
-              </span>
+              <div className="brand-name">
+                <span className="brand-name-primary">TSMB</span>
+                <span className="brand-name-sub">The Smart Money Blueprint</span>
+              </div>
             </Link>
 
             <a href="#contact" className="brand-link">
@@ -655,21 +691,15 @@ export default async function Home() {
 
               <article className="pillar">
                 <div className="pillar-dot" />
-
                 <h2>Invest</h2>
-
                 <p>
                   Put your money to work with intention. Learn how to evaluate opportunities, manage risk, and build an investment strategy designed to grow your wealth over time.
-
-Earn
                 </p>
               </article>
 
               <article className="pillar">
                 <div className="pillar-dot" />
-
                 <h2>Earn</h2>
-
                 <p>
                   Put your money to work with purpose.
                   Develop income streams, invest strategically,
@@ -680,11 +710,9 @@ Earn
 
               <article className="pillar">
                 <div className="pillar-dot" />
-
                 <h2>Retire</h2>
-
                 <p>
-                  Turn today’s discipline into tomorrow’s freedom. Plan for the future, build lasting wealth, and create a financial foundation that allows you to retire with confidence and choice.
+                  Turn today's discipline into tomorrow's freedom. Plan for the future, build lasting wealth, and create a financial foundation that allows you to retire with confidence and choice.
                 </p>
               </article>
 
@@ -719,7 +747,6 @@ Earn
 
               <div className="principle">
                 <div className="check">✓</div>
-
                 <span>
                   Understand your starting point before
                   planning your next move.
@@ -728,7 +755,6 @@ Earn
 
               <div className="principle">
                 <div className="check">✓</div>
-
                 <span>
                   Build habits that remain useful through
                   changing markets and circumstances.
@@ -737,7 +763,6 @@ Earn
 
               <div className="principle">
                 <div className="check">✓</div>
-
                 <span>
                   Think long term rather than reacting to
                   every short-term headline.
@@ -746,7 +771,6 @@ Earn
 
               <div className="principle">
                 <div className="check">✓</div>
-
                 <span>
                   Keep your financial strategy aligned with
                   the life you actually want.
@@ -766,9 +790,7 @@ Earn
             © {new Date().getFullYear()} TheSmartMoneyBlueprint.
             All rights reserved.
             <br />
-            Financial decision should be considered in light of your individual
-            position . 
-        
+            Financial decisions should be considered in light of your individual position.
           </p>
         </footer>
 
