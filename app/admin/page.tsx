@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-import { useEffect, useState } from "react";
-
 export default function AdminPage() {
   const [authed, setAuthed] = useState(false);
   const [password, setPassword] = useState("");
@@ -66,63 +64,53 @@ export default function AdminPage() {
     setSaveMessage(data.success ? "Saved!" : data.error || "Failed to save");
   }
 
-  const theme = {
-    navy: "#0c1622",
-    navyLight: "#111d2e",
-    navyLighter: "#162536",
-    gold: "#C9A35B",
-    goldLight: "#E2C789",
-    text: "#e8e4da",
-    textMuted: "#9a958a",
-    line: "#1e2d3d",
-    error: "#EF4444",
-    success: "#25D366",
-    whatsapp: "#25D366",
-    telegram: "#229ED9",
-  };
+  const navy = "#0c1622";
+  const navyLight = "#111d2e";
+  const gold = "#C9A35B";
+  const goldLight = "#E2C789";
+  const text = "#e8e4da";
+  const textMuted = "#9a958a";
+  const line = "#1e2d3d";
+  const error = "#EF4444";
+  const success = "#25D366";
+  const whatsapp = "#25D366";
+  const telegram = "#229ED9";
 
   // --- Login Screen ---
   if (!authed) {
     return (
-      <main
+      <div
         style={{
-          minHeight: "100vh",
-          width: "100%",
-          overflowX: "hidden",
-          background: theme.navy,
-          padding: "40px 20px",
-          fontFamily: "var(--font-body), sans-serif",
+          minHeight: "100dvh",
+          background: navy,
+          padding: "32px 16px",
         }}
       >
         <div
           style={{
-            width: "100%",
-            maxWidth: 420,
+            maxWidth: 380,
             margin: "0 auto",
-            background: theme.navyLight,
-            padding: "36px 28px",
-            borderRadius: 16,
-            border: `1px solid ${theme.line}`,
-            display: "flex",
-            flexDirection: "column",
-            gap: 24,
+            background: navyLight,
+            padding: "32px 24px",
+            borderRadius: 12,
+            border: `1px solid ${line}`,
           }}
         >
           {/* Header */}
-          <div style={{ textAlign: "center" }}>
+          <div style={{ textAlign: "center", marginBottom: 28 }}>
             <div
               style={{
-                width: 52,
-                height: 52,
+                width: 48,
+                height: 48,
                 borderRadius: "50%",
-                border: `1px solid ${theme.gold}`,
-                color: theme.goldLight,
+                border: `1px solid ${gold}`,
+                color: goldLight,
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
-                marginBottom: 20,
+                marginBottom: 16,
                 fontFamily: "var(--font-display), serif",
-                fontSize: 22,
+                fontSize: 20,
                 fontWeight: 700,
               }}
             >
@@ -131,91 +119,66 @@ export default function AdminPage() {
             <h1
               style={{
                 fontFamily: "var(--font-display), serif",
-                color: theme.text,
-                fontSize: 26,
-                margin: "0 0 8px",
+                color: text,
+                fontSize: 24,
+                margin: "0 0 6px",
                 fontWeight: 600,
               }}
             >
               Admin Portal
             </h1>
-            <p style={{ color: theme.textMuted, fontSize: 13, margin: 0 }}>
+            <p style={{ color: textMuted, fontSize: 13, margin: 0 }}>
               TheSmartMoneyBlueprint
             </p>
           </div>
 
-          <form
-            onSubmit={handleLogin}
-            style={{ display: "flex", flexDirection: "column", gap: 20 }}
-          >
-            <div>
-              <label
-                style={{
-                  display: "block",
-                  color: theme.textMuted,
-                  fontSize: 11,
-                  fontWeight: 700,
-                  letterSpacing: "1.5px",
-                  textTransform: "uppercase",
-                  marginBottom: 10,
-                }}
-              >
-                Password
-              </label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter your password"
-                required
-                style={{
-                  width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: 10,
-                  border: `1px solid ${theme.line}`,
-                  background: theme.navy,
-                  color: theme.text,
-                  fontSize: 15,
-                  outline: "none",
-                  boxSizing: "border-box",
-                  transition: "border-color 0.2s ease",
-                }}
-                onFocus={(e) =>
-                  (e.target.style.borderColor = theme.gold)
-                }
-                onBlur={(e) =>
-                  (e.target.style.borderColor = theme.line)
-                }
-              />
-            </div>
+          <form onSubmit={handleLogin}>
+            <label
+              style={{
+                display: "block",
+                color: textMuted,
+                fontSize: 11,
+                fontWeight: 700,
+                letterSpacing: "1.5px",
+                textTransform: "uppercase",
+                marginBottom: 8,
+              }}
+            >
+              Password
+            </label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter your password"
+              required
+              style={{
+                width: "100%",
+                padding: "12px 14px",
+                borderRadius: 8,
+                border: `1px solid ${line}`,
+                background: navy,
+                color: text,
+                fontSize: 15,
+                outline: "none",
+                boxSizing: "border-box",
+                marginBottom: 16,
+              }}
+            />
 
             {loginError && (
               <div
                 style={{
-                  padding: "12px 16px",
-                  borderRadius: 10,
+                  padding: "10px 12px",
+                  borderRadius: 8,
                   background: "rgba(239, 68, 68, 0.1)",
                   border: `1px solid rgba(239, 68, 68, 0.2)`,
-                  color: theme.error,
+                  color: error,
                   fontSize: 13,
                   fontWeight: 600,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 8,
+                  marginBottom: 16,
                 }}
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="12" y1="8" x2="12" y2="12" />
-                  <line x1="12" y1="16" x2="12.01" y2="16" />
-                </svg>
                 {loginError}
               </div>
             )}
@@ -223,58 +186,44 @@ export default function AdminPage() {
             <button
               type="submit"
               style={{
-                marginTop: 4,
-                padding: "16px",
-                borderRadius: 10,
+                width: "100%",
+                padding: "14px",
+                borderRadius: 8,
                 border: "none",
-                background: theme.gold,
-                color: theme.navy,
+                background: gold,
+                color: navy,
                 fontWeight: 800,
                 fontSize: 13,
                 letterSpacing: "1px",
                 textTransform: "uppercase",
                 cursor: "pointer",
-                transition: "transform 0.15s ease, opacity 0.2s ease",
               }}
-              onMouseDown={(e) =>
-                (e.currentTarget.style.transform = "scale(0.98)")
-              }
-              onMouseUp={(e) =>
-                (e.currentTarget.style.transform = "scale(1)")
-              }
             >
               Authenticate
             </button>
           </form>
         </div>
-      </main>
+      </div>
     );
   }
 
   // --- Dashboard ---
   return (
-    <main
+    <div
       style={{
-        minHeight: "100vh",
-        width: "100%",
-        overflowX: "hidden",
-        background: theme.navy,
-        padding: "40px 20px",
-        fontFamily: "var(--font-body), sans-serif",
+        minHeight: "100dvh",
+        background: navy,
+        padding: "32px 16px",
       }}
     >
       <div
         style={{
-          width: "100%",
-          maxWidth: 520,
+          maxWidth: 480,
           margin: "0 auto",
-          background: theme.navyLight,
-          padding: "40px 36px",
-          borderRadius: 16,
-          border: `1px solid ${theme.line}`,
-          display: "flex",
-          flexDirection: "column",
-          gap: 28,
+          background: navyLight,
+          padding: "28px 24px",
+          borderRadius: 12,
+          border: `1px solid ${line}`,
         }}
       >
         {/* Header */}
@@ -283,30 +232,31 @@ export default function AdminPage() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            borderBottom: `1px solid ${theme.line}`,
-            paddingBottom: 20,
+            borderBottom: `1px solid ${line}`,
+            paddingBottom: 16,
+            marginBottom: 20,
           }}
         >
           <div>
             <div
               style={{
-                display: "inline-flex",
+                display: "flex",
                 alignItems: "center",
                 gap: 6,
-                color: theme.success,
+                color: success,
                 fontSize: 11,
                 fontWeight: 800,
                 letterSpacing: "1.5px",
                 textTransform: "uppercase",
-                marginBottom: 8,
+                marginBottom: 6,
               }}
             >
               <span
                 style={{
-                  width: 7,
-                  height: 7,
+                  width: 6,
+                  height: 6,
                   borderRadius: "50%",
-                  background: theme.success,
+                  background: success,
                 }}
               />
               Authenticated
@@ -314,8 +264,8 @@ export default function AdminPage() {
             <h1
               style={{
                 fontFamily: "var(--font-display), serif",
-                color: theme.text,
-                fontSize: 24,
+                color: text,
+                fontSize: 22,
                 margin: 0,
                 fontWeight: 600,
               }}
@@ -328,24 +278,15 @@ export default function AdminPage() {
             onClick={() => setAuthed(false)}
             style={{
               background: "transparent",
-              border: `1px solid ${theme.line}`,
-              color: theme.textMuted,
-              padding: "8px 14px",
-              borderRadius: 8,
+              border: `1px solid ${line}`,
+              color: textMuted,
+              padding: "6px 12px",
+              borderRadius: 6,
               fontSize: 11,
               fontWeight: 700,
               letterSpacing: "1px",
               textTransform: "uppercase",
               cursor: "pointer",
-              transition: "all 0.2s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = theme.gold;
-              e.currentTarget.style.color = theme.gold;
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = theme.line;
-              e.currentTarget.style.color = theme.textMuted;
             }}
           >
             Lock
@@ -355,20 +296,20 @@ export default function AdminPage() {
         {loading ? (
           <div
             style={{
-              padding: "40px 0",
+              padding: "32px 0",
               textAlign: "center",
-              color: theme.textMuted,
+              color: textMuted,
               fontSize: 14,
             }}
           >
             <div
               style={{
-                width: 24,
-                height: 24,
-                border: `2px solid ${theme.line}`,
-                borderTopColor: theme.gold,
+                width: 20,
+                height: 20,
+                border: `2px solid ${line}`,
+                borderTopColor: gold,
                 borderRadius: "50%",
-                margin: "0 auto 14px",
+                margin: "0 auto 10px",
                 animation: "spin 0.8s linear infinite",
               }}
             />
@@ -380,31 +321,28 @@ export default function AdminPage() {
             Retrieving database values...
           </div>
         ) : (
-          <form
-            onSubmit={handleSave}
-            style={{ display: "flex", flexDirection: "column", gap: 18 }}
-          >
+          <form onSubmit={handleSave}>
             {/* WhatsApp URL */}
-            <div>
+            <div style={{ marginBottom: 16 }}>
               <label
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 8,
-                  color: theme.textMuted,
+                  gap: 6,
+                  color: textMuted,
                   fontSize: 11,
                   fontWeight: 700,
                   letterSpacing: "1.5px",
                   textTransform: "uppercase",
-                  marginBottom: 10,
+                  marginBottom: 6,
                 }}
               >
                 <span
                   style={{
-                    width: 7,
-                    height: 7,
+                    width: 6,
+                    height: 6,
                     borderRadius: "50%",
-                    background: theme.whatsapp,
+                    background: whatsapp,
                   }}
                 />
                 WhatsApp Group URL
@@ -416,46 +354,39 @@ export default function AdminPage() {
                 placeholder="https://wa.link/..."
                 style={{
                   width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: 10,
-                  border: `1px solid ${theme.line}`,
-                  background: theme.navy,
-                  color: theme.text,
+                  padding: "10px 12px",
+                  borderRadius: 8,
+                  border: `1px solid ${line}`,
+                  background: navy,
+                  color: text,
                   fontSize: 14,
                   outline: "none",
                   boxSizing: "border-box",
-                  transition: "border-color 0.2s ease",
                 }}
-                onFocus={(e) =>
-                  (e.target.style.borderColor = theme.whatsapp)
-                }
-                onBlur={(e) =>
-                  (e.target.style.borderColor = theme.line)
-                }
               />
             </div>
 
             {/* WhatsApp Number */}
-            <div>
+            <div style={{ marginBottom: 16 }}>
               <label
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 8,
-                  color: theme.textMuted,
+                  gap: 6,
+                  color: textMuted,
                   fontSize: 11,
                   fontWeight: 700,
                   letterSpacing: "1.5px",
                   textTransform: "uppercase",
-                  marginBottom: 10,
+                  marginBottom: 6,
                 }}
               >
                 <span
                   style={{
-                    width: 7,
-                    height: 7,
+                    width: 6,
+                    height: 6,
                     borderRadius: "50%",
-                    background: theme.whatsapp,
+                    background: whatsapp,
                   }}
                 />
                 WhatsApp Number
@@ -467,46 +398,39 @@ export default function AdminPage() {
                 placeholder="+1 (929) 607-2719"
                 style={{
                   width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: 10,
-                  border: `1px solid ${theme.line}`,
-                  background: theme.navy,
-                  color: theme.text,
+                  padding: "10px 12px",
+                  borderRadius: 8,
+                  border: `1px solid ${line}`,
+                  background: navy,
+                  color: text,
                   fontSize: 14,
                   outline: "none",
                   boxSizing: "border-box",
-                  transition: "border-color 0.2s ease",
                 }}
-                onFocus={(e) =>
-                  (e.target.style.borderColor = theme.whatsapp)
-                }
-                onBlur={(e) =>
-                  (e.target.style.borderColor = theme.line)
-                }
               />
             </div>
 
             {/* Telegram URL */}
-            <div>
+            <div style={{ marginBottom: 16 }}>
               <label
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 8,
-                  color: theme.textMuted,
+                  gap: 6,
+                  color: textMuted,
                   fontSize: 11,
                   fontWeight: 700,
                   letterSpacing: "1.5px",
                   textTransform: "uppercase",
-                  marginBottom: 10,
+                  marginBottom: 6,
                 }}
               >
                 <span
                   style={{
-                    width: 7,
-                    height: 7,
+                    width: 6,
+                    height: 6,
                     borderRadius: "50%",
-                    background: theme.telegram,
+                    background: telegram,
                   }}
                 />
                 Telegram Channel URL
@@ -518,46 +442,39 @@ export default function AdminPage() {
                 placeholder="https://t.me/..."
                 style={{
                   width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: 10,
-                  border: `1px solid ${theme.line}`,
-                  background: theme.navy,
-                  color: theme.text,
+                  padding: "10px 12px",
+                  borderRadius: 8,
+                  border: `1px solid ${line}`,
+                  background: navy,
+                  color: text,
                   fontSize: 14,
                   outline: "none",
                   boxSizing: "border-box",
-                  transition: "border-color 0.2s ease",
                 }}
-                onFocus={(e) =>
-                  (e.target.style.borderColor = theme.telegram)
-                }
-                onBlur={(e) =>
-                  (e.target.style.borderColor = theme.line)
-                }
               />
             </div>
 
             {/* Telegram Username */}
-            <div>
+            <div style={{ marginBottom: 20 }}>
               <label
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 8,
-                  color: theme.textMuted,
+                  gap: 6,
+                  color: textMuted,
                   fontSize: 11,
                   fontWeight: 700,
                   letterSpacing: "1.5px",
                   textTransform: "uppercase",
-                  marginBottom: 10,
+                  marginBottom: 6,
                 }}
               >
                 <span
                   style={{
-                    width: 7,
-                    height: 7,
+                    width: 6,
+                    height: 6,
                     borderRadius: "50%",
-                    background: theme.telegram,
+                    background: telegram,
                   }}
                 />
                 Telegram Username
@@ -569,22 +486,15 @@ export default function AdminPage() {
                 placeholder="@username"
                 style={{
                   width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: 10,
-                  border: `1px solid ${theme.line}`,
-                  background: theme.navy,
-                  color: theme.text,
+                  padding: "10px 12px",
+                  borderRadius: 8,
+                  border: `1px solid ${line}`,
+                  background: navy,
+                  color: text,
                   fontSize: 14,
                   outline: "none",
                   boxSizing: "border-box",
-                  transition: "border-color 0.2s ease",
                 }}
-                onFocus={(e) =>
-                  (e.target.style.borderColor = theme.telegram)
-                }
-                onBlur={(e) =>
-                  (e.target.style.borderColor = theme.line)
-                }
               />
             </div>
 
@@ -593,26 +503,19 @@ export default function AdminPage() {
               type="submit"
               disabled={saving}
               style={{
-                marginTop: 6,
-                padding: "16px",
-                borderRadius: 10,
+                width: "100%",
+                padding: "14px",
+                borderRadius: 8,
                 border: "none",
-                background: theme.gold,
-                color: theme.navy,
+                background: gold,
+                color: navy,
                 fontWeight: 800,
                 fontSize: 13,
                 letterSpacing: "1px",
                 textTransform: "uppercase",
                 cursor: saving ? "default" : "pointer",
                 opacity: saving ? 0.6 : 1,
-                transition: "transform 0.15s ease, opacity 0.2s ease",
               }}
-              onMouseDown={(e) =>
-                !saving && (e.currentTarget.style.transform = "scale(0.98)")
-              }
-              onMouseUp={(e) =>
-                !saving && (e.currentTarget.style.transform = "scale(1)")
-              }
             >
               {saving ? "Updating..." : "Save Changes"}
             </button>
@@ -621,8 +524,9 @@ export default function AdminPage() {
             {saveMessage && (
               <div
                 style={{
-                  padding: "12px 14px",
-                  borderRadius: 10,
+                  marginTop: 12,
+                  padding: "12px",
+                  borderRadius: 8,
                   background:
                     saveMessage === "Saved!"
                       ? "rgba(37, 211, 102, 0.1)"
@@ -632,8 +536,7 @@ export default function AdminPage() {
                       ? "rgba(37, 211, 102, 0.2)"
                       : "rgba(239, 68, 68, 0.2)"
                   }`,
-                  color:
-                    saveMessage === "Saved!" ? theme.success : theme.error,
+                  color: saveMessage === "Saved!" ? success : error,
                   fontSize: 13,
                   fontWeight: 700,
                   textAlign: "center",
@@ -647,6 +550,6 @@ export default function AdminPage() {
           </form>
         )}
       </div>
-    </main>
+    </div>
   );
 }
