@@ -73,8 +73,8 @@ export default function AdminPage() {
   const line = "#1e2d3d";
   const error = "#EF4444";
   const success = "#25D366";
-  const whatsapp = "#25D366";
-  const telegram = "#229ED9";
+  const whatsappColor = "#25D366";
+  const telegramColor = "#229ED9";
 
   // --- Login Screen ---
   if (!authed) {
@@ -342,7 +342,7 @@ export default function AdminPage() {
                     width: 6,
                     height: 6,
                     borderRadius: "50%",
-                    background: whatsapp,
+                    background: whatsappColor,
                   }}
                 />
                 WhatsApp Group URL
@@ -386,7 +386,7 @@ export default function AdminPage() {
                     width: 6,
                     height: 6,
                     borderRadius: "50%",
-                    background: whatsapp,
+                    background: whatsappColor,
                   }}
                 />
                 WhatsApp Number
@@ -430,7 +430,7 @@ export default function AdminPage() {
                     width: 6,
                     height: 6,
                     borderRadius: "50%",
-                    background: telegram,
+                    background: telegramColor,
                   }}
                 />
                 Telegram Channel URL
@@ -474,7 +474,7 @@ export default function AdminPage() {
                     width: 6,
                     height: 6,
                     borderRadius: "50%",
-                    background: telegram,
+                    background: telegramColor,
                   }}
                 />
                 Telegram Username
