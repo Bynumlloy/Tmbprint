@@ -64,13 +64,13 @@ export default function AdminPage() {
     setSaveMessage(data.success ? "Saved!" : data.error || "Failed to save");
   }
 
-  const navy = "#0A152E";
-  const navyLight = "#0d1f3c";
-  const gold = "#2dd4bf";
-  const goldLight = "#5eead4";
-  const text = "#e0f2f1";
-  const textMuted = "#A2C2BF";
-  const line = "#134e4a";
+  const navy = "#111827";
+  const navyLight = "#1a2234";
+  const gold = "#34d399";
+  const goldLight = "#6ee7b7";
+  const text = "#e5e7eb";
+  const textMuted = "#9ca3af";
+  const line = "#374151";
   const error = "#EF4444";
   const success = "#25D366";
   const whatsappColor = "#25D366";
