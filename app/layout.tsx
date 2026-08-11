@@ -16,12 +16,9 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thesmartmoneyblueprint.vip"),
-
   title: "TheSmartMoneyBlueprint.vip | Invest, Save, and Retire",
-
   description:
     "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
-
   keywords: [
     "TheSmartMoneyBlueprint",
     "retirement planning",
@@ -30,21 +27,14 @@ export const metadata: Metadata = {
     "financial planning",
     "smart money",
   ],
-
   authors: [{ name: "TheSmartMoneyBlueprint.vip" }],
-
   openGraph: {
     title: "TheSmartMoneyBlueprint.vip | Invest, Save, and Retire",
-
     description:
       "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
-
     url: "https://www.thesmartmoneyblueprint.vip",
-
     siteName: "TheSmartMoneyBlueprint.vip",
-
     type: "website",
-
     images: [
       {
         url: "/og-image.png",
@@ -54,15 +44,11 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
-
     title: "TheSmartMoneyBlueprint.vip | Invest, Save, and Retire",
-
     description:
       "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
-
     images: ["/og-image.png"],
   },
 };
@@ -72,6 +58,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
+  themeColor: "#0c1622",
 };
 
 export default function RootLayout({
@@ -80,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="overflow-x-hidden">
+    <html lang="en" className="bg-[#0c1622] overflow-x-hidden">
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-[#0c1622] text-gray-100 min-h-screen m-0 p-0 overflow-x-hidden`}
       >
