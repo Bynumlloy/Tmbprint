@@ -49,7 +49,7 @@ export const dynamic = "force-dynamic";
 
 const theme = {
   bg: "#0A152E",
-  bgDark: "#040915",
+  bgDark: "#0A152E",
   bgLight: "#0A152E",
   bgLighter: "0A152E",
   gold: "#2dd4bf",
