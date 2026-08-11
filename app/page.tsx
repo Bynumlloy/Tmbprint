@@ -656,13 +656,12 @@ export default async function Home() {
               <article className="pillar">
                 <div className="pillar-dot" />
 
-                <h2>Learn</h2>
+                <h2>Invest</h2>
 
                 <p>
-                  Understand the principles that drive wealth.
-                  Master risk, explore opportunities, and build
-                  the knowledge to make confident financial
-                  decisions.
+                  Put your money to work with intention. Learn how to evaluate opportunities, manage risk, and build an investment strategy designed to grow your wealth over time.
+
+Earn
                 </p>
               </article>
 
@@ -682,12 +681,10 @@ export default async function Home() {
               <article className="pillar">
                 <div className="pillar-dot" />
 
-                <h2>Inspire</h2>
+                <h2>Retire</h2>
 
                 <p>
-                  Share what you have built. Mentor others,
-                  give back, and create a legacy that extends
-                  beyond your own financial success.
+                  Turn today’s discipline into tomorrow’s freedom. Plan for the future, build lasting wealth, and create a financial foundation that allows you to retire with confidence and choice.
                 </p>
               </article>
 
