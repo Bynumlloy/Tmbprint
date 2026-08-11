@@ -675,12 +675,7 @@ export default async function Home() {
             </h1>
 
             <p>
-              The Smart Money Blueprint is about making your
-              financial future easier to understand and easier
-              to act on. We focus on the fundamentals that
-              matter: disciplined saving, thoughtful investing,
-              long-term planning, and preparing for the life
-              you want to enjoy.
+              The Smart Money Blueprint simplifies your path to financial growth through disciplined saving, informed investing, and long-term planning. For step-by-step guidance and trade support, connect with the TMB Team on Telegram or WhatsApp using the link below.
             </p>
 
             {/* Side-by-side colored contact buttons */}
