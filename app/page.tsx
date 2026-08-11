@@ -229,6 +229,7 @@ export default async function Home() {
               background: ${theme.navy};
               position: relative;
               line-height: 0;
+              padding-bottom: 36px;
             }
 
             .hero-image {
@@ -238,22 +239,21 @@ export default async function Home() {
               object-fit: contain;
             }
 
-            /* Gradient overlay that fades the bottom of the image into the warm sand background.
-               The amber mid-stop echoes the sunset's golden tones so the transition feels
-               continuous rather than cut off. */
+            /* Fade the bottom of the image into the same navy as the hero background,
+               so the image dissolves cleanly into the dark section rather than
+               cutting off with a hard edge. */
             .hero-fade {
               position: absolute;
               bottom: 0;
               left: 0;
               right: 0;
-              height: 42%;
+              height: 35%;
               background: linear-gradient(
                 to bottom,
                 transparent 0%,
-                rgba(210, 155, 70, 0.08) 30%,
-                rgba(220, 168, 90, 0.28) 55%,
-                rgba(235, 195, 120, 0.62) 75%,
-                ${theme.cream} 100%
+                rgba(7, 26, 43, 0.45) 50%,
+                rgba(7, 26, 43, 0.85) 80%,
+                ${theme.navy} 100%
               );
               pointer-events: none;
             }
