@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+import { useEffect, useState } from "react";
+
 export default function AdminPage() {
   const [authed, setAuthed] = useState(false);
   const [password, setPassword] = useState("");
@@ -87,9 +89,6 @@ export default function AdminPage() {
           minHeight: "100vh",
           width: "100%",
           overflowX: "hidden",
-          display: "flex",
-          alignItems: "flex-start",
-          justifyContent: "center",
           background: theme.navy,
           padding: "40px 20px",
           fontFamily: "var(--font-body), sans-serif",
@@ -99,6 +98,7 @@ export default function AdminPage() {
           style={{
             width: "100%",
             maxWidth: 420,
+            margin: "0 auto",
             background: theme.navyLight,
             padding: "36px 28px",
             borderRadius: 16,
@@ -258,9 +258,6 @@ export default function AdminPage() {
         minHeight: "100vh",
         width: "100%",
         overflowX: "hidden",
-        display: "flex",
-        alignItems: "flex-start",
-        justifyContent: "center",
         background: theme.navy,
         padding: "40px 20px",
         fontFamily: "var(--font-body), sans-serif",
@@ -270,6 +267,7 @@ export default function AdminPage() {
         style={{
           width: "100%",
           maxWidth: 520,
+          margin: "0 auto",
           background: theme.navyLight,
           padding: "40px 36px",
           borderRadius: 16,
