@@ -62,32 +62,6 @@ const theme = {
   telegram: "#229ED9",
 };
 
-function ArrowIcon({ size = 14 }: { size?: number }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M5 19L19 5"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-      <path
-        d="M9 5H19V15"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 function WhatsAppIcon({ size = 16 }: { size?: number }) {
   return (
     <svg
@@ -121,8 +95,6 @@ export default async function Home() {
   const {
     whatsapp: WHATSAPP_URL,
     telegram: TELEGRAM_URL,
-    whatsappNumber,
-    telegramUsername,
   } = await getLinks();
 
   return (
@@ -165,10 +137,6 @@ export default async function Home() {
               overflow-x: hidden;
               background: ${theme.navy};
             }
-
-            /* =========================================
-               BRAND BAR
-            ========================================= */
 
             .brand-bar {
               background: ${theme.navy};
@@ -220,10 +188,6 @@ export default async function Home() {
               text-transform: uppercase;
             }
 
-            /* =========================================
-               HERO IMAGE with top + bottom fade
-            ========================================= */
-
             .hero {
               position: relative;
               width: 100%;
@@ -265,10 +229,6 @@ export default async function Home() {
               );
               pointer-events: none;
             }
-
-            /* =========================================
-               INTRO + COLORED CONTACT BUTTONS
-            ========================================= */
 
             .intro {
               padding: 56px 22px 64px;
@@ -313,7 +273,6 @@ export default async function Home() {
               line-height: 1.9;
             }
 
-            /* Side-by-side colored contact buttons */
             .contact-pills {
               display: flex;
               justify-content: center;
@@ -324,11 +283,11 @@ export default async function Home() {
             .contact-pill {
               display: inline-flex;
               align-items: center;
-              gap: 8px;
-              padding: 12px 24px;
+              gap: 10px;
+              padding: 16px 32px;
               border-radius: 100px;
               text-decoration: none;
-              font-size: 13px;
+              font-size: 15px;
               font-weight: 700;
               letter-spacing: 0.2px;
               transition:
@@ -359,10 +318,6 @@ export default async function Home() {
             .contact-pill .pill-label {
               white-space: nowrap;
             }
-
-            /* =========================================
-               THREE PILLARS
-            ========================================= */
 
             .pillars {
               background: ${theme.navyLight};
@@ -433,10 +388,6 @@ export default async function Home() {
               line-height: 1.8;
             }
 
-            /* =========================================
-               PHILOSOPHY
-            ========================================= */
-
             .philosophy {
               background: ${theme.navyLighter};
               padding: 76px 22px;
@@ -504,10 +455,6 @@ export default async function Home() {
               font-weight: 700;
             }
 
-            /* =========================================
-               FOOTER
-            ========================================= */
-
             footer {
               padding: 30px 22px;
               background: ${theme.navyDark};
@@ -529,10 +476,6 @@ export default async function Home() {
               font-size: 9.5px;
               line-height: 1.7;
             }
-
-            /* =========================================
-               MOBILE
-            ========================================= */
 
             @media (max-width: 650px) {
               .brand-bar {
@@ -559,8 +502,8 @@ export default async function Home() {
               }
 
               .contact-pill {
-                padding: 10px 18px;
-                font-size: 12px;
+                padding: 14px 24px;
+                font-size: 14px;
               }
 
               .pillars {
@@ -618,10 +561,6 @@ export default async function Home() {
 
       <div className="page">
 
-        {/* =========================================
-            BRAND BAR
-        ========================================= */}
-
         <header className="brand-bar">
           <div className="brand-bar-inner">
 
@@ -640,15 +579,11 @@ export default async function Home() {
           </div>
         </header>
 
-        {/* =========================================
-            MAIN IMAGE with top + bottom fade
-        ========================================= */}
-
         <section className="hero">
           <div className="hero-fade-top" aria-hidden="true" />
           <Image
             src="/banner.jpg"
-            alt="The Smart Money Blueprint — Invest. Save. Retire."
+            alt="TheSmartMoneyBlueprint — Learn. Earn. Inspire."
             width={1536}
             height={802}
             priority
@@ -658,27 +593,22 @@ export default async function Home() {
           <div className="hero-fade-bottom" aria-hidden="true" />
         </section>
 
-        {/* =========================================
-            INTRODUCTION + colored contact pills
-        ========================================= */}
-
         <section className="intro" id="contact">
           <div className="content-width fade-up">
 
             <div className="eyebrow">
-              A smarter approach to money
+              Learn, earn, and inspire
             </div>
 
             <h1>
               Build wealth with
-              <em> intention.</em>
+              <em> purpose.</em>
             </h1>
 
             <p>
               The Smart Money Blueprint simplifies your path to financial growth through disciplined saving, informed investing, and long-term planning. For step-by-step guidance and trade support, connect with the TMB Team on Telegram or WhatsApp using the link below.
             </p>
 
-            {/* Side-by-side colored contact buttons */}
             <div className="contact-pills">
               <Link
                 href={WHATSAPP_URL}
@@ -687,7 +617,7 @@ export default async function Home() {
                 className="contact-pill whatsapp"
               >
                 <span className="pill-icon">
-                  <WhatsAppIcon size={16} />
+                  <WhatsAppIcon size={20} />
                 </span>
                 <span className="pill-label">WhatsApp</span>
               </Link>
@@ -699,7 +629,7 @@ export default async function Home() {
                 className="contact-pill telegram"
               >
                 <span className="pill-icon">
-                  <TelegramIcon size={16} />
+                  <TelegramIcon size={20} />
                 </span>
                 <span className="pill-label">Telegram</span>
               </Link>
@@ -708,19 +638,15 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* =========================================
-            THREE PILLARS
-        ========================================= */}
-
         <section className="pillars">
           <div className="section-width">
 
             <div className="dark-eyebrow">
-              The blueprint
+              The framework
             </div>
 
             <h2 className="pillars-title">
-              Three simple ideas.
+              Three pillars.
               <br />
               One stronger financial future.
             </h2>
@@ -730,48 +656,44 @@ export default async function Home() {
               <article className="pillar">
                 <div className="pillar-dot" />
 
-                <h2>Invest</h2>
+                <h2>Learn</h2>
+
+                <p>
+                  Understand the principles that drive wealth.
+                  Master risk, explore opportunities, and build
+                  the knowledge to make confident financial
+                  decisions.
+                </p>
+              </article>
+
+              <article className="pillar">
+                <div className="pillar-dot" />
+
+                <h2>Earn</h2>
 
                 <p>
                   Put your money to work with purpose.
-                  Understand risk, think long term, and
-                  build an investment approach that fits
-                  your goals.
+                  Develop income streams, invest strategically,
+                  and create the financial momentum that
+                  compounds over time.
                 </p>
               </article>
 
               <article className="pillar">
                 <div className="pillar-dot" />
 
-                <h2>Save</h2>
+                <h2>Inspire</h2>
 
                 <p>
-                  Strong financial foundations start with
-                  consistent saving. Create flexibility,
-                  protect your future, and give yourself
-                  room to make better decisions.
-                </p>
-              </article>
-
-              <article className="pillar">
-                <div className="pillar-dot" />
-
-                <h2>Retire</h2>
-
-                <p>
-                  Retirement is about more than a number.
-                  Plan for income, lifestyle, independence,
-                  and the freedom to enjoy the years ahead.
+                  Share what you have built. Mentor others,
+                  give back, and create a legacy that extends
+                  beyond your own financial success.
                 </p>
               </article>
 
             </div>
           </div>
         </section>
-
-        {/* =========================================
-            PHILOSOPHY
-        ========================================= */}
 
         <section className="philosophy">
           <div className="philosophy-grid">
@@ -838,17 +760,13 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* =========================================
-            FOOTER
-        ========================================= */}
-
         <footer>
           <div className="footer-name">
-            The Smart Money Blueprint
+            TheSmartMoneyBlueprint
           </div>
 
           <p className="footer-copy">
-            © {new Date().getFullYear()} The Smart Money Blueprint.
+            © {new Date().getFullYear()} TheSmartMoneyBlueprint.
             All rights reserved.
             <br />
             Educational information only. Financial decisions
