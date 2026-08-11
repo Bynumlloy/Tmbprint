@@ -48,15 +48,15 @@ async function getLinks() {
 export const dynamic = "force-dynamic";
 
 const theme = {
-  navy: "#0c1622",
-  navyDark: "#080f18",
-  navyLight: "#111d2e",
-  navyLighter: "#162536",
-  gold: "#C9A35B",
-  goldLight: "#E2C789",
-  text: "#e8e4da",
-  textMuted: "#9a958a",
-  line: "#1e2d3d",
+  bg: "#0f0a05",
+  bgDark: "#080502",
+  bgLight: "#1c140c",
+  bgLighter: "#2a1f14",
+  gold: "#c9844a",
+  goldLight: "#e2a96e",
+  text: "#f0e6d8",
+  textMuted: "#a08b76",
+  line: "#3d2e1f",
   white: "#FFFFFF",
   whatsapp: "#25D366",
   telegram: "#229ED9",
@@ -114,7 +114,7 @@ export default async function Home() {
             body {
               margin: 0;
               padding: 0;
-              background: ${theme.navy};
+              background: ${theme.bg};
             }
 
             body {
@@ -135,11 +135,11 @@ export default async function Home() {
               width: 100%;
               min-height: 100vh;
               overflow-x: hidden;
-              background: ${theme.navy};
+              background: ${theme.bg};
             }
 
             .brand-bar {
-              background: ${theme.navy};
+              background: ${theme.bg};
               color: white;
               padding: 17px 20px;
             }
@@ -191,7 +191,7 @@ export default async function Home() {
             .hero {
               position: relative;
               width: 100%;
-              background: ${theme.navy};
+              background: ${theme.bg};
               line-height: 0;
             }
 
@@ -210,7 +210,7 @@ export default async function Home() {
               height: 80px;
               background: linear-gradient(
                 to bottom,
-                ${theme.navy} 0%,
+                ${theme.bg} 0%,
                 transparent 100%
               );
               pointer-events: none;
@@ -225,14 +225,14 @@ export default async function Home() {
               background: linear-gradient(
                 to bottom,
                 transparent 0%,
-                ${theme.navy} 100%
+                ${theme.bg} 100%
               );
               pointer-events: none;
             }
 
             .intro {
               padding: 56px 22px 64px;
-              background: ${theme.navy};
+              background: ${theme.bg};
               text-align: center;
             }
 
@@ -320,7 +320,7 @@ export default async function Home() {
             }
 
             .pillars {
-              background: ${theme.navyLight};
+              background: ${theme.bgLight};
               color: white;
               padding: 75px 22px;
             }
@@ -389,7 +389,7 @@ export default async function Home() {
             }
 
             .philosophy {
-              background: ${theme.navyLighter};
+              background: ${theme.bgLighter};
               padding: 76px 22px;
             }
 
@@ -457,7 +457,7 @@ export default async function Home() {
 
             footer {
               padding: 30px 22px;
-              background: ${theme.navyDark};
+              background: ${theme.bgDark};
               text-align: center;
             }
 
