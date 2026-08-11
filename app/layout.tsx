@@ -1,4 +1,4 @@
-  import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
@@ -15,33 +15,33 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.acmemtcguild.com"),
+  metadataBase: new URL("https://www.thesmartmoneyblueprint.vip"),
 
-  title: "AcmeMTCGuild.com | Learn, Earn, and Inspire",
+  title: "TheSmartMoneyBlueprint.vip | Learn, Earn, and Inspire",
 
   description:
-    "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven MTC framework.",
+    "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
 
   keywords: [
-    "AcmeMTCGuild",
+    "TheSmartMoneyBlueprint",
     "retirement planning",
     "investment guidance",
     "wealth building",
     "financial planning",
-    "MTC framework",
+    "smart money",
   ],
 
-  authors: [{ name: "AcmeMTCGuild.com" }],
+  authors: [{ name: "TheSmartMoneyBlueprint.vip" }],
 
   openGraph: {
-    title: "AcmeMTCGuild.com | Learn, Earn, and Inspire",
+    title: "TheSmartMoneyBlueprint.vip | Learn, Earn, and Inspire",
 
     description:
-      "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven MTC framework.",
+      "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
 
-    url: "https://www.acmemtcguild.com",
+    url: "https://www.thesmartmoneyblueprint.vip",
 
-    siteName: "AcmeMTCGuild.com",
+    siteName: "TheSmartMoneyBlueprint.vip",
 
     type: "website",
 
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AcmeMTCGuild.com Banner",
+        alt: "TheSmartMoneyBlueprint.vip Banner",
       },
     ],
   },
@@ -58,10 +58,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "AcmeMTCGuild.com | Learn, Earn, and Inspire",
+    title: "TheSmartMoneyBlueprint.vip | Learn, Earn, and Inspire",
 
     description:
-      "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven MTC framework.",
+      "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
 
     images: ["/og-image.png"],
   },
