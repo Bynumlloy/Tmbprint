@@ -221,7 +221,7 @@ export default async function Home() {
             }
 
             /* =========================================
-               HERO IMAGE with soft bottom fade
+               HERO IMAGE with top + bottom fade
             ========================================= */
 
             .hero {
@@ -238,7 +238,21 @@ export default async function Home() {
               object-fit: contain;
             }
 
-            .hero-fade {
+            .hero-fade-top {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              height: 80px;
+              background: linear-gradient(
+                to bottom,
+                ${theme.navy} 0%,
+                transparent 100%
+              );
+              pointer-events: none;
+            }
+
+            .hero-fade-bottom {
               position: absolute;
               bottom: 0;
               left: 0;
@@ -253,7 +267,7 @@ export default async function Home() {
             }
 
             /* =========================================
-               INTRO + SMALL CONTACT BUTTONS
+               INTRO + COLORED CONTACT BUTTONS
             ========================================= */
 
             .intro {
@@ -299,37 +313,43 @@ export default async function Home() {
               line-height: 1.9;
             }
 
-            /* Small elegant contact buttons */
+            /* Side-by-side colored contact buttons */
             .contact-pills {
               display: flex;
               justify-content: center;
-              gap: 10px;
+              gap: 12px;
               margin-top: 32px;
-              flex-wrap: wrap;
             }
 
             .contact-pill {
               display: inline-flex;
               align-items: center;
               gap: 8px;
-              padding: 10px 20px;
+              padding: 12px 24px;
               border-radius: 100px;
-              border: 1px solid ${theme.line};
-              color: ${theme.text};
               text-decoration: none;
-              font-size: 12px;
-              font-weight: 600;
+              font-size: 13px;
+              font-weight: 700;
               letter-spacing: 0.2px;
               transition:
-                background .2s ease,
-                border-color .2s ease,
-                transform .2s ease;
+                transform .2s ease,
+                box-shadow .2s ease;
             }
 
             .contact-pill:hover {
-              background: ${theme.navyLighter};
-              border-color: ${theme.gold};
-              transform: translateY(-1px);
+              transform: translateY(-2px);
+            }
+
+            .contact-pill.whatsapp {
+              background: ${theme.whatsapp};
+              color: white;
+              box-shadow: 0 6px 20px rgba(37,211,102,.25);
+            }
+
+            .contact-pill.telegram {
+              background: ${theme.telegram};
+              color: white;
+              box-shadow: 0 6px 20px rgba(34,158,217,.25);
             }
 
             .contact-pill .pill-icon {
@@ -489,76 +509,6 @@ export default async function Home() {
             }
 
             /* =========================================
-               SECOND CTA
-            ========================================= */
-
-            .cta {
-              background: ${theme.navyLight};
-              color: white;
-              padding: 80px 22px;
-              text-align: center;
-            }
-
-            .cta h2 {
-              max-width: 680px;
-              margin: 15px auto 18px;
-              font-family: var(--font-display), serif;
-              font-size: clamp(43px, 8vw, 68px);
-              line-height: .94;
-              font-weight: 600;
-            }
-
-            .cta h2 em {
-              color: ${theme.goldLight};
-              font-style: italic;
-            }
-
-            .cta p {
-              max-width: 560px;
-              margin: 0 auto 30px;
-              color: rgba(255,255,255,.55);
-              font-size: 13.5px;
-              line-height: 1.85;
-            }
-
-            .cta-buttons {
-              display: flex;
-              justify-content: center;
-              gap: 11px;
-              flex-wrap: wrap;
-            }
-
-            .cta-button {
-              min-width: 190px;
-              min-height: 49px;
-              padding: 13px 18px;
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
-              gap: 8px;
-              text-decoration: none;
-              font-size: 11px;
-              font-weight: 800;
-              letter-spacing: 1.1px;
-              text-transform: uppercase;
-              transition: transform .2s ease;
-            }
-
-            .cta-button:hover {
-              transform: translateY(-2px);
-            }
-
-            .cta-button.primary {
-              background: ${theme.gold};
-              color: ${theme.navy};
-            }
-
-            .cta-button.secondary {
-              border: 1px solid rgba(255,255,255,.28);
-              color: white;
-            }
-
-            /* =========================================
                FOOTER
             ========================================= */
 
@@ -597,8 +547,9 @@ export default async function Home() {
                 display: none;
               }
 
-              .hero-fade {
-                height: 60px;
+              .hero-fade-top,
+              .hero-fade-bottom {
+                height: 50px;
               }
 
               .intro {
@@ -650,18 +601,6 @@ export default async function Home() {
               .philosophy-copy-wrap {
                 margin-top: 42px;
               }
-
-              .cta {
-                padding: 65px 20px;
-              }
-
-              .cta-buttons {
-                flex-direction: column;
-              }
-
-              .cta-button {
-                width: 100%;
-              }
             }
 
             @media (prefers-reduced-motion: no-preference) {
@@ -710,10 +649,11 @@ export default async function Home() {
         </header>
 
         {/* =========================================
-            MAIN IMAGE with soft bottom fade
+            MAIN IMAGE with top + bottom fade
         ========================================= */}
 
         <section className="hero">
+          <div className="hero-fade-top" aria-hidden="true" />
           <Image
             src="/banner.jpg"
             alt="The Smart Money Blueprint — Invest. Save. Retire."
@@ -723,14 +663,14 @@ export default async function Home() {
             sizes="100vw"
             className="hero-image"
           />
-          <div className="hero-fade" aria-hidden="true" />
+          <div className="hero-fade-bottom" aria-hidden="true" />
         </section>
 
         {/* =========================================
-            INTRODUCTION + small contact pills
+            INTRODUCTION + colored contact pills
         ========================================= */}
 
-        <section className="intro">
+        <section className="intro" id="contact">
           <div className="content-width fade-up">
 
             <div className="eyebrow">
@@ -751,13 +691,13 @@ export default async function Home() {
               you want to enjoy.
             </p>
 
-            {/* Small elegant contact buttons in navy area */}
+            {/* Side-by-side colored contact buttons */}
             <div className="contact-pills">
               <Link
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-pill"
+                className="contact-pill whatsapp"
               >
                 <span className="pill-icon">
                   <WhatsAppIcon size={16} />
@@ -769,7 +709,7 @@ export default async function Home() {
                 href={TELEGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-pill"
+                className="contact-pill telegram"
               >
                 <span className="pill-icon">
                   <TelegramIcon size={16} />
@@ -914,56 +854,6 @@ export default async function Home() {
               </div>
 
             </div>
-          </div>
-        </section>
-
-        {/* =========================================
-            FINAL CTA
-        ========================================= */}
-
-        <section className="cta" id="contact">
-          <div className="content-width">
-
-            <div className="dark-eyebrow">
-              Start the conversation
-            </div>
-
-            <h2>
-              Your future deserves a
-              <em> blueprint.</em>
-            </h2>
-
-            <p>
-              Whether you're beginning to invest, working on
-              your savings, or preparing for retirement, a
-              thoughtful conversation can be a useful first
-              step.
-            </p>
-
-            <div className="cta-buttons">
-
-              <Link
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cta-button primary"
-              >
-                WhatsApp Us
-                <ArrowIcon size={14} />
-              </Link>
-
-              <Link
-                href={TELEGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cta-button secondary"
-              >
-                Message on Telegram
-                <ArrowIcon size={14} />
-              </Link>
-
-            </div>
-
           </div>
         </section>
 
