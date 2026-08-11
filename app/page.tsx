@@ -629,7 +629,7 @@ export default async function Home() {
               <div className="brand-mark">S</div>
 
               <span className="brand-name">
-                Smart Money Blueprint
+                TSMB
               </span>
             </Link>
 
