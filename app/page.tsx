@@ -1,4 +1,4 @@
-import Image from "next/image";
+ import Image from "next/image";
 import Link from "next/link";
 import { neon } from "@neondatabase/serverless";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
@@ -48,15 +48,15 @@ async function getLinks() {
 export const dynamic = "force-dynamic";
 
 const theme = {
-  bg: "#0f0a05",
-  bgDark: "#080502",
-  bgLight: "#1c140c",
-  bgLighter: "#2a1f14",
-  gold: "#c9844a",
-  goldLight: "#e2a96e",
-  text: "#f0e6d8",
-  textMuted: "#a08b76",
-  line: "#3d2e1f",
+  bg: "#051a1a",
+  bgDark: "#021212",
+  bgLight: "#0a2e2e",
+  bgLighter: "#0f3d3d",
+  gold: "#2dd4bf",
+  goldLight: "#5eead4",
+  text: "#e0f2f1",
+  textMuted: "#6b9e9a",
+  line: "#134e4a",
   white: "#FFFFFF",
   whatsapp: "#25D366",
   telegram: "#229ED9",
