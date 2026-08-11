@@ -52,21 +52,21 @@ const theme = {
   navyLight: "#0D263B",
   gold: "#C9A35B",
   goldLight: "#E2C789",
-  cream: "#F5EAD4",      // warmer, amber-sand — pulls from the sunset golds
-  creamDark: "#EDE0C8",  // slightly deeper warm sand for philosophy section
-  text: "#1A2330",
-  muted: "#6B7A6A",      // warmer muted — less blue-grey
-  line: "#D9CCAF",       // warm divider
+  cream: "#F7F3EB",
+  creamDark: "#ECE5D8",
+  text: "#172535",
+  muted: "#687580",
+  line: "#DCD6CA",
   white: "#FFFFFF",
   whatsapp: "#25D366",
   telegram: "#229ED9",
 };
 
-function ArrowIcon() {
+function ArrowIcon({ size = 14 }: { size?: number }) {
   return (
     <svg
-      width="13"
-      height="13"
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill="none"
       aria-hidden="true"
@@ -74,13 +74,13 @@ function ArrowIcon() {
       <path
         d="M5 19L19 5"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth="1.8"
         strokeLinecap="round"
       />
       <path
         d="M9 5H19V15"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth="1.8"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -88,11 +88,11 @@ function ArrowIcon() {
   );
 }
 
-function WhatsAppIcon() {
+function WhatsAppIcon({ size = 16 }: { size?: number }) {
   return (
     <svg
-      width="16"
-      height="16"
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill="currentColor"
       aria-hidden="true"
@@ -103,11 +103,11 @@ function WhatsAppIcon() {
   );
 }
 
-function TelegramIcon() {
+function TelegramIcon({ size = 16 }: { size?: number }) {
   return (
     <svg
-      width="16"
-      height="16"
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill="currentColor"
       aria-hidden="true"
@@ -221,15 +221,14 @@ export default async function Home() {
             }
 
             /* =========================================
-               HERO IMAGE — with bottom fade
+               HERO IMAGE with soft bottom fade
             ========================================= */
 
             .hero {
+              position: relative;
               width: 100%;
               background: ${theme.navy};
-              position: relative;
               line-height: 0;
-              padding-bottom: 36px;
             }
 
             .hero-image {
@@ -239,31 +238,26 @@ export default async function Home() {
               object-fit: contain;
             }
 
-            /* Fade the bottom of the image into the same navy as the hero background,
-               so the image dissolves cleanly into the dark section rather than
-               cutting off with a hard edge. */
             .hero-fade {
               position: absolute;
               bottom: 0;
               left: 0;
               right: 0;
-              height: 35%;
+              height: 100px;
               background: linear-gradient(
                 to bottom,
                 transparent 0%,
-                rgba(7, 26, 43, 0.45) 50%,
-                rgba(7, 26, 43, 0.85) 80%,
-                ${theme.navy} 100%
+                ${theme.cream} 100%
               );
               pointer-events: none;
             }
 
             /* =========================================
-               INTRO  (now includes contact buttons)
+               INTRO + SMALL CONTACT BUTTONS
             ========================================= */
 
             .intro {
-              padding: 56px 22px 72px;
+              padding: 56px 22px 64px;
               background: ${theme.cream};
               text-align: center;
             }
@@ -305,77 +299,45 @@ export default async function Home() {
               line-height: 1.9;
             }
 
-            /* =========================================
-               CONTACT PILL BUTTONS (inside cream)
-            ========================================= */
-
+            /* Small elegant contact buttons */
             .contact-pills {
               display: flex;
               justify-content: center;
-              align-items: center;
               gap: 10px;
+              margin-top: 32px;
               flex-wrap: wrap;
-              margin-top: 30px;
             }
 
-            .pill {
+            .contact-pill {
               display: inline-flex;
               align-items: center;
-              gap: 7px;
-              height: 40px;
-              padding: 0 18px;
+              gap: 8px;
+              padding: 10px 20px;
               border-radius: 100px;
+              border: 1px solid ${theme.line};
+              color: ${theme.text};
               text-decoration: none;
-              font-size: 11px;
-              font-weight: 700;
-              letter-spacing: 0.5px;
-              white-space: nowrap;
+              font-size: 12px;
+              font-weight: 600;
+              letter-spacing: 0.2px;
               transition:
-                transform 0.18s ease,
-                box-shadow 0.18s ease,
-                opacity 0.18s ease;
+                background .2s ease,
+                border-color .2s ease,
+                transform .2s ease;
             }
 
-            .pill:hover {
-              transform: translateY(-2px);
-              opacity: 0.92;
+            .contact-pill:hover {
+              background: ${theme.creamDark};
+              border-color: ${theme.gold};
+              transform: translateY(-1px);
             }
 
-            .pill-icon {
-              display: grid;
-              place-items: center;
+            .contact-pill .pill-icon {
               flex-shrink: 0;
             }
 
-            .pill.whatsapp {
-              background: ${theme.whatsapp};
-              color: white;
-              box-shadow: 0 3px 14px rgba(37, 211, 102, 0.22);
-            }
-
-            .pill.telegram {
-              background: ${theme.telegram};
-              color: white;
-              box-shadow: 0 3px 14px rgba(34, 158, 217, 0.22);
-            }
-
-            .pill-label {
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              line-height: 1;
-            }
-
-            .pill-label strong {
-              font-size: 11px;
-              font-weight: 700;
-            }
-
-            .pill-sub {
-              font-size: 9px;
-              font-weight: 500;
-              opacity: 0.82;
-              margin-top: 2px;
+            .contact-pill .pill-label {
+              white-space: nowrap;
             }
 
             /* =========================================
@@ -602,7 +564,7 @@ export default async function Home() {
 
             footer {
               padding: 30px 22px;
-              background: #04131F;
+              background: #041522;
               text-align: center;
             }
 
@@ -635,19 +597,22 @@ export default async function Home() {
                 display: none;
               }
 
+              .hero-fade {
+                height: 60px;
+              }
+
               .intro {
-                padding: 48px 20px 60px;
+                padding: 44px 20px 52px;
               }
 
               .contact-pills {
                 flex-direction: column;
-                align-items: stretch;
-                max-width: 280px;
-                margin-left: auto;
-                margin-right: auto;
+                align-items: center;
               }
 
-              .pill {
+              .contact-pill {
+                width: 100%;
+                max-width: 260px;
                 justify-content: center;
               }
 
@@ -745,7 +710,7 @@ export default async function Home() {
         </header>
 
         {/* =========================================
-            MAIN IMAGE — fade overlay bleeds into cream
+            MAIN IMAGE with soft bottom fade
         ========================================= */}
 
         <section className="hero">
@@ -758,12 +723,11 @@ export default async function Home() {
             sizes="100vw"
             className="hero-image"
           />
-          {/* Gradient that dissolves the bottom of the image into the cream background */}
           <div className="hero-fade" aria-hidden="true" />
         </section>
 
         {/* =========================================
-            INTRODUCTION + CONTACT PILLS
+            INTRODUCTION + small contact pills
         ========================================= */}
 
         <section className="intro">
@@ -787,41 +751,31 @@ export default async function Home() {
               you want to enjoy.
             </p>
 
-            {/* Compact contact pills — live in the cream section */}
+            {/* Small elegant contact buttons in cream area */}
             <div className="contact-pills">
-
               <Link
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="pill whatsapp"
+                className="contact-pill"
               >
                 <span className="pill-icon">
-                  <WhatsAppIcon />
+                  <WhatsAppIcon size={16} />
                 </span>
-                <span className="pill-label">
-                  <strong>WhatsApp</strong>
-                  <span className="pill-sub">{whatsappNumber}</span>
-                </span>
-                <ArrowIcon />
+                <span className="pill-label">WhatsApp</span>
               </Link>
 
               <Link
                 href={TELEGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="pill telegram"
+                className="contact-pill"
               >
                 <span className="pill-icon">
-                  <TelegramIcon />
+                  <TelegramIcon size={16} />
                 </span>
-                <span className="pill-label">
-                  <strong>Telegram</strong>
-                  <span className="pill-sub">{telegramUsername}</span>
-                </span>
-                <ArrowIcon />
+                <span className="pill-label">Telegram</span>
               </Link>
-
             </div>
 
           </div>
@@ -995,7 +949,7 @@ export default async function Home() {
                 className="cta-button primary"
               >
                 WhatsApp Us
-                <ArrowIcon />
+                <ArrowIcon size={14} />
               </Link>
 
               <Link
@@ -1005,7 +959,7 @@ export default async function Home() {
                 className="cta-button secondary"
               >
                 Message on Telegram
-                <ArrowIcon />
+                <ArrowIcon size={14} />
               </Link>
 
             </div>
