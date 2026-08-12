@@ -676,7 +676,7 @@ export default async function Home() {
                   <h2>Earn</h2>
                 </div>
                 <p>
-                  Put your money to work with purpose.
+                
                   Develop income streams, invest strategically,
                   and create the financial momentum that
                   compounds over time.
