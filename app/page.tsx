@@ -575,43 +575,64 @@ export default async function Home() {
           <div className="brand-bar-inner">
 
             <Link href="/" className="brand">
-  <svg
-    className="brand-logo-svg"
-    width="44"
-    height="44"
-    viewBox="0 0 56 56"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-  >
-    {/* Blueprint dot grid — 5×5 */}
-    <g fill="#2dd4bf" opacity="0.32">
-      <circle cx="10" cy="10" r="1.4"/><circle cx="20" cy="10" r="1.4"/><circle cx="30" cy="10" r="1.4"/><circle cx="40" cy="10" r="1.4"/><circle cx="50" cy="10" r="1.4"/>
-      <circle cx="10" cy="20" r="1.4"/><circle cx="20" cy="20" r="1.4"/><circle cx="30" cy="20" r="1.4"/><circle cx="40" cy="20" r="1.4"/><circle cx="50" cy="20" r="1.4"/>
-      <circle cx="10" cy="30" r="1.4"/><circle cx="20" cy="30" r="1.4"/><circle cx="30" cy="30" r="1.4"/><circle cx="40" cy="30" r="1.4"/><circle cx="50" cy="30" r="1.4"/>
-      <circle cx="10" cy="40" r="1.4"/><circle cx="20" cy="40" r="1.4"/><circle cx="30" cy="40" r="1.4"/><circle cx="40" cy="40" r="1.4"/><circle cx="50" cy="40" r="1.4"/>
-      <circle cx="10" cy="50" r="1.4"/><circle cx="20" cy="50" r="1.4"/><circle cx="30" cy="50" r="1.4"/><circle cx="40" cy="50" r="1.4"/><circle cx="50" cy="50" r="1.4"/>
-    </g>
-    {/* Rising trajectory line */}
-    <polyline
-      points="10,50 22,38 34,26 46,14"
-      stroke="#2dd4bf"
-      strokeWidth="2.8"
-      fill="none"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    {/* Destination dot — top right */}
-    <circle cx="46" cy="14" r="4.5" fill="#2dd4bf"/>
-    {/* Origin dot — bottom left */}
-    <circle cx="10" cy="50" r="2.4" fill="#2dd4bf" opacity="0.45"/>
-  </svg>
+              <svg
+                className="brand-logo-svg"
+                width="44"
+                height="44"
+                viewBox="0 0 56 56"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <defs>
+                  <linearGradient id="bgGrad" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="#0f2a3f"/>
+                    <stop offset="100%" stopColor="#0a1a2e"/>
+                  </linearGradient>
+                  <linearGradient id="bar1" x1="14" y1="38" x2="14" y2="46" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="#0d9488"/>
+                    <stop offset="100%" stopColor="#0a7066"/>
+                  </linearGradient>
+                  <linearGradient id="bar2" x1="27" y1="26" x2="27" y2="46" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="#14b8a6"/>
+                    <stop offset="100%" stopColor="#0d9488"/>
+                  </linearGradient>
+                  <linearGradient id="bar3" x1="40" y1="15" x2="40" y2="46" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="#5eead4"/>
+                    <stop offset="100%" stopColor="#2dd4bf"/>
+                  </linearGradient>
+                </defs>
+                {/* Background */}
+                <rect width="56" height="56" rx="12" fill="url(#bgGrad)"/>
+                {/* Border */}
+                <rect x="1.5" y="1.5" width="53" height="53" rx="10.5" stroke="#2dd4bf" strokeWidth="1.2" opacity="0.5"/>
+                {/* Gradient bars */}
+                <rect x="10" y="38" width="9" height="8" rx="2.5" fill="url(#bar1)"/>
+                <rect x="23" y="26" width="9" height="20" rx="2.5" fill="url(#bar2)"/>
+                <rect x="36" y="15" width="9" height="31" rx="2.5" fill="url(#bar3)"/>
+                {/* Dot markers at bar tops */}
+                <circle cx="14.5" cy="37" r="2" fill="#0d9488"/>
+                <circle cx="27.5" cy="25" r="2" fill="#14b8a6"/>
+                <circle cx="40.5" cy="14" r="2.5" fill="#5eead4"/>
+                {/* Trend line connecting dots */}
+                <polyline
+                  points="14.5,37 27.5,25 40.5,14"
+                  stroke="white"
+                  strokeWidth="1.2"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  opacity="0.25"
+                />
+                {/* Baseline */}
+                <line x1="8" y1="46" x2="48" y2="46" stroke="#2dd4bf" strokeWidth="1" strokeLinecap="round" opacity="0.25"/>
+              </svg>
 
-  <div className="brand-name">
-    <span className="brand-name-primary">TSMB</span>
-    <span className="brand-name-sub">The Smart Money Blueprint</span>
-  </div>
-</Link>
+              <div className="brand-name">
+                <span className="brand-name-primary">TSMB</span>
+                <span className="brand-name-sub">The Smart Money Blueprint</span>
+              </div>
+            </Link>
 
             <a href="#contact" className="brand-link">
               Connect With Us
