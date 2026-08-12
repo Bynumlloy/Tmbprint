@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { neon } from "@neondatabase/serverless";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
+import Logo from "@/components/Logo";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
@@ -575,42 +576,7 @@ export default async function Home() {
           <div className="brand-bar-inner">
 
             <Link href="/" className="brand">
-              <svg
-                className="brand-logo-svg"
-                width="44"
-                height="44"
-                viewBox="0 0 56 56"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <defs>
-                  <linearGradient id="bgD2" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#0f2a3f"/>
-                    <stop offset="100%" stopColor="#071525"/>
-                  </linearGradient>
-                  <linearGradient id="leaf1b" x1="14" y1="30" x2="28" y2="10" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#0d9488"/>
-                    <stop offset="100%" stopColor="#5eead4"/>
-                  </linearGradient>
-                  <linearGradient id="leaf2b" x1="28" y1="20" x2="46" y2="6" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#14b8a6"/>
-                    <stop offset="100%" stopColor="#2dd4bf"/>
-                  </linearGradient>
-                </defs>
-                {/* Background */}
-                <rect width="56" height="56" rx="14" fill="url(#bgD2)"/>
-                {/* Left leaf */}
-                <path d="M28 34 Q13 30 15 14 Q29 16 28 34Z" fill="url(#leaf1b)"/>
-                {/* Right leaf */}
-                <path d="M28 26 Q43 18 45 6 Q31 8 28 26Z" fill="url(#leaf2b)"/>
-                {/* Stem */}
-                <path d="M28 50 Q28 40 28 34" stroke="#2dd4bf" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-                {/* Ground dots */}
-                <circle cx="22" cy="51" r="1.2" fill="#0d9488" opacity="0.5"/>
-                <circle cx="28" cy="52" r="1.2" fill="#0d9488" opacity="0.5"/>
-                <circle cx="34" cy="51" r="1.2" fill="#0d9488" opacity="0.5"/>
-              </svg>
+              <Logo size={44} />
 
               <div className="brand-name">
                 <span className="brand-name-primary">TSMB</span>
