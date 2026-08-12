@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thesmartmoneyblueprint.vip"),
-  title: "TheSmartMoneyBlueprint.vip | Invest, Save, and Retire",
+  title: "TheSmartMoneyBlueprint | Invest, Save, and Retire",
   description:
     "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
   keywords: [
@@ -27,26 +27,26 @@ export const metadata: Metadata = {
     "financial planning",
     "smart money",
   ],
-  authors: [{ name: "TheSmartMoneyBlueprint.vip" }],
+  authors: [{ name: "TheSmartMoneyBlueprint" }],
   openGraph: {
-    title: "TheSmartMoneyBlueprint.vip | Invest, Save, and Retire",
+    title: "TheSmartMoneyBlueprint | Invest, Save, and Retire",
     description:
       "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
     url: "https://www.thesmartmoneyblueprint.vip",
-    siteName: "TheSmartMoneyBlueprint.vip",
+    siteName: "TheSmartMoneyBlueprint",
     type: "website",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "TheSmartMoneyBlueprint.vip Banner",
+        alt: "TheSmartMoneyBlueprint Banner",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TheSmartMoneyBlueprint.vip | Invest, Save, and Retire",
+    title: "TheSmartMoneyBlueprint | Invest, Save, and Retire",
     description:
       "Personalized retirement planning and strategic investment guidance. Build lasting wealth through our proven framework.",
     images: ["/og-image.png"],
