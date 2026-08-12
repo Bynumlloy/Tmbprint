@@ -585,23 +585,31 @@ export default async function Home() {
                 aria-hidden="true"
               >
                 <defs>
-                  <linearGradient id="leaf1" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#5eead4"/>
-                    <stop offset="100%" stopColor="#0d9488"/>
+                  <linearGradient id="bgD2" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="#0f2a3f"/>
+                    <stop offset="100%" stopColor="#071525"/>
                   </linearGradient>
-                  <linearGradient id="leaf2" x1="1" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#2dd4bf"/>
-                    <stop offset="100%" stopColor="#0d9488"/>
+                  <linearGradient id="leaf1b" x1="14" y1="30" x2="28" y2="10" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="#0d9488"/>
+                    <stop offset="100%" stopColor="#5eead4"/>
+                  </linearGradient>
+                  <linearGradient id="leaf2b" x1="28" y1="20" x2="46" y2="6" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="#14b8a6"/>
+                    <stop offset="100%" stopColor="#2dd4bf"/>
                   </linearGradient>
                 </defs>
+                {/* Background */}
+                <rect width="56" height="56" rx="14" fill="url(#bgD2)"/>
                 {/* Left leaf */}
-                <path d="M28 30 Q12 26 14 10 Q28 12 28 30Z" fill="url(#leaf1)" opacity="0.9"/>
+                <path d="M28 34 Q13 30 15 14 Q29 16 28 34Z" fill="url(#leaf1b)"/>
                 {/* Right leaf */}
-                <path d="M28 22 Q44 16 46 4 Q32 6 28 22Z" fill="url(#leaf2)" opacity="0.85"/>
+                <path d="M28 26 Q43 18 45 6 Q31 8 28 26Z" fill="url(#leaf2b)"/>
                 {/* Stem */}
-                <path d="M28 52 Q28 42 28 30" stroke="#2dd4bf" strokeWidth="2.2" strokeLinecap="round" fill="none"/>
-                {/* Ground curve */}
-                <path d="M18 52 Q28 49 38 52" stroke="#0d9488" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.5"/>
+                <path d="M28 50 Q28 40 28 34" stroke="#2dd4bf" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+                {/* Ground dots */}
+                <circle cx="22" cy="51" r="1.2" fill="#0d9488" opacity="0.5"/>
+                <circle cx="28" cy="52" r="1.2" fill="#0d9488" opacity="0.5"/>
+                <circle cx="34" cy="51" r="1.2" fill="#0d9488" opacity="0.5"/>
               </svg>
 
               <div className="brand-name">
