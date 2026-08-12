@@ -677,9 +677,7 @@ export default async function Home() {
                 </div>
                 <p>
                 
-                  Develop income streams, invest strategically,
-                  and create the financial momentum that
-                  compounds over time.
+                  Develop reliable income streams, invest strategically, and build the kind of financial momentum that compounds year after year.
                 </p>
               </article>
 
