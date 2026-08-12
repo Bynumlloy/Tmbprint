@@ -576,13 +576,8 @@ export default async function Home() {
           <div className="brand-bar-inner">
 
             <Link href="/" className="brand">
-              <Logo size={44} />
-
-              <div className="brand-name">
-                <span className="brand-name-primary">TSMB</span>
-                <span className="brand-name-sub">The Smart Money Blueprint</span>
-              </div>
-            </Link>
+  <Logo size={44} />
+</Link>
 
             <a href="#contact" className="brand-link">
               Connect With Us
