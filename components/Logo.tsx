@@ -89,7 +89,7 @@ export default function Logo({
         {/* Primary wordmark */}
         <span
           style={{
-            fontSize: 16,
+            fontSize: 17,
             fontWeight: 800,
             letterSpacing: "3px",
             textTransform: "uppercase",
