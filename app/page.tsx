@@ -585,47 +585,23 @@ export default async function Home() {
                 aria-hidden="true"
               >
                 <defs>
-                  <linearGradient id="bgGrad" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#0f2a3f"/>
-                    <stop offset="100%" stopColor="#0a1a2e"/>
-                  </linearGradient>
-                  <linearGradient id="bar1" x1="14" y1="38" x2="14" y2="46" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#0d9488"/>
-                    <stop offset="100%" stopColor="#0a7066"/>
-                  </linearGradient>
-                  <linearGradient id="bar2" x1="27" y1="26" x2="27" y2="46" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#14b8a6"/>
+                  <linearGradient id="leaf1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#5eead4"/>
                     <stop offset="100%" stopColor="#0d9488"/>
                   </linearGradient>
-                  <linearGradient id="bar3" x1="40" y1="15" x2="40" y2="46" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#5eead4"/>
-                    <stop offset="100%" stopColor="#2dd4bf"/>
+                  <linearGradient id="leaf2" x1="1" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#2dd4bf"/>
+                    <stop offset="100%" stopColor="#0d9488"/>
                   </linearGradient>
                 </defs>
-                {/* Background */}
-                <rect width="56" height="56" rx="12" fill="url(#bgGrad)"/>
-                {/* Border */}
-                <rect x="1.5" y="1.5" width="53" height="53" rx="10.5" stroke="#2dd4bf" strokeWidth="1.2" opacity="0.5"/>
-                {/* Gradient bars */}
-                <rect x="10" y="38" width="9" height="8" rx="2.5" fill="url(#bar1)"/>
-                <rect x="23" y="26" width="9" height="20" rx="2.5" fill="url(#bar2)"/>
-                <rect x="36" y="15" width="9" height="31" rx="2.5" fill="url(#bar3)"/>
-                {/* Dot markers at bar tops */}
-                <circle cx="14.5" cy="37" r="2" fill="#0d9488"/>
-                <circle cx="27.5" cy="25" r="2" fill="#14b8a6"/>
-                <circle cx="40.5" cy="14" r="2.5" fill="#5eead4"/>
-                {/* Trend line connecting dots */}
-                <polyline
-                  points="14.5,37 27.5,25 40.5,14"
-                  stroke="white"
-                  strokeWidth="1.2"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  opacity="0.25"
-                />
-                {/* Baseline */}
-                <line x1="8" y1="46" x2="48" y2="46" stroke="#2dd4bf" strokeWidth="1" strokeLinecap="round" opacity="0.25"/>
+                {/* Left leaf */}
+                <path d="M28 30 Q12 26 14 10 Q28 12 28 30Z" fill="url(#leaf1)" opacity="0.9"/>
+                {/* Right leaf */}
+                <path d="M28 22 Q44 16 46 4 Q32 6 28 22Z" fill="url(#leaf2)" opacity="0.85"/>
+                {/* Stem */}
+                <path d="M28 52 Q28 42 28 30" stroke="#2dd4bf" strokeWidth="2.2" strokeLinecap="round" fill="none"/>
+                {/* Ground curve */}
+                <path d="M18 52 Q28 49 38 52" stroke="#0d9488" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.5"/>
               </svg>
 
               <div className="brand-name">
