@@ -576,7 +576,7 @@ export default async function Home() {
           <div className="brand-bar-inner">
 
             <Link href="/" className="brand">
-  <Logo size={44} />
+  <Logo />
 </Link>
 
             <a href="#contact" className="brand-link">
