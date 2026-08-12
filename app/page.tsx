@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { neon } from "@neondatabase/serverless";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
-import Logo from "@/components/Logo";
+import Logo from "./components/Logo";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
