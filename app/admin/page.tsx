@@ -403,7 +403,7 @@ export default function AdminPage() {
                 type="text"
                 value={whatsappNumber}
                 onChange={(e) => setWhatsappNumber(e.target.value)}
-                placeholder="+1 (929) 607-2719"
+                placeholder="+123456789"
                 style={{
                   width: "100%",
                   padding: "10px 12px",
