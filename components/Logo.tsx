@@ -30,7 +30,7 @@ export default function Logo({
             fontSize: 17,
             fontWeight: 800,
             letterSpacing: "3px",
-            textTransform: "none",
+            textTransform: "uppercase",
             color: primary,
             lineHeight: 1,
             textShadow: theme === "dark" ? "0 0 12px rgba(45,212,191,0.3)" : "none",
