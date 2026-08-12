@@ -575,34 +575,43 @@ export default async function Home() {
           <div className="brand-bar-inner">
 
             <Link href="/" className="brand">
-              <svg
-                className="brand-logo-svg"
-                width="40"
-                height="40"
-                viewBox="0 0 56 56"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                {/* Lighter fill so it separates from the page navy */}
-                <rect width="56" height="56" rx="11" fill="#1a3a5c" />
-                {/* Teal border */}
-                <rect x="1.5" y="1.5" width="53" height="53" rx="9.5" stroke="#2dd4bf" strokeWidth="2.5" />
-                {/* Clean S letterform */}
-                <path
-                  d="M34 19C34 15.1 30.9 12 27 12H22C17.6 12 14 15.6 14 20C14 24.4 17.6 28 22 28H27.5C30.5 28 33 30.5 33 33.5C33 36.5 30.5 39 27.5 39H21C18 39 15.5 36.8 15 34"
-                  stroke="#2dd4bf"
-                  strokeWidth="3.2"
-                  strokeLinecap="round"
-                  fill="none"
-                />
-              </svg>
+  <svg
+    className="brand-logo-svg"
+    width="44"
+    height="44"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    {/* Blueprint dot grid — 5×5 */}
+    <g fill="#2dd4bf" opacity="0.32">
+      <circle cx="10" cy="10" r="1.4"/><circle cx="20" cy="10" r="1.4"/><circle cx="30" cy="10" r="1.4"/><circle cx="40" cy="10" r="1.4"/><circle cx="50" cy="10" r="1.4"/>
+      <circle cx="10" cy="20" r="1.4"/><circle cx="20" cy="20" r="1.4"/><circle cx="30" cy="20" r="1.4"/><circle cx="40" cy="20" r="1.4"/><circle cx="50" cy="20" r="1.4"/>
+      <circle cx="10" cy="30" r="1.4"/><circle cx="20" cy="30" r="1.4"/><circle cx="30" cy="30" r="1.4"/><circle cx="40" cy="30" r="1.4"/><circle cx="50" cy="30" r="1.4"/>
+      <circle cx="10" cy="40" r="1.4"/><circle cx="20" cy="40" r="1.4"/><circle cx="30" cy="40" r="1.4"/><circle cx="40" cy="40" r="1.4"/><circle cx="50" cy="40" r="1.4"/>
+      <circle cx="10" cy="50" r="1.4"/><circle cx="20" cy="50" r="1.4"/><circle cx="30" cy="50" r="1.4"/><circle cx="40" cy="50" r="1.4"/><circle cx="50" cy="50" r="1.4"/>
+    </g>
+    {/* Rising trajectory line */}
+    <polyline
+      points="10,50 22,38 34,26 46,14"
+      stroke="#2dd4bf"
+      strokeWidth="2.8"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    {/* Destination dot — top right */}
+    <circle cx="46" cy="14" r="4.5" fill="#2dd4bf"/>
+    {/* Origin dot — bottom left */}
+    <circle cx="10" cy="50" r="2.4" fill="#2dd4bf" opacity="0.45"/>
+  </svg>
 
-              <div className="brand-name">
-                <span className="brand-name-primary">TSMB</span>
-                <span className="brand-name-sub">The Smart Money Blueprint</span>
-              </div>
-            </Link>
+  <div className="brand-name">
+    <span className="brand-name-primary">TSMB</span>
+    <span className="brand-name-sub">The Smart Money Blueprint</span>
+  </div>
+</Link>
 
             <a href="#contact" className="brand-link">
               Connect With Us
