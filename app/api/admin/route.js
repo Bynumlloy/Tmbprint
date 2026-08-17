@@ -24,10 +24,10 @@ async function ensureTable() {
     INSERT INTO site_links (id, whatsapp_url, telegram_url, whatsapp_number, telegram_username)
     VALUES (
       1,
-      'https://wa.link/26glqx',
-      'https://telegram.me/RetireWealthyGuides',
-      '+1 (929) 607-2719',
-      '@RetireWealthyGuides'
+      'https://wa...',
+      'https://telegram.me/..',
+      '+1234',
+      '@username'
     )
     ON CONFLICT (id) DO NOTHING
   `;
